@@ -1,198 +1,140 @@
 <?php
-session_start();
-require __DIR__ . '/db.php';
+/**
+ * Caroline's Place — Multi-Treatment Spa Booking Submission
+ * Processes spa reservations, records line items, and redirects to confirmation.
+ */
+require_once __DIR__ . '/db.php';
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    header('Location: ../spa_menu.php');
+    header('Location: /spa_menu.php');
     exit;
 }
 
-$fullName      = trim($_POST['full_name']       ?? '');
-$email         = trim($_POST['email']           ?? '');
-$phone         = trim($_POST['phone']           ?? '');
-$preferredDate = trim($_POST['preferred_date']  ?? '');
-$preferredTime = trim($_POST['preferred_time']  ?? '');
-$notes         = trim($_POST['notes']           ?? '');
-$totalAmount   = isset($_POST['total_amount'])  ? (float)$_POST['total_amount'] : 0;
+$db = getDb();
 
-$lineSvcIds = $_POST['line_service_id'] ?? [];
-$lineOptIds = $_POST['line_option_id']  ?? [];
-$lineUnits  = $_POST['line_unit']       ?? [];
-$lineQtys   = $_POST['line_qty']        ?? [];
+$fullName      = trim($_POST['full_name'] ?? '');
+$email         = trim($_POST['email'] ?? '');
+$phone         = trim($_POST['phone'] ?? '');
+$preferredDate = trim($_POST['preferred_date'] ?? '');
+$preferredTime = trim($_POST['preferred_time'] ?? '');
+$notes         = trim($_POST['notes'] ?? '');
 
-$errors = [];
-
-if (strlen($fullName) < 2)      $errors[] = 'Full name is required.';
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) $errors[] = 'Valid email is required.';
-if (strlen($phone) < 5)         $errors[] = 'Phone number is required.';
-if (!$preferredDate || !strtotime($preferredDate)) $errors[] = 'Valid date is required.';
-if (!$preferredTime)            $errors[] = 'Time is required.';
-
-if ($preferredDate && strtotime($preferredDate) < strtotime('today')) {
-    $errors[] = 'Date cannot be in the past.';
+if (empty($fullName) || empty($email) || empty($phone) || empty($preferredDate) || empty($preferredTime)) {
+    header('Location: /spa_menu.php');
+    exit;
 }
 
-if (!is_array($lineSvcIds) || !$lineSvcIds) {
-    $errors[] = 'No services selected.';
+// Retrieve line items
+$svcIds = $_POST['line_service_id'] ?? [];
+$optIds = $_POST['line_option_id'] ?? [];
+$units  = $_POST['line_unit'] ?? [];
+$qtys   = $_POST['line_qty'] ?? [];
+
+if (!is_array($svcIds)) $svcIds = [$svcIds];
+if (!is_array($optIds)) $optIds = [$optIds];
+if (!is_array($units))  $units  = [$units];
+if (!is_array($qtys))   $qtys   = [$qtys];
+
+if (empty($svcIds)) {
+    header('Location: /spa_menu.php');
+    exit;
 }
 
-$lineCount = is_array($lineSvcIds) ? count($lineSvcIds) : 0;
+// Generate unique reference code: e.g. SPA-7K2M9P
+$ref = 'SPA-' . strtoupper(substr(bin2hex(random_bytes(4)), 0, 6));
 
-if ($lineCount > 0) {
-    if (!is_array($lineOptIds) || count($lineOptIds) !== $lineCount) $errors[] = 'Invalid service options.';
-    if (!is_array($lineQtys)   || count($lineQtys)   !== $lineCount) $errors[] = 'Invalid quantities.';
+// Prepare service lookup
+$svcStmt = $db->prepare("SELECT id, name FROM services WHERE id = ?");
+$optStmt = $db->prepare("SELECT id, option_label, price_ngn FROM options WHERE id = ?");
+
+$calculatedTotal = 0.0;
+$itemsToInsert = [];
+
+for ($i = 0; $i < count($svcIds); $i++) {
+    $sid = (int)($svcIds[$i] ?? 0);
+    if ($sid <= 0) continue;
+
+    $svcStmt->execute([$sid]);
+    $svc = $svcStmt->fetch();
+    if (!$svc) continue;
+
+    $oid = !empty($optIds[$i]) ? (int)$optIds[$i] : null;
+    $opt = null;
+    if ($oid) {
+        $optStmt->execute([$oid]);
+        $opt = $optStmt->fetch();
+    }
+
+    $unitPrice = $opt ? (float)$opt['price_ngn'] : (float)($units[$i] ?? 0.0);
+    $qty = max(1, min(10, (int)($qtys[$i] ?? 1)));
+    $lineTotal = $unitPrice * $qty;
+    $calculatedTotal += $lineTotal;
+
+    $itemsToInsert[] = [
+        'service_id'   => $sid,
+        'option_id'    => $oid,
+        'service_name' => $svc['name'],
+        'option_label' => $opt ? $opt['option_label'] : 'Standard',
+        'unit_price'   => $unitPrice,
+        'qty'          => $qty,
+        'line_total'   => $lineTotal
+    ];
 }
 
-if ($errors) {
-    $errorMsg = implode(' ', $errors);
-    ?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head><meta charset="UTF-8"><title>Booking Error</title>
-    <style>
-      body { font-family: system-ui, sans-serif; background:#FAF9F6; display:flex; align-items:center; justify-content:center; min-height:100vh; padding:24px; }
-      .err-card { background:#F0EBE0; border:1px solid rgba(28,26,24,0.12); padding:48px; max-width:480px; text-align:center; }
-      h1 { font-family: Georgia, serif; margin-bottom:16px; color:#8B6F2E; }
-      p { color:#7A7268; margin-bottom:24px; line-height:1.6; }
-      a { display:inline-block; padding:14px 28px; background:#1C1A18; color:#FAF9F6; text-decoration:none; font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; }
-    </style></head>
-    <body>
-      <div class="err-card">
-        <h1>Booking Error</h1>
-        <p><?= htmlspecialchars($errorMsg) ?></p>
-        <a href="../spa_menu.php">Go Back to Booking</a>
-      </div>
-    </body></html>
-    <?php
+if (empty($itemsToInsert)) {
+    header('Location: /spa_menu.php');
     exit;
 }
 
 try {
-    $db = getDB();
-
-    $validLines = [];
-    $verifiedTotal = 0;
-
-    for ($i = 0; $i < $lineCount; $i++) {
-        $sid   = (int)($lineSvcIds[$i] ?? 0);
-        $oid   = (int)($lineOptIds[$i] ?? 0);
-        $qty   = max(1, min(9, (int)($lineQtys[$i] ?? 1)));
-
-        if ($sid <= 0 || $oid <= 0) continue;
-
-        $stmt = $db->prepare("
-            SELECT s.name AS service_name,
-                   o.option_label,
-                   o.price_ngn AS unit_price
-            FROM spa_services s
-            JOIN spa_service_options o ON o.service_id = s.id
-            WHERE s.id = ? AND o.id = ?
-              AND s.is_active = 1 AND o.is_active = 1
-            LIMIT 1
-        ");
-        $stmt->execute([$sid, $oid]);
-        $row = $stmt->fetch();
-
-        if (!$row) continue;
-
-        $unit = (float)$row['unit_price'];
-        $lineTotal = $unit * $qty;
-        $verifiedTotal += $lineTotal;
-
-        $validLines[] = [
-            'sid'          => $sid,
-            'oid'          => $oid,
-            'service_name' => $row['service_name'],
-            'option_label' => $row['option_label'],
-            'unit_price'   => $unit,
-            'qty'          => $qty,
-            'line_total'   => $lineTotal,
-        ];
-    }
-
-    if (!$validLines) {
-        header('Location: ../spa.php');
-        exit;
-    }
-
-    $referenceCode = 'SPA-' . strtoupper(substr(md5(uniqid()), 0, 8));
-    $NOW = date('Y-m-d H:i:s');
-
     $db->beginTransaction();
 
-    $stmt = $db->prepare("
-        INSERT INTO spa_bookings
-          (reference_code, full_name, email, phone, preferred_date, preferred_time,
-           total_amount_ngn, notes, status, payment_status, admin_notes, created_at, updated_at)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?, 'pending', 'unpaid', ?, ?, ?)
+    $driver = $db->getAttribute(PDO::ATTR_DRIVER_NAME);
+    $nowExpr = $driver === 'sqlite' ? "datetime('now')" : "NOW()";
+
+    $insBooking = $db->prepare("
+        INSERT INTO bookings (
+            reference_code, full_name, email, phone, division,
+            preferred_date, preferred_time, total_amount_ngn, notes,
+            status, payment_status, created_at
+        ) VALUES (?, ?, ?, ?, 'spa', ?, ?, ?, ?, 'pending', 'unpaid', {$nowExpr})
     ");
-    $stmt->execute([
-        $referenceCode,
-        $fullName,
-        $email,
-        $phone,
-        date('Y-m-d', strtotime($preferredDate)),
-        $preferredTime,
-        $verifiedTotal,
-        $notes ?: null,
-        null,
-        $NOW,
-        $NOW,
+
+    $insBooking->execute([
+        $ref, $fullName, $email, $phone,
+        $preferredDate, $preferredTime,
+        $calculatedTotal, $notes
     ]);
 
-    $bid = (int)$db->lastInsertId();
+    $bookingId = $db->lastInsertId();
 
-    $itemStmt = $db->prepare("
-        INSERT INTO spa_booking_items
-          (booking_id, service_id, option_id, service_name, option_label,
-           unit_price_ngn, quantity, line_total_ngn)
-        VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+    $insItem = $db->prepare("
+        INSERT INTO booking_items (
+            booking_id, service_id, option_id, service_name,
+            option_label, unit_price_ngn, quantity, line_total_ngn
+        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
     ");
 
-    foreach ($validLines as $l) {
-        $itemStmt->execute([
-            $bid,
-            $l['sid'],
-            $l['oid'],
-            $l['service_name'],
-            $l['option_label'],
-            $l['unit_price'],
-            $l['qty'],
-            $l['line_total'],
+    foreach ($itemsToInsert as $item) {
+        $insItem->execute([
+            $bookingId,
+            $item['service_id'],
+            $item['option_id'],
+            $item['service_name'],
+            $item['option_label'],
+            $item['unit_price'],
+            $item['qty'],
+            $item['line_total']
         ]);
     }
 
     $db->commit();
 
-    header('Location: ../confirmation.php?ref=' . urlencode($referenceCode) . '&source=spa');
+    header('Location: /confirmation.php?ref=' . urlencode($ref));
     exit;
-
 } catch (Exception $e) {
-    if (isset($db) && $db->inTransaction()) {
+    if ($db->inTransaction()) {
         $db->rollBack();
     }
-    $err = $e->getMessage();
-    ?>
-    <!DOCTYPE html>
-    <html lang="en">
-    <head><meta charset="UTF-8"><title>Server Error</title>
-    <style>
-      body { font-family: system-ui, sans-serif; background:#FAF9F6; display:flex; align-items:center; justify-content:center; min-height:100vh; padding:24px; }
-      .err-card { background:#F0EBE0; border:1px solid rgba(28,26,24,0.12); padding:48px; max-width:560px; text-align:center; }
-      h1 { font-family: Georgia, serif; margin-bottom:16px; color:#8B6F2E; }
-      p { color:#7A7268; margin-bottom:16px; line-height:1.6; }
-      pre { background:#fff; color:#a91414; font-family:Consolas, monospace; padding:12px; text-align:left; border:1px solid rgba(169,20,20,0.25); border-radius:4px; overflow-x:auto; font-size:12px; }
-      a { display:inline-block; padding:14px 28px; background:#1C1A18; color:#FAF9F6; text-decoration:none; font-size:0.7rem; letter-spacing:0.2em; text-transform:uppercase; }
-    </style></head>
-    <body>
-      <div class="err-card">
-        <h1>Server Error</h1>
-        <p>Something went wrong while processing your booking. Details below (for debugging):</p>
-        <pre><?= htmlspecialchars($err) ?></pre>
-        <br>
-        <a href="../spa_menu.php">Go Back to Booking</a>
-      </div>
-    </body></html>
-    <?php
-    exit;
+    die("An error occurred while confirming your reservation: " . htmlspecialchars($e->getMessage()));
 }

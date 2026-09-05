@@ -1,47 +1,53 @@
 # ============================================================
-# CAROLINE'S PLACE — Apache Configuration
+# CAROLINE'S PLACE — Hostinger & Apache Production Configuration
 # ============================================================
 
-Options -Indexes
-ServerSignature Off
+Options -Indexes +FollowSymLinks
+DirectoryIndex index.php index.html
 
-# ── PHP settings ─────────────────────────────────────────────
-php_flag display_errors Off
-php_flag log_errors On
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
 
-# ── Security headers ──────────────────────────────────────────
-<IfModule mod_headers.c>
-  Header set X-Content-Type-Options "nosniff"
-  Header set X-Frame-Options "SAMEORIGIN"
-  Header set X-XSS-Protection "1; mode=block"
-  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  # Protect sensitive files and directories
+  RewriteRule ^(\.git|\.env|schema\.sql|seed_data\.json|api/carolines\.sqlite|composer\.) - [F,L,NC]
+
+  # If requested path directly exists as a file or directory, serve it
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Route admin endpoints: e.g. /admin/dashboard -> /admin/dashboard.php
+  RewriteCond %{DOCUMENT_ROOT}/admin/$1.php -f
+  RewriteRule ^admin/([^/]+)/?$ admin/$1.php [L]
+
+  # Route api endpoints: e.g. /api/services -> /api/services.php
+  RewriteCond %{DOCUMENT_ROOT}/api/$1.php -f
+  RewriteRule ^api/([^/]+)/?$ api/$1.php [L]
+
+  # Route root pages: e.g. /clubhouse -> /clubhouse.php, /spa -> /spa.php, /spa_menu -> /spa_menu.php
+  RewriteCond %{DOCUMENT_ROOT}/$1.php -f
+  RewriteRule ^([^/]+)/?$ $1.php [L]
 </IfModule>
 
-# ── Protect sensitive files ───────────────────────────────────
-<FilesMatch "^(db\.php|setup\.sql|README\.txt|\.env)$">
-  Order Allow,Deny
-  Deny from all
-</FilesMatch>
+# Set correct MIME types
+<IfModule mod_mime.c>
+  AddType image/svg+xml .svg .svgz
+  AddType image/webp .webp
+  AddType image/png .png
+  AddType image/jpeg .jpg .jpeg
+  AddType text/css .css
+  AddType application/javascript .js
+</IfModule>
 
-<Files "db.php">
-  Order Allow,Deny
-  Deny from all
-</Files>
-
-# ── Browser caching for assets ────────────────────────────────
+# Browser Caching for static assets
 <IfModule mod_expires.c>
   ExpiresActive On
-  ExpiresByType image/webp         "access plus 1 year"
-  ExpiresByType image/jpeg         "access plus 1 year"
-  ExpiresByType image/png          "access plus 1 year"
-  ExpiresByType text/css           "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/jpg "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType text/css "access plus 1 week"
+  ExpiresByType application/javascript "access plus 1 week"
 </IfModule>
-
-# ── Gzip compression ─────────────────────────────────────────
-<IfModule mod_deflate.c>
-  AddOutputFilterByType DEFLATE text/html text/css application/javascript text/plain
-</IfModule>
-
-# ── Friendly 404 ─────────────────────────────────────────────
-ErrorDocument 404 /index.php

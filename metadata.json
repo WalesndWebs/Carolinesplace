@@ -1,0 +1,8 @@
+{
+  "name": "Carolines Place",
+  "description": "Luxury guest house, clubhouse and spa booking platform",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

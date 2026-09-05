@@ -1,86 +1,70 @@
 <?php
-header('Content-Type: application/json');
+/**
+ * Caroline's Place — Admin Spa Items Drilldown API
+ * Used by admin dashboard accordion to view itemized services for a booking.
+ */
 session_start();
-
-// Admin only
-if (empty($_SESSION['admin_id'])) {
-    http_response_code(401);
-    echo json_encode(['error' => 'Unauthorized']);
-    exit;
-}
-
-if ($_SERVER['REQUEST_METHOD'] !== 'GET') {
-    http_response_code(405);
-    echo json_encode(['error' => 'Method not allowed']);
-    exit;
-}
-
+header('Content-Type: application/json; charset=utf-8');
 require_once __DIR__ . '/db.php';
 
-$bookingId = isset($_GET['booking_id']) ? (int)$_GET['booking_id'] : 0;
+if (empty($_SESSION['admin'])) {
+    http_response_code(401);
+    echo json_encode(['ok' => false, 'error' => 'Unauthorized']);
+    exit;
+}
+
+$bookingId = (int)($_GET['booking_id'] ?? 0);
 if ($bookingId <= 0) {
     http_response_code(400);
-    echo json_encode(['error' => 'Missing or invalid booking_id']);
+    echo json_encode(['ok' => false, 'error' => 'Invalid booking ID']);
     exit;
 }
 
 try {
-    $db = getDB();
+    $db = getDb();
 
-    // 1. Basic booking info + customer + grand total
-    $bookingStmt = $db->prepare("
-        SELECT sb.*
-        FROM spa_bookings sb
-        WHERE sb.id = ?
-        LIMIT 1
-    ");
-    $bookingStmt->execute([$bookingId]);
-    $booking = $bookingStmt->fetch();
+    // Fetch booking
+    $bStmt = $db->prepare("SELECT * FROM bookings WHERE id = ?");
+    $bStmt->execute([$bookingId]);
+    $booking = $bStmt->fetch();
 
     if (!$booking) {
         http_response_code(404);
-        echo json_encode(['error' => 'Spa booking not found']);
+        echo json_encode(['ok' => false, 'error' => 'Booking not found']);
         exit;
     }
 
-    // 2. All line items (snapshot data saved at time of booking)
-    $itemsStmt = $db->prepare("
-        SELECT
-            sbi.id,
-            sbi.service_name,
-            sbi.option_label,
-            sbi.unit_price_ngn,
-            sbi.quantity,
-            sbi.line_total_ngn,
-            sbi.service_id,
-            sbi.option_id
-        FROM spa_booking_items sbi
-        WHERE sbi.booking_id = ?
-        ORDER BY sbi.id ASC
-    ");
-    $itemsStmt->execute([$bookingId]);
-    $items = $itemsStmt->fetchAll();
+    // Fetch line items
+    $iStmt = $db->prepare("SELECT * FROM booking_items WHERE booking_id = ? ORDER BY id ASC");
+    $iStmt->execute([$bookingId]);
+    $items = $iStmt->fetchAll();
 
-    // 3. Compute subtotals on return (add formatted strings for display)
+    $calculatedTotal = 0.0;
     $formattedItems = [];
-    $calcTotal = 0;
-    foreach ($items as $it) {
-        $calcTotal += (float)$it['line_total_ngn'];
-        $formattedItems[] = $it + [
-            'unit_price_formatted' => priceFmt((float)$it['unit_price_ngn']),
-            'line_total_formatted' => priceFmt((float)$it['line_total_ngn']),
+
+    foreach ($items as $item) {
+        $calculatedTotal += (float)$item['line_total_ngn'];
+        $formattedItems[] = [
+            'id'                   => $item['id'],
+            'service_name'         => $item['service_name'],
+            'option_label'         => $item['option_label'] ?: 'Standard',
+            'quantity'             => (int)$item['quantity'],
+            'unit_price'           => (float)$item['unit_price_ngn'],
+            'unit_price_formatted' => priceFmt($item['unit_price_ngn']),
+            'line_total'           => (float)$item['line_total_ngn'],
+            'line_total_formatted' => priceFmt($item['line_total_ngn']),
         ];
     }
 
     echo json_encode([
-        'ok' => true,
-        'booking' => $booking,
-        'items' => $formattedItems,
-        'item_count' => count($formattedItems),
-        'calculated_total' => $calcTotal,
-        'calculated_total_formatted' => priceFmt($calcTotal),
+        'ok'                         => true,
+        'item_count'                 => count($formattedItems),
+        'calculated_total'           => $calculatedTotal,
+        'calculated_total_formatted' => priceFmt($calculatedTotal),
+        'booking'                    => $booking,
+        'items'                      => $formattedItems,
     ]);
-} catch (Throwable $e) {
+} catch (Exception $e) {
     http_response_code(500);
-    echo json_encode(['error' => 'Server error loading items: ' . $e->getMessage()]);
+    echo json_encode(['ok' => false, 'error' => $e->getMessage()]);
 }

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard — Caroline's Place</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <style>
+    .admin-layout { max-width: 1240px; margin: 0 auto; padding: 24px; }
+    .stat-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 28px; }
+    .stat-card { background: #fff; border-radius: 12px; padding: 20px; border: 1px solid rgba(27,20,16,0.1); }
+    .stat-card__lbl { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin-bottom: 6px; }
+    .stat-card__val { font-family: var(--font-serif); font-size: 26px; font-weight: 700; color: var(--fg); }
+    .badge-status { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 11px; font-weight: 600; text-transform: uppercase; }
+    .badge-pending { background: #fef3c7; color: #92400e; }
+    .badge-confirmed { background: #dbeafe; color: #1e40af; }
+    .badge-completed { background: #d1fae5; color: #065f46; }
+    .badge-cancelled { background: #fee2e2; color: #991b1b; }
+    .table-container { background: #fff; border-radius: 14px; border: 1px solid rgba(27,20,16,0.1); overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,0.03); }
+    .admin-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .admin-table th { background: #faf6ef; text-align: left; padding: 14px 16px; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 600; border-bottom: 1px solid rgba(27,20,16,0.1); }
+    .admin-table td { padding: 14px 16px; border-bottom: 1px solid rgba(27,20,16,0.06); vertical-align: middle; }
+    .admin-table tr:hover td { background: #fffcf8; }
+  </style>
+</head>
+<body style="background:var(--bg);">
+
+<!-- Admin Nav Bar -->
+<header style="background:#fff; border-bottom:1px solid rgba(27,20,16,0.1); padding:16px 24px;">
+  <div style="max-width:1240px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;">
+    <div style="display:flex; align-items:center; gap:20px;">
+      <a href="/" style="font-family:var(--font-serif); font-size:20px; font-weight:600; color:var(--fg);">Caroline's Place</a>
+      <span style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; background:var(--primary); color:#fff; padding:3px 10px; border-radius:999px;">Admin</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:16px; font-size:14px;">
+      <a href="/admin/dashboard" style="font-weight:600; color:var(--primary);">Bookings</a>
+      <a href="/admin/spa_products" style="color:var(--muted);">Spa Catalog</a>
+      <a href="/" style="color:var(--muted);">Public Site</a>
+      <span style="color:var(--muted);">|</span>
+      <span style="color:var(--fg); font-weight:500;">Hello, <%= admin.display_name || admin.username %></span>
+      <a href="/admin/logout" style="color:#c53030; text-decoration:none; font-size:13px; padding:6px 12px; border:1px solid rgba(197,48,48,0.3); border-radius:6px;">Logout</a>
+    </div>
+  </div>
+</header>
+
+<div class="admin-layout">
+
+  <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; flex-wrap:wrap; gap:12px;">
+    <div>
+      <h1 style="font-family:var(--font-serif); font-size:28px; color:var(--fg); margin:0;">Spa Bookings Dashboard</h1>
+      <p style="color:var(--muted); font-size:14px; margin:4px 0 0;">Manage and review guest reservations</p>
+    </div>
+    <a href="/spa_menu" class="btn btn--primary" style="padding:10px 18px; font-size:13px;">+ New Booking</a>
+  </div>
+
+  <!-- Stat Cards -->
+  <div class="stat-cards">
+    <div class="stat-card">
+      <div class="stat-card__lbl">Total Bookings</div>
+      <div class="stat-card__val"><%= stats.total %></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__lbl">Pending</div>
+      <div class="stat-card__val" style="color:#d97706;"><%= stats.pending %></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__lbl">Confirmed</div>
+      <div class="stat-card__val" style="color:#2563eb;"><%= stats.confirmed %></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__lbl">Completed</div>
+      <div class="stat-card__val" style="color:#059669;"><%= stats.completed %></div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card__lbl">Total Revenue</div>
+      <div class="stat-card__val" style="color:var(--primary);"><%= priceFmt(stats.revenue) %></div>
+    </div>
+  </div>
+
+  <!-- Status Filter Pills -->
+  <div style="display:flex; gap:8px; margin-bottom:18px; flex-wrap:wrap;">
+    <a href="/admin/dashboard" style="padding:6px 14px; border-radius:999px; font-size:13px; text-decoration:none; <%= currentStatus === 'all' ? 'background:var(--primary); color:#fff; font-weight:600;' : 'background:#fff; border:1px solid rgba(27,20,16,0.1); color:var(--muted);' %>">All (<%= stats.total %>)</a>
+    <a href="/admin/dashboard?status=pending" style="padding:6px 14px; border-radius:999px; font-size:13px; text-decoration:none; <%= currentStatus === 'pending' ? 'background:#f59e0b; color:#fff; font-weight:600;' : 'background:#fff; border:1px solid rgba(27,20,16,0.1); color:var(--muted);' %>">Pending (<%= stats.pending %>)</a>
+    <a href="/admin/dashboard?status=confirmed" style="padding:6px 14px; border-radius:999px; font-size:13px; text-decoration:none; <%= currentStatus === 'confirmed' ? 'background:#3b82f6; color:#fff; font-weight:600;' : 'background:#fff; border:1px solid rgba(27,20,16,0.1); color:var(--muted);' %>">Confirmed (<%= stats.confirmed %>)</a>
+    <a href="/admin/dashboard?status=completed" style="padding:6px 14px; border-radius:999px; font-size:13px; text-decoration:none; <%= currentStatus === 'completed' ? 'background:#10b981; color:#fff; font-weight:600;' : 'background:#fff; border:1px solid rgba(27,20,16,0.1); color:var(--muted);' %>">Completed (<%= stats.completed %>)</a>
+    <a href="/admin/dashboard?status=cancelled" style="padding:6px 14px; border-radius:999px; font-size:13px; text-decoration:none; <%= currentStatus === 'cancelled' ? 'background:#ef4444; color:#fff; font-weight:600;' : 'background:#fff; border:1px solid rgba(27,20,16,0.1); color:var(--muted);' %>">Cancelled (<%= stats.cancelled %>)</a>
+  </div>
+
+  <!-- Bookings Table -->
+  <div class="table-container">
+    <% if (bookings.length === 0) { %>
+      <div style="padding:48px; text-align:center; color:var(--muted);">
+        <p style="font-size:16px; margin-bottom:12px;">No bookings found for the selected filter.</p>
+        <a href="/spa_menu" class="btn btn--primary btn--sm">Create a booking</a>
+      </div>
+    <% } else { %>
+      <div style="overflow-x:auto;">
+        <table class="admin-table">
+          <thead>
+            <tr>
+              <th>Reference</th>
+              <th>Guest</th>
+              <th>Date &amp; Time</th>
+              <th>Items</th>
+              <th>Total (NGN)</th>
+              <th>Status</th>
+              <th>Update Status</th>
+              <th>Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% bookings.forEach(b => { %>
+              <tr>
+                <td>
+                  <a href="/confirmation?ref=<%= b.reference_code %>" style="font-family:monospace; font-weight:700; color:var(--primary); text-decoration:underline;" target="_blank">
+                    <%= b.reference_code %>
+                  </a>
+                </td>
+                <td>
+                  <div style="font-weight:600; color:var(--fg);"><%= b.full_name %></div>
+                  <div style="font-size:12px; color:var(--muted);"><%= b.email %> · <%= b.phone %></div>
+                </td>
+                <td>
+                  <div><%= b.preferred_date %></div>
+                  <div style="font-size:12px; color:var(--muted);"><%= b.preferred_time %></div>
+                </td>
+                <td>
+                  <span style="background:#f3f4f6; padding:3px 8px; border-radius:6px; font-weight:500;">
+                    <%= b.items ? b.items.length : (b.item_count || 0) %> item(s)
+                  </span>
+                </td>
+                <td style="font-family:var(--font-serif); font-weight:700; color:var(--fg); font-size:15px;">
+                  <%= priceFmt(b.total_amount_ngn) %>
+                </td>
+                <td>
+                  <span class="badge-status badge-<%= b.status %>">
+                    <%= b.status %>
+                  </span>
+                </td>
+                <td>
+                  <form method="POST" action="/api/update-booking" style="display:inline-flex; gap:6px; align-items:center;">
+                    <input type="hidden" name="booking_id" value="<%= b.id %>" />
+                    <select name="status" style="padding:4px 8px; font-size:12px; border:1px solid rgba(27,20,16,0.15); border-radius:6px; background:#fff;">
+                      <option value="pending" <%= b.status === 'pending' ? 'selected' : '' %>>Pending</option>
+                      <option value="confirmed" <%= b.status === 'confirmed' ? 'selected' : '' %>>Confirmed</option>
+                      <option value="completed" <%= b.status === 'completed' ? 'selected' : '' %>>Completed</option>
+                      <option value="cancelled" <%= b.status === 'cancelled' ? 'selected' : '' %>>Cancelled</option>
+                    </select>
+                    <button type="submit" style="padding:4px 8px; font-size:11px; background:var(--fg); color:#fff; border:0; border-radius:6px; cursor:pointer;">Update</button>
+                  </form>
+                </td>
+                <td>
+                  <button type="button" onclick="toggleDetails('<%= b.id %>')" style="background:transparent; border:1px solid rgba(27,20,16,0.15); padding:4px 8px; border-radius:6px; font-size:12px; cursor:pointer; color:var(--fg);">
+                    View
+                  </button>
+                </td>
+              </tr>
+              <!-- Expandable details row -->
+              <tr id="details-<%= b.id %>" style="display:none; background:#faf7f0;">
+                <td colspan="8" style="padding:16px 20px;">
+                  <div style="font-size:13px;">
+                    <div style="font-weight:600; margin-bottom:8px;">Booking Details for <%= b.reference_code %></div>
+                    <% if (b.notes) { %>
+                      <p style="margin-bottom:8px; color:var(--muted);"><strong>Guest Notes:</strong> <%= b.notes %></p>
+                    <% } %>
+                    <% if (b.items && b.items.length > 0) { %>
+                      <table style="width:100%; max-width:600px; border-collapse:collapse; background:#fff; border-radius:8px; overflow:hidden; border:1px solid rgba(27,20,16,0.08);">
+                        <thead>
+                          <tr style="background:#f0ebd8; text-align:left; font-size:11px; text-transform:uppercase;">
+                            <th style="padding:6px 10px;">Service</th>
+                            <th style="padding:6px 10px;">Option</th>
+                            <th style="padding:6px 10px;">Qty</th>
+                            <th style="padding:6px 10px; text-align:right;">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <% b.items.forEach(it => { %>
+                            <tr style="border-bottom:1px solid #f0ebd8;">
+                              <td style="padding:6px 10px;"><%= it.service_name %></td>
+                              <td style="padding:6px 10px; color:var(--muted);"><%= it.option_label %></td>
+                              <td style="padding:6px 10px;"><%= it.quantity %></td>
+                              <td style="padding:6px 10px; text-align:right;"><%= priceFmt(it.line_total_ngn) %></td>
+                            </tr>
+                          <% }); %>
+                        </tbody>
+                      </table>
+                    <% } %>
+                  </div>
+                </td>
+              </tr>
+            <% }); %>
+          </tbody>
+        </table>
+      </div>
+    <% } %>
+  </div>
+
+</div>
+
+<script>
+function toggleDetails(id) {
+  const row = document.getElementById('details-' + id);
+  if (row) {
+    row.style.display = row.style.display === 'none' ? 'table-row' : 'none';
+  }
+}
+</script>
+
+</body>
+</html>

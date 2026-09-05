@@ -1,102 +1,88 @@
 <?php
-header('Content-Type: application/json');
+/**
+ * Caroline's Place — Update Booking Status & Notes
+ * Admin authenticated endpoint. Supports both AJAX JSON and Form POST.
+ */
 session_start();
+require_once __DIR__ . '/db.php';
 
-// Admin only
-if (empty($_SESSION['admin_id'])) {
+// Authentication check
+if (empty($_SESSION['admin'])) {
     http_response_code(401);
+    header('Content-Type: application/json; charset=utf-8');
     echo json_encode(['error' => 'Unauthorized']);
     exit;
 }
 
-if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-    http_response_code(405);
-    echo json_encode(['error' => 'Method not allowed']);
-    exit;
-}
+$raw = file_get_contents('php://input');
+$json = json_decode($raw, true);
 
-require_once __DIR__ . '/db.php';
+$id           = (int)($json['id'] ?? $_POST['booking_id'] ?? 0);
+$status       = $json['status'] ?? $_POST['status'] ?? null;
+$paymentStatus = $json['payment_status'] ?? $_POST['payment_status'] ?? null;
+$adminNotes   = $json['admin_notes'] ?? $_POST['admin_notes'] ?? null;
 
-$raw  = file_get_contents('php://input');
-$body = json_decode($raw, true);
-
-if (!$body || !isset($body['id'])) {
-    http_response_code(400);
-    echo json_encode(['error' => 'Missing booking ID']);
-    exit;
-}
-
-$id = (int)$body['id'];
 if ($id <= 0) {
     http_response_code(400);
+    header('Content-Type: application/json; charset=utf-8');
     echo json_encode(['error' => 'Invalid booking ID']);
     exit;
 }
 
-$bookingType = isset($body['type']) && $body['type'] === 'spa' ? 'spa' : 'legacy';
-$targetTable = $bookingType === 'spa' ? 'spa_bookings' : 'bookings';
-
-// Build update set
-$sets   = ['updated_at = CURRENT_TIMESTAMP'];
-$params = [];
-
-if (isset($body['status'])) {
-    $allowed = ['pending','confirmed','cancelled','completed'];
-    if (!in_array($body['status'], $allowed)) {
-        http_response_code(400);
-        echo json_encode(['error' => 'Invalid status value']);
-        exit;
-    }
-    $sets[]   = 'status = ?';
-    $params[] = $body['status'];
-}
-
-if (isset($body['payment_status'])) {
-    if (!in_array($body['payment_status'], ['unpaid','paid'])) {
-        http_response_code(400);
-        echo json_encode(['error' => 'Invalid payment status']);
-        exit;
-    }
-    $sets[]   = 'payment_status = ?';
-    $params[] = $body['payment_status'];
-}
-
-if (array_key_exists('admin_notes', $body)) {
-    $sets[]   = 'admin_notes = ?';
-    $params[] = $body['admin_notes'] ?: null;
-}
-
-if (array_key_exists('staff_assigned', $body)) {
-    $sets[]   = 'staff_assigned = ?';
-    $params[] = $body['staff_assigned'] ?: null;
-}
-
-if (count($sets) === 1) {
-    http_response_code(400);
-    echo json_encode(['error' => 'No fields to update']);
-    exit;
-}
-
 try {
-    $db = getDB();
+    $db = getDb();
+    $fields = [];
+    $params = [];
+
+    if ($status !== null) {
+        $allowed = ['pending', 'confirmed', 'completed', 'cancelled'];
+        if (in_array($status, $allowed, true)) {
+            $fields[] = "status = ?";
+            $params[] = $status;
+        }
+    }
+
+    if ($paymentStatus !== null) {
+        $allowedPay = ['unpaid', 'paid', 'refunded', 'partially_paid'];
+        if (in_array($paymentStatus, $allowedPay, true)) {
+            $fields[] = "payment_status = ?";
+            $params[] = $paymentStatus;
+        }
+    }
+
+    if ($adminNotes !== null) {
+        $fields[] = "admin_notes = ?";
+        $params[] = $adminNotes;
+    }
+
+    if (empty($fields)) {
+        http_response_code(400);
+        header('Content-Type: application/json; charset=utf-8');
+        echo json_encode(['error' => 'No fields to update']);
+        exit;
+    }
+
+    $driver = $db->getAttribute(PDO::ATTR_DRIVER_NAME);
+    $nowExpr = $driver === 'sqlite' ? "datetime('now')" : "NOW()";
+    $fields[] = "updated_at = {$nowExpr}";
+
+    $sql = "UPDATE bookings SET " . implode(', ', $fields) . " WHERE id = ?";
     $params[] = $id;
-    $sql      = "UPDATE {$targetTable} SET " . implode(', ', $sets) . " WHERE id = ?";
-    $stmt     = $db->prepare($sql);
+
+    $stmt = $db->prepare($sql);
     $stmt->execute($params);
 
-    if ($stmt->rowCount() === 0) {
-        http_response_code(404);
-        echo json_encode(['error' => 'Booking not found']);
+    // If redirected via standard form POST
+    if (!empty($_POST['booking_id'])) {
+        $referer = $_SERVER['HTTP_REFERER'] ?? '/admin/dashboard.php';
+        header('Location: ' . $referer);
         exit;
     }
 
-    // Return updated booking
-    $fetch = $db->prepare("SELECT * FROM {$targetTable} WHERE id = ?");
-    $fetch->execute([$id]);
-    $booking = $fetch->fetch();
-
-    echo json_encode($booking);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode(['success' => true, 'id' => $id]);
 } catch (Exception $e) {
     http_response_code(500);
-    echo json_encode(['error' => 'Server error']);
+    header('Content-Type: application/json; charset=utf-8');
+    echo json_encode(['error' => $e->getMessage()]);
 }

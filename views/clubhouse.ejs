@@ -1,13 +1,4 @@
-<?php
-/**
- * Caroline's Place — The Club House
- */
-$pageTitle = "The Club House — Caroline's Place";
-$pageDesc  = "The Premium Leadership Retreat. An elegant, private space designed for executives to connect, collaborate, and lead with clarity.";
-$current   = 'clubhouse';
-
-require_once __DIR__ . '/includes/header.php';
-?>
+<%- include('includes/header') %>
 
 <!-- ================================================================
      ✨ CLUBHOUSE #1: PAGE HERO: Eyebrow + Huge Title + Full Rounded Bar Photo
@@ -29,7 +20,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- HERO PHOTO: FULL Rounded corners -->
     <div class="club-hero-img-wrap">
       <img
-        src="/assets/images/DSC_3010.jpg"
+        src="/assets/images/DSC_4045.jpg"
         alt="The Club House — Bar &amp; Lounge"
         class="club-hero-img"
         loading="eager"
@@ -61,27 +52,6 @@ require_once __DIR__ . '/includes/header.php';
   </div>
 </section>
 
-<!-- --> 
-<!-- ================================================================
-     ✨ SPA SPLIT 2: LEFT Pedi copy + RIGHT nail stations image
-     ================================================================ -->
-<section class="page-split page-split--reverse reveal">
-  <div class="page-split__copy">
-    <p class="page-split__eyebrow">PRIVATE&amp;FITNESS</p>
-    <div class="hero-split__divider" style="margin-bottom: 20px;">
-      <span style="width:28px;background:#b8895a;"></span>
-    </div>
-    <h2 class="page-split__title">Where Performance &amp;<br>Meets Luxury</h2>
-    <p class="page-split__text">
-      A sophisticated training environment designed for those who demand more from themselves.
-Train with purpose. Elevate your performance. Built for greatness.
-    </p>
-  </div>
-  <div class="page-split__img">
-    <img src="/assets/images/gym.jpg" alt="Pedicure &amp; Nail Care Stations" loading="lazy" class="page-split__rounded-img" />
-  </div>
-</section>
-
 <!-- ================================================================
      ✨ CLUBHOUSE #3: SPLIT DARK — "Executive Lounge" copy LEFT + LONG Lounge photo RIGHT
      ================================================================ -->
@@ -100,7 +70,7 @@ Train with purpose. Elevate your performance. Built for greatness.
     </p>
   </div>
   <div class="page-split__img page-split__img--tall">
-    <img src="/assets/images/DSC_4045.jpg" alt="Executive Lounge — Long Interior" loading="lazy" class="page-split__img-dark" />
+    <img src="/assets/images/DSC_3010.jpg" alt="Executive Lounge — Long Interior" loading="lazy" class="page-split__img-dark" />
   </div>
 </section>
 
@@ -116,34 +86,44 @@ Train with purpose. Elevate your performance. Built for greatness.
     <div class="facilities-grid">
       <!-- 1 Executive Lounge -->
       <div class="facility-tile">
-        <img src="/assets/images/DSC_3010.jpg" alt="Executive Lounge" loading="lazy" class="facility-tile__img" />
-        <span class="facility-tile__label">LOUNGE</span>
+        <img src="/assets/images/DSC_4045.jpg" alt="Executive Lounge" loading="lazy" class="facility-tile__img" />
+        <span class="facility-tile__label">EXECUTIVE LOUNGE</span>
       </div>
-       <!-- 3 Conference Room -->
+      <!-- 2 Wellness Studio -->
+      <div class="facility-tile">
+        <img src="/assets/images/DSC_75020.jpg" alt="Wellness Studio" loading="lazy" class="facility-tile__img" onerror="this.onerror=null;this.src='/assets/images/DSC_7476.jpg';" />
+        <span class="facility-tile__label">WELLNESS STUDIO</span>
+      </div>
+      <!-- 3 Conference Room -->
       <div class="facility-tile">
         <img src="/assets/images/DSC_7433.jpg" alt="Conference Room" loading="lazy" class="facility-tile__img" onerror="this.onerror=null;this.src='/assets/images/DSC_74331.jpg';" />
         <span class="facility-tile__label">CONFERENCE ROOM</span>
+      </div>
+      <!-- 4 Private Dining -->
+      <div class="facility-tile">
+        <img src="/assets/images/DSC_7476.jpg" alt="Private Dining" loading="lazy" class="facility-tile__img" onerror="this.onerror=null;this.src='/assets/images/DSC_2929.jpg';" />
+        <span class="facility-tile__label">PRIVATE DINING</span>
+      </div>
+      <!-- 5 Member's Lounge -->
+      <div class="facility-tile">
+        <img src="/assets/images/DSC_2929.jpg" alt="Member's Lounge" loading="lazy" class="facility-tile__img" onerror="this.onerror=null;this.src='/assets/images/DSC_7502.jpg';" />
+        <span class="facility-tile__label">MEMBER'S LOUNGE</span>
       </div>
       <!-- 6 Fitness Center -->
       <div class="facility-tile">
         <img src="/assets/images/DSC_74331.jpg" alt="Fitness Center" loading="lazy" class="facility-tile__img" onerror="this.onerror=null;this.src='/assets/images/DSC_3048.jpg';" />
         <span class="facility-tile__label">FITNESS CENTER</span>
       </div>
-      <!-- 2 Wellness Studio -->
-      <div class="facility-tile">
-        <img src="/assets/images/rt.jpg" alt="ROOF TOP VIEW" loading="lazy" class="facility-tile__img" onerror="this.onerror=null;this.src='/assets/images/DSC_7476.jpg';" />
-        <span class="facility-tile__label">ROOF TOP </span>
-      </div>
-     
-      <!-- 4 Private Dining -->
-      
-      <!-- 5 Member's Lounge -->
-     
-      
       <!-- 7 Game Room -->
-      
+      <div class="facility-tile">
+        <img src="/assets/images/DSC_3036.jpg" alt="Game Room" loading="lazy" class="facility-tile__img" onerror="this.onerror=null;this.src='/assets/images/DSC_3030.jpg';" />
+        <span class="facility-tile__label">GAME ROOM</span>
+      </div>
       <!-- 8 Outdoor Terrace -->
-      
+      <div class="facility-tile">
+        <img src="/assets/images/DSC_2929.jpg" alt="Outdoor Terrace" loading="lazy" class="facility-tile__img" onerror="this.onerror=null;this.src='/assets/images/DSC_7502.jpg';" />
+        <span class="facility-tile__label">OUTDOOR TERRACE</span>
+      </div>
     </div>
   </div>
 </section>
@@ -184,4 +164,4 @@ Train with purpose. Elevate your performance. Built for greatness.
   </div>
 </section>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<%- include('includes/footer') %>

@@ -1,20 +1,12 @@
-<?php
-/**
- * Caroline's Place — Global Header
- */
-$pageTitle = $pageTitle ?? "Caroline's Place — A Private Sanctuary";
-$pageDesc  = $pageDesc  ?? "Caroline's Place — a luxury private members' club and spa in Lagos, Nigeria. Discretion, refinement, and bespoke experiences.";
-$current   = $current   ?? 'index';
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title><?php echo htmlspecialchars($pageTitle); ?></title>
-  <meta name="description" content="<?php echo htmlspecialchars($pageDesc); ?>" />
-  <meta property="og:title" content="<?php echo htmlspecialchars($pageTitle); ?>" />
-  <meta property="og:description" content="<?php echo htmlspecialchars($pageDesc); ?>" />
+  <title><%= typeof pageTitle !== 'undefined' ? pageTitle + " — Caroline's Place" : "Caroline's Place — A Private Sanctuary" %></title>
+  <meta name="description" content="<%= typeof pageDesc !== 'undefined' ? pageDesc : "Caroline's Place — a luxury private members' club and spa in Lagos, Nigeria. Discretion, refinement, and bespoke experiences." %>" />
+  <meta property="og:title" content="<%= typeof pageTitle !== 'undefined' ? pageTitle + " — Caroline's Place" : "Caroline's Place — A Private Sanctuary" %>" />
+  <meta property="og:description" content="<%= typeof pageDesc !== 'undefined' ? pageDesc : "Caroline's Place — a luxury private members' club and spa in Lagos, Nigeria. Discretion, refinement, and bespoke experiences." %>" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
@@ -22,7 +14,7 @@ $current   = $current   ?? 'index';
 </head>
 <body>
 
-<nav class="nav <?php echo $current === 'spa' ? 'nav--spa' : ''; ?>" id="mainNav">
+<nav class="nav <%= current === 'spa' ? 'nav--spa' : '' %>" id="mainNav">
   <a href="/" class="nav__logo" aria-label="Caroline's Place Home">
     <img
       src="/assets/images/logo.png"
@@ -31,11 +23,11 @@ $current   = $current   ?? 'index';
       loading="eager"
       fetchpriority="high"
     />
-    <?php if ($current === 'spa'): ?>
+    <% if (current === 'spa') { %>
       <span class="nav__logo-sep" aria-hidden="true"></span>
       <div class="nav__spa-brand-blend" title="The Nail Lounge &amp; Spa at Caroline's Place">
         <img
-          src="/assets/images/logo.jpg"
+          src="/assets/images/nail-lounge-logo.svg"
           alt="The Nail Lounge &amp; Spa Emblem"
           class="nav__spa-logo-img"
           loading="eager"
@@ -45,14 +37,14 @@ $current   = $current   ?? 'index';
           <span class="nav__spa-brand-sub">&amp; SPA</span>
         </div>
       </div>
-    <?php endif; ?>
+    <% } %>
   </a>
 
   <div class="nav__links">
-    <a href="/" class="nav__link <?php echo $current === 'index' ? 'active' : ''; ?>">Home</a>
-    <a href="/clubhouse.php" class="nav__link <?php echo $current === 'clubhouse' ? 'active' : ''; ?>">Club House</a>
-    <a href="/spa.php" class="nav__link <?php echo in_array($current, ['spa', 'book']) ? 'active' : ''; ?>">Spa</a>
-    <a href="/spa_menu.php" class="btn-book btn-book--nav">Book Experience</a>
+    <a href="/" class="nav__link <%= current === 'index' ? 'active' : '' %>">Home</a>
+    <a href="/clubhouse" class="nav__link <%= current === 'clubhouse' ? 'active' : '' %>">Club House</a>
+    <a href="/spa" class="nav__link <%= (current === 'spa' || current === 'book') ? 'active' : '' %>">Spa</a>
+    <a href="/spa_menu" class="btn-book btn-book--nav">Book Experience</a>
   </div>
 
   <button class="nav__hamburger" id="menuToggle" aria-label="Menu">
@@ -62,9 +54,9 @@ $current   = $current   ?? 'index';
 
 <div class="nav__mobile" id="mobileMenu">
   <a href="/" class="nav__link">Home</a>
-  <a href="/clubhouse.php" class="nav__link">Club House</a>
-  <a href="/spa.php" class="nav__link">Spa</a>
-  <a href="/spa_menu.php" class="btn-book">Book Experience</a>
+  <a href="/clubhouse" class="nav__link">Club House</a>
+  <a href="/spa" class="nav__link">Spa</a>
+  <a href="/spa_menu" class="btn-book">Book Experience</a>
 </div>
 
 <script src="/assets/js/main.js" defer></script>

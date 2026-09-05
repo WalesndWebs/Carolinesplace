@@ -1,54 +1,8 @@
-<?php
-/**
- * Caroline's Place — Reservation Confirmation
- */
-require_once __DIR__ . '/api/db.php';
-
-$ref = trim($_GET['ref'] ?? '');
-$db = getDb();
-
-$booking = null;
-$items = [];
-
-if (!empty($ref)) {
-    $bStmt = $db->prepare("SELECT * FROM bookings WHERE reference_code = ?");
-    $bStmt->execute([$ref]);
-    $booking = $bStmt->fetch();
-
-    if ($booking) {
-        $iStmt = $db->prepare("SELECT * FROM booking_items WHERE booking_id = ? ORDER BY id ASC");
-        $iStmt->execute([$booking['id']]);
-        $items = $iStmt->fetchAll();
-    }
-}
-
-if (!$booking) {
-    $pageTitle = "Reservation Lookup — Caroline's Place";
-    $current = 'confirmation';
-    require_once __DIR__ . '/includes/header.php';
-    ?>
-    <div class="page-header" style="padding-top:100px;">
-      <h1 class="page-header__title">Reservation Confirmation</h1>
-      <p class="page-header__desc">No reservation found matching reference code: <?php echo htmlspecialchars($ref); ?></p>
-      <div style="margin-top:24px;">
-        <a href="/spa_menu.php" class="btn btn--primary">View Spa Menu</a>
-      </div>
-    </div>
-    <?php
-    require_once __DIR__ . '/includes/footer.php';
-    exit;
-}
-
-$firstName = explode(' ', trim($booking['full_name']))[0];
-$pageTitle = "Booking Confirmed — Caroline's Place";
-$current = 'confirmation';
-
-require_once __DIR__ . '/includes/header.php';
-?>
+<%- include('includes/header') %>
 
 <div class="page-header page-header--compact" style="padding-top:100px;">
   <span class="page-header__eyebrow">Reservation Confirmed</span>
-  <h1 class="page-header__title">Thank You, <?php echo htmlspecialchars($firstName ?: 'Guest'); ?></h1>
+  <h1 class="page-header__title">Thank You, <%= booking.full_name ? booking.full_name.split(' ')[0] : 'Guest' %></h1>
   <p class="page-header__desc">
     Your reservation request has been received. Our concierge will review and contact you shortly.
   </p>
@@ -69,7 +23,7 @@ require_once __DIR__ . '/includes/header.php';
       <!-- Reference Code Box -->
       <div class="confirm-ref-box" style="background:#fcf9f2; border:1px dashed var(--primary); border-radius:12px; padding:20px; text-align:center; margin-bottom:32px;">
         <div style="font-size:12px; letter-spacing:0.15em; text-transform:uppercase; color:var(--muted); margin-bottom:6px;">Booking Reference</div>
-        <div style="font-family:monospace; font-size:24px; font-weight:700; color:var(--primary); letter-spacing:2px;"><?php echo htmlspecialchars($booking['reference_code']); ?></div>
+        <div style="font-family:monospace; font-size:24px; font-weight:700; color:var(--primary); letter-spacing:2px;"><%= booking.reference_code %></div>
         <div style="font-size:12px; color:var(--muted); margin-top:6px;">Please save this reference for your records</div>
       </div>
 
@@ -79,35 +33,36 @@ require_once __DIR__ . '/includes/header.php';
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:14px; font-size:14px;">
           <div>
             <span style="color:var(--muted); display:block; font-size:12px;">Full Name</span>
-            <strong><?php echo htmlspecialchars($booking['full_name']); ?></strong>
+            <strong><%= booking.full_name %></strong>
           </div>
           <div>
             <span style="color:var(--muted); display:block; font-size:12px;">Email</span>
-            <strong><?php echo htmlspecialchars($booking['email']); ?></strong>
+            <strong><%= booking.email %></strong>
           </div>
           <div>
             <span style="color:var(--muted); display:block; font-size:12px;">Phone</span>
-            <strong><?php echo htmlspecialchars($booking['phone']); ?></strong>
+            <strong><%= booking.phone %></strong>
           </div>
           <div>
             <span style="color:var(--muted); display:block; font-size:12px;">Scheduled For</span>
-            <strong><?php echo htmlspecialchars($booking['preferred_date']); ?> at <?php echo htmlspecialchars($booking['preferred_time']); ?></strong>
+            <strong><%= booking.preferred_date %> at <%= booking.preferred_time %></strong>
           </div>
           <div>
             <span style="color:var(--muted); display:block; font-size:12px;">Status</span>
-            <span style="display:inline-block; padding:3px 10px; border-radius:999px; font-size:11px; font-weight:600; text-transform:uppercase; background:#fff3cd; color:#856404;"><?php echo htmlspecialchars($booking['status']); ?></span>
+            <span style="display:inline-block; padding:3px 10px; border-radius:999px; font-size:11px; font-weight:600; text-transform:uppercase; background:#fff3cd; color:#856404;"><%= booking.status %></span>
           </div>
-          <?php if (!empty($booking['notes'])): ?>
+          <% if (booking.notes) { %>
             <div style="grid-column:1 / -1;">
               <span style="color:var(--muted); display:block; font-size:12px;">Special Requests</span>
-              <p style="margin:2px 0 0; color:var(--fg);"><?php echo htmlspecialchars($booking['notes']); ?></p>
+              <p style="margin:2px 0 0; color:var(--fg);"><%= booking.notes %></p>
             </div>
-          <?php endif; ?>
+          <% } %>
         </div>
       </div>
 
       <!-- Booked Items Breakdown -->
-      <?php if (!empty($items)): ?>
+      <% const bookedList = (typeof items !== 'undefined' && items) || (booking && booking.items) || []; %>
+      <% if (bookedList && bookedList.length > 0) { %>
       <div style="margin-bottom:30px;">
         <h3 style="font-family:var(--font-serif); font-size:18px; color:var(--fg); margin-bottom:14px; border-bottom:1px solid rgba(27,20,16,0.08); padding-bottom:8px;">Reserved Treatments</h3>
         <div style="overflow-x:auto;">
@@ -121,35 +76,34 @@ require_once __DIR__ . '/includes/header.php';
               </tr>
             </thead>
             <tbody>
-              <?php foreach ($items as $it): ?>
+              <% bookedList.forEach(it => { %>
                 <tr style="border-bottom:1px solid rgba(27,20,16,0.06);">
-                  <td style="padding:10px 4px; font-weight:500;"><?php echo htmlspecialchars($it['service_name']); ?></td>
-                  <td style="padding:10px 4px; color:var(--muted);"><?php echo htmlspecialchars($it['option_label'] ?: 'Standard'); ?></td>
-                  <td style="padding:10px 4px; text-align:center;"><?php echo (int)$it['quantity']; ?></td>
-                  <td style="padding:10px 4px; text-align:right; font-variant-numeric:tabular-nums;"><?php echo priceFmt($it['line_total_ngn']); ?></td>
+                  <td style="padding:10px 4px; font-weight:500;"><%= it.service_name %></td>
+                  <td style="padding:10px 4px; color:var(--muted);"><%= it.option_label || 'Standard' %></td>
+                  <td style="padding:10px 4px; text-align:center;"><%= it.quantity %></td>
+                  <td style="padding:10px 4px; text-align:right; font-variant-numeric:tabular-nums;"><%= priceFmt(it.line_total_ngn) %></td>
                 </tr>
-              <?php endforeach; ?>
+              <% }); %>
             </tbody>
             <tfoot>
               <tr>
                 <td colspan="3" style="padding:14px 4px 6px; text-align:right; font-weight:600; text-transform:uppercase; font-size:12px; color:var(--muted);">Total Amount</td>
-                <td style="padding:14px 4px 6px; text-align:right; font-family:var(--font-serif); font-size:18px; font-weight:700; color:var(--primary);"><?php echo priceFmt($booking['total_amount_ngn']); ?></td>
+                <td style="padding:14px 4px 6px; text-align:right; font-family:var(--font-serif); font-size:18px; font-weight:700; color:var(--primary);"><%= priceFmt(booking.total_amount_ngn) %></td>
               </tr>
             </tfoot>
           </table>
         </div>
       </div>
-      <?php endif; ?>
+      <% } %>
 
       <div style="display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-top:28px;">
-        <button type="button" onclick="window.print()" class="btn btn--outline" style="padding:12px 24px;">🖨 Print Receipt</button>
         <a href="/" class="btn btn--outline" style="padding:12px 24px;">Return Home</a>
-        <a href="/spa_menu.php" class="btn btn--primary" style="padding:12px 24px;">Book Another Experience</a>
+        <a href="/spa_menu" class="btn btn--primary" style="padding:12px 24px;">Book Another Experience</a>
+        <button type="button" onclick="window.print()" class="btn btn--ghost" style="padding:12px 20px;">Print Confirmation</button>
       </div>
 
     </div>
-
   </div>
 </section>
 
-<?php require_once __DIR__ . '/includes/footer.php'; ?>
+<%- include('includes/footer') %>
