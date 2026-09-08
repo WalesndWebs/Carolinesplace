@@ -66,9 +66,8 @@ Once uploaded to your domain:
 - **Spa Products & Pricing Manager:** `https://yourdomain.com/admin/spa_products.php` (or `https://yourdomain.com/admin/spa_products`)
 - **Bookings Dashboard:** `https://yourdomain.com/admin/dashboard.php` (or `https://yourdomain.com/admin/dashboard`)
 
-**Default Admin Credentials:**
-- **Username:** `admin`
-- **Password:** `Caroline@Sanctuary2026`
+**Admin Credentials:**
+- Use the administrator account configured in your database / environment.
 
 ---
 

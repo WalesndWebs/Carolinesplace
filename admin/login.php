@@ -141,7 +141,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
           name="username"
           class="form-input"
           style="width:100%; padding:12px 14px; border:1px solid rgba(27,20,16,0.15); border-radius:8px; font-family:inherit; font-size:14px;"
-          value="<?php echo htmlspecialchars($username ?: 'admin'); ?>"
+          value="<?php echo htmlspecialchars($username ?? ''); ?>"
           autocomplete="username"
           required
         />
@@ -154,7 +154,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
           name="password"
           class="form-input"
           style="width:100%; padding:12px 14px; border:1px solid rgba(27,20,16,0.15); border-radius:8px; font-family:inherit; font-size:14px;"
-          value="Caroline@Sanctuary2026"
+          value=""
           autocomplete="current-password"
           required
         />
@@ -164,14 +164,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
       </button>
     </form>
 
-    <div style="margin-top:16px;">
-      <a href="/admin/dashboard.php?token=sanctuary_admin_2026" class="btn" style="display:block; width:100%; text-align:center; padding:12px; background:rgba(184,137,90,0.12); color:var(--primary); border:1px solid rgba(184,137,90,0.3); border-radius:8px; font-size:13px; font-weight:600; text-decoration:none;">
-        ⚡ Instant 1-Click Access (Admin Portal)
-      </a>
-    </div>
-
     <div style="margin-top:20px; padding-top:16px; border-top:1px solid rgba(27,20,16,0.08); font-size:12px; color:var(--muted); text-align:center;">
-      <p style="margin-bottom:8px;">Concierge credentials: <strong>admin</strong> / <strong>Caroline@Sanctuary2026</strong></p>
       <a href="/" style="color:var(--primary); font-size:13px; text-decoration:none;">← Return to site</a>
     </div>
   </div>

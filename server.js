@@ -249,36 +249,12 @@ app.get(['/confirmation', '/confirmation.php'], (req, res) => {
 // ─────────────────────────────────────────────────────────────
 
 app.get('/admin', (req, res) => {
-  res.redirect('/admin/dashboard?token=' + ADMIN_TOKEN);
-});
-
-// Quick 1-click login endpoint
-app.get('/admin/quick_login', (req, res) => {
-  const adminUser = {
-    id: 1,
-    username: 'admin',
-    display_name: 'Super Admin',
-    email: 'admin@carolinesplace.com'
-  };
-  if (req.session) {
-    req.session.admin = adminUser;
-  }
-  res.cookie('admin_auth', ADMIN_TOKEN, {
-    maxAge: 24 * 60 * 60 * 1000,
-    sameSite: 'none',
-    secure: true,
-    path: '/'
-  });
-  return res.redirect('/admin/dashboard?token=' + ADMIN_TOKEN);
+  res.redirect('/admin/dashboard');
 });
 
 app.get(['/admin/login', '/admin/login.php'], (req, res) => {
   if (req.session && req.session.admin) {
-    return res.redirect('/admin/dashboard?token=' + ADMIN_TOKEN);
-  }
-  const token = req.query.token || (req.parsedCookies && req.parsedCookies.admin_auth);
-  if (token === ADMIN_TOKEN) {
-    return res.redirect('/admin/dashboard?token=' + ADMIN_TOKEN);
+    return res.redirect('/admin/dashboard');
   }
   res.render('admin/login', {
     error: null,
