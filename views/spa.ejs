@@ -8,7 +8,7 @@
     <div class="spa-page__brand-lockup">
       <div class="spa-page__brand-logo-frame">
         <img
-          src="/assets/images/nail-lounge-logo.svg"
+          src="/assets/images/logo.jpg"
           alt="The Nail Lounge &amp; Spa Logo"
           class="spa-page__brand-logo"
           width="114"
@@ -35,15 +35,91 @@
       bespoke nail studio artistry, therapeutic massage and restorative body rituals are curated exclusively for you.
     </p>
   </div>
-  <div class="hero-split__img-wrap">
-    <img
-      src="/assets/images/DSC_2976.jpg"
-      alt="N Lounge &amp; Spa — Hair &amp; Nail Studio"
-      class="hero-split__img"
-      fetchpriority="high"
-      loading="eager"
-      onerror="this.onerror=null;this.src='/assets/images/DSC_2991.jpg';"
-    />
+  <!-- RIGHT: 5-ATTACHED-IMAGE HERO SLIDER! ONLY the 5 images you sent! -->
+  <div class="hero-split__img-wrap hero-slider hero-slider--spa" id="spaHeroSlider">
+    <!-- SLIDE 1: Hot Stone Massage (1st attached image) -->
+    <div class="hero-slider__slide hero-slider__slide--active">
+      <img
+        src="/assets/images/spa2.jpg" alt="Hot Stone Massage — N Lounge &amp; Spa"
+        class="hero-slider__img"
+        fetchpriority="high"
+        loading="eager"
+      />
+    </div>
+    <!-- SLIDE 2: Blue Royal Manicure + Tayo caption (2nd attached image) -->
+    <div class="hero-slider__slide">
+      <img
+        src="/assets/images/nail2.jpg"
+        alt="Royal Blue Gel Manicure — Ask for Tayo"
+        class="hero-slider__img"
+        loading="lazy"
+      />
+    </div>
+    <!-- SLIDE 3: Knotless Box Braids (3rd attached image) -->
+    <div class="hero-slider__slide">
+      <img
+        src="/assets/images/DSC_2976.jpg"
+        alt="Knotless Box Braids — Hair Studio"
+        class="hero-slider__img"
+        loading="lazy"
+        onerror="this.onerror=null;this.src='/assets/images/DSC_2991.jpg';"
+      />
+    </div>
+    <!-- SLIDE 4: Foot Reflexology Massage (4th attached image) -->
+    <div class="hero-slider__slide">
+      <img
+        src="/assets/images/DSC_7496.jpg"
+        alt="Foot Reflexology &amp; Massage"
+        class="hero-slider__img"
+        loading="lazy"
+        onerror="this.onerror=null;this.src='/assets/images/DSC_7476.jpg';"
+      />
+    </div>
+    <!-- SLIDE 5: V-TEN Treatment / Facial Room (5th attached image) -->
+    <div class="hero-slider__slide">
+      <img
+        src="/assets/images/DSC_75020.jpg"
+        alt="V-TEN Advanced Treatment Room"
+        class="hero-slider__img"
+        loading="lazy"
+      />
+    </div>
+     <!-- SLIDE 6: Facial Treatment Suite -->
+    <div class="hero-slider__slide">
+      <img
+        src="/assets/images/DSC_7476.jpg"
+        alt="V-TEN Advanced Treatment Room"
+        class="hero-slider__img"
+        loading="lazy"
+      />
+    </div>
+    <div class="hero-slider__slide">
+      <img
+        src="/assets/images/slid1.jpg"
+        alt="Artisanal Hair &amp; Beauty Studio"
+        class="hero-slider__img"
+        loading="lazy"
+      />
+    </div>
+
+    <!-- Prev / Next Arrows -->
+    <button type="button" class="hero-slider__arrow hero-slider__arrow--prev" data-hero-slider-dir="-1" aria-label="Previous slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+    </button>
+    <button type="button" class="hero-slider__arrow hero-slider__arrow--next" data-hero-slider-dir="1" aria-label="Next slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+    </button>
+
+    <!-- Dots Navigation -->
+    <div class="hero-slider__dots" role="tablist" aria-label="Spa hero slider pages">
+      <button type="button" class="hero-slider__dot hero-slider__dot--active" data-hero-slider-idx="0" role="tab" aria-label="Slide 1 — Hot Stone Massage"></button>
+      <button type="button" class="hero-slider__dot" data-hero-slider-idx="1" role="tab" aria-label="Slide 2 — Blue Gel Manicure"></button>
+      <button type="button" class="hero-slider__dot" data-hero-slider-idx="2" role="tab" aria-label="Slide 3 — Hair Studio"></button>
+      <button type="button" class="hero-slider__dot" data-hero-slider-idx="3" role="tab" aria-label="Slide 4 — Foot Reflexology"></button>
+      <button type="button" class="hero-slider__dot" data-hero-slider-idx="4" role="tab" aria-label="Slide 5 — V-TEN Room"></button>
+      <button type="button" class="hero-slider__dot" data-hero-slider-idx="5" role="tab" aria-label="Slide 6 — Treatment Suite"></button>
+      <button type="button" class="hero-slider__dot" data-hero-slider-idx="6" role="tab" aria-label="Slide 7 — Studio"></button>
+    </div>
   </div>
 </section>
 
@@ -52,7 +128,7 @@
      ================================================================ -->
 <section class="page-split reveal">
   <div class="page-split__img">
-    <img src="/assets/images/DSC_2991.jpg" alt="Hair &amp; Nail Studio" loading="lazy" class="page-split__rounded-img" />
+    <img src="/assets/images/dsc1.jpg" alt="Hair &amp; Nail Studio" loading="lazy" class="page-split__rounded-img" />
   </div>
   <div class="page-split__copy">
     <p class="page-split__eyebrow">HAIR &amp; NAIL STUDIO</p>
@@ -70,9 +146,37 @@
 </section>
 
 <!-- ================================================================
-     ✨ SPA SPLIT 2: LEFT Pedi copy + RIGHT nail stations image
+     ✨ NEW! MANICURE SECTION: LEFT copy + RIGHT Blue Manicure image
      ================================================================ -->
 <section class="page-split page-split--reverse reveal">
+  <div class="page-split__copy">
+    <p class="page-split__eyebrow">MANICURE STUDIO</p>
+    <div class="hero-split__divider" style="margin-bottom: 20px;">
+      <span style="width:28px;background:#b8895a;"></span>
+    </div>
+    <h2 class="page-split__title">Flawless Manicures,<br>Handcrafted For You.</h2>
+    <p class="page-split__text" style="margin-bottom: 22px;">
+      From everyday elegance to show-stopping statement nails — every manicure is shaped,
+      buffed and polished by our certified artists for a chip-resistant, high-shine finish
+      that lasts weeks, not days.
+    
+      — our senior nail technician and the fan-favourite behind the flawless royal blue sets everyone is booking.&nbsp;✨
+    </p>
+  </div>
+  <div class="page-split__img">
+    <img
+      src="/assets/images/nail.jpg"
+      alt="Royal Blue Gel Manicure — Ask for Tayo"
+      loading="lazy"
+      class="page-split__rounded-img page-split__rounded-img--glow"
+    />
+  </div>
+</section>
+
+<!-- ================================================================
+     ✨ SPA SPLIT 3: LEFT Pedi copy + RIGHT nail stations image
+     ================================================================ -->
+<section class="page-split reveal">
   <div class="page-split__copy">
     <p class="page-split__eyebrow">HAIR &amp; NAIL STUDIO</p>
     <div class="hero-split__divider" style="margin-bottom: 20px;">

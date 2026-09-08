@@ -99,6 +99,181 @@ export function getOptions() {
   return [...options];
 }
 
+export function saveSeedData() {
+  try {
+    const seedPath = path.join(process.cwd(), 'seed_data.json');
+    const dataToSave = {
+      categories,
+      services,
+      options,
+      admins,
+      bookings,
+      booking_items: bookingItems
+    };
+    fs.writeFileSync(seedPath, JSON.stringify(dataToSave, null, 2), 'utf8');
+  } catch (err) {
+    console.error('Error writing seed_data.json:', err);
+  }
+}
+
+export function addCategory({ name, sort_order = 0 }) {
+  const maxId = categories.length > 0 ? Math.max(...categories.map(c => c.id || 0)) : 0;
+  const newCat = {
+    id: maxId + 1,
+    name: name.trim(),
+    description: '',
+    icon: '✨',
+    sort_order: Number(sort_order) || 0,
+    is_active: 1,
+    created_at: new Date().toISOString()
+  };
+  categories.push(newCat);
+  saveSeedData();
+  return newCat;
+}
+
+export function updateCategory(id, { name, sort_order, is_active }) {
+  const cat = categories.find(c => c.id === Number(id));
+  if (!cat) return false;
+  if (name !== undefined && name.trim() !== '') cat.name = name.trim();
+  if (sort_order !== undefined) cat.sort_order = Number(sort_order) || 0;
+  if (is_active !== undefined) cat.is_active = is_active ? 1 : 0;
+  saveSeedData();
+  return true;
+}
+
+export function deleteCategory(id) {
+  const cId = Number(id);
+  categories = categories.filter(c => c.id !== cId);
+  saveSeedData();
+  return true;
+}
+
+export function addService({ category_id, name, sort_order = 0 }) {
+  const maxId = services.length > 0 ? Math.max(...services.map(s => s.id || 0)) : 0;
+  const newSvc = {
+    id: maxId + 1,
+    category_id: Number(category_id),
+    name: name.trim(),
+    description: name.trim(),
+    duration_minutes: 60,
+    sort_order: Number(sort_order) || 0,
+    is_active: 1,
+    created_at: new Date().toISOString()
+  };
+  services.push(newSvc);
+  saveSeedData();
+  return newSvc;
+}
+
+export function updateService(id, { category_id, name, sort_order, is_active }) {
+  const svc = services.find(s => s.id === Number(id));
+  if (!svc) return false;
+  if (category_id !== undefined) svc.category_id = Number(category_id);
+  if (name !== undefined && name.trim() !== '') svc.name = name.trim();
+  if (sort_order !== undefined) svc.sort_order = Number(sort_order) || 0;
+  if (is_active !== undefined) svc.is_active = is_active ? 1 : 0;
+  saveSeedData();
+  return true;
+}
+
+export function deleteService(id) {
+  const sId = Number(id);
+  services = services.filter(s => s.id !== sId);
+  options = options.filter(o => o.service_id !== sId);
+  saveSeedData();
+  return true;
+}
+
+export function addOption({ service_id, option_label, price_ngn, sort_order = 0 }) {
+  const maxId = options.length > 0 ? Math.max(...options.map(o => o.id || 0)) : 0;
+  const newOpt = {
+    id: maxId + 1,
+    service_id: Number(service_id),
+    option_label: option_label.trim(),
+    price_ngn: Number(price_ngn) || 0,
+    sort_order: Number(sort_order) || 0,
+    is_active: 1,
+    created_at: new Date().toISOString()
+  };
+  options.push(newOpt);
+  saveSeedData();
+  return newOpt;
+}
+
+export function updateOption(id, { option_label, price_ngn, sort_order, is_active }) {
+  const opt = options.find(o => o.id === Number(id));
+  if (!opt) return false;
+  if (option_label !== undefined && option_label.trim() !== '') opt.option_label = option_label.trim();
+  if (price_ngn !== undefined) opt.price_ngn = Number(price_ngn) || 0;
+  if (sort_order !== undefined) opt.sort_order = Number(sort_order) || 0;
+  if (is_active !== undefined) opt.is_active = is_active ? 1 : 0;
+  saveSeedData();
+  return true;
+}
+
+export function deleteOption(id) {
+  const oId = Number(id);
+  options = options.filter(o => o.id !== oId);
+  saveSeedData();
+  return true;
+}
+
+export function getFullCatalog(svcCatFilter = 0, optSvcFilter = 0) {
+  const cats = [...categories].sort((a, b) => (a.sort_order || 0) - (b.sort_order || 0) || a.name.localeCompare(b.name));
+  const catMap = new Map(cats.map(c => [c.id, c.name]));
+
+  let svcs = [...services].sort((a, b) => {
+    const catA = a.category_id || 0;
+    const catB = b.category_id || 0;
+    if (catA !== catB) return catA - catB;
+    if ((a.sort_order || 0) !== (b.sort_order || 0)) return (a.sort_order || 0) - (b.sort_order || 0);
+    return (a.name || '').localeCompare(b.name || '');
+  }).map(s => ({
+    ...s,
+    category_name: catMap.get(s.category_id) || 'General'
+  }));
+
+  const svcDropdown = [...svcs];
+
+  if (svcCatFilter > 0) {
+    svcs = svcs.filter(s => s.category_id === Number(svcCatFilter));
+  }
+
+  const svcMap = new Map(svcDropdown.map(s => [s.id, s]));
+
+  let opts = [...options].sort((a, b) => {
+    const sA = svcMap.get(a.service_id);
+    const sB = svcMap.get(b.service_id);
+    const catA = sA ? sA.category_id : 0;
+    const catB = sB ? sB.category_id : 0;
+    if (catA !== catB) return catA - catB;
+    const sOrdA = sA ? sA.sort_order || 0 : 0;
+    const sOrdB = sB ? sB.sort_order || 0 : 0;
+    if (sOrdA !== sOrdB) return sOrdA - sOrdB;
+    if ((a.sort_order || 0) !== (b.sort_order || 0)) return (a.sort_order || 0) - (b.sort_order || 0);
+    return (a.option_label || '').localeCompare(b.option_label || '');
+  }).map(o => {
+    const svc = svcMap.get(o.service_id);
+    return {
+      ...o,
+      service_name: svc ? svc.name : 'Unknown Service',
+      category_name: svc ? svc.category_name : 'General'
+    };
+  });
+
+  if (optSvcFilter > 0) {
+    opts = opts.filter(o => o.service_id === Number(optSvcFilter));
+  }
+
+  return {
+    categories: cats,
+    services: svcs,
+    options: opts,
+    svcDropdown
+  };
+}
+
 export function getCategoryData() {
   const cats = getCategories();
   const opts = getOptions();

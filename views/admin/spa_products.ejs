@@ -3,87 +3,757 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spa Catalog Management — Caroline's Place Admin</title>
+  <title>Spa Products &amp; Pricing — Admin Portal</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/assets/css/style.css" />
   <style>
-    .admin-layout { max-width: 1240px; margin: 0 auto; padding: 24px; }
-    .catalog-block { background:#fff; border-radius:14px; border:1px solid rgba(27,20,16,0.1); margin-bottom:28px; padding:24px; box-shadow:0 4px 16px rgba(0,0,0,0.02); }
-    .catalog-block__header { display:flex; align-items:center; justify-content:space-between; margin-bottom:18px; border-bottom:1px solid rgba(27,20,16,0.08); padding-bottom:14px; }
-    .service-row { display:flex; justify-content:space-between; align-items:center; padding:12px 0; border-bottom:1px solid rgba(27,20,16,0.05); }
-    .service-row:last-child { border-bottom:0; }
+    :root {
+      --bg: #F4EFEA;
+      --card: #FAF6F0;
+      --border: rgba(27, 20, 16, 0.12);
+      --fg: #1B1410;
+      --muted: #7C6F65;
+      --primary: #B8895A;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--fg);
+      font-family: var(--font-sans);
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .admin-nav {
+      height: 64px;
+      background: #EDE6DC;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 32px;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .admin-nav__left {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .admin-nav__brand {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--fg);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .admin-nav__brand svg {
+      color: var(--primary);
+    }
+
+    .admin-nav__link {
+      color: #8B6F2E;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .admin-nav__link:hover {
+      text-decoration: underline;
+    }
+
+    .admin-nav__right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .admin-nav__user {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .admin-nav__logout {
+      font-size: 0.72rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      border: 1px solid var(--border);
+      padding: 8px 18px;
+      background: transparent;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      color: var(--fg);
+      border-radius: 4px;
+      transition: all 0.2s;
+    }
+
+    .admin-nav__logout:hover {
+      background: var(--fg);
+      color: #FFF;
+    }
+
+    .admin-main {
+      padding: 36px 32px 64px;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .page-title {
+      font-family: var(--font-serif);
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--fg);
+      margin: 0 0 8px;
+    }
+
+    .page-subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 32px;
+    }
+
+    .spa-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      align-items: start;
+    }
+
+    @media (max-width: 1100px) {
+      .spa-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .spa-card {
+      background: #EDE6DC;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .spa-card__title {
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: var(--fg);
+      margin: 0 0 20px;
+    }
+
+    .spa-card__subtitle {
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 24px 0 12px;
+      font-weight: 600;
+    }
+
+    .spa-form {
+      margin-bottom: 8px;
+    }
+
+    .spa-form .form-group {
+      margin-bottom: 14px;
+    }
+
+    .spa-form .form-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--muted);
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .spa-form .form-input,
+    .spa-form .form-select,
+    .filter-select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      border: 1px solid rgba(27, 20, 16, 0.16);
+      border-radius: 6px;
+      background: #E5DDD1;
+      color: var(--fg);
+      font-family: var(--font-sans);
+      transition: border-color 0.2s, background 0.2s;
+    }
+
+    .spa-form .form-input:focus,
+    .spa-form .form-select:focus,
+    .filter-select:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: #FDFBF8;
+    }
+
+    .filter-bar {
+      margin-bottom: 16px;
+    }
+
+    .btn-admin-action {
+      background: #1A1412;
+      color: #FFF;
+      border: none;
+      border-radius: 4px;
+      padding: 10px 18px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .btn-admin-action:hover {
+      background: #332822;
+    }
+
+    .btn-admin-action:active {
+      transform: translateY(1px);
+    }
+
+    .item-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-height: 540px;
+      overflow-y: auto;
+      padding-right: 4px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(27, 20, 16, 0.2) transparent;
+    }
+
+    .item-list::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .item-list::-webkit-scrollbar-thumb {
+      background: rgba(27, 20, 16, 0.2);
+      border-radius: 3px;
+    }
+
+    .item-row {
+      background: #FFFFFF;
+      border: 1px solid rgba(27, 20, 16, 0.1);
+      border-radius: 10px;
+      padding: 16px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.03);
+    }
+
+    .item-row__name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--fg);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+    }
+
+    .item-row__meta {
+      font-size: 0.74rem;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+
+    .inline-row {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .inline-row .form-input,
+    .inline-row .form-select {
+      padding: 8px 10px;
+      font-size: 0.85rem;
+      border: 1px solid rgba(27, 20, 16, 0.16);
+      border-radius: 6px;
+      background: #E5DDD1;
+      color: var(--fg);
+      box-sizing: border-box;
+    }
+
+    .inline-row .form-input:focus,
+    .inline-row .form-select:focus {
+      outline: none;
+      border-color: var(--primary);
+      background: #FFF;
+    }
+
+    .item-actions-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+    }
+
+    .inline-checkbox {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      color: var(--fg);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .inline-checkbox input {
+      accent-color: #2563EB;
+      width: 15px;
+      height: 15px;
+      cursor: pointer;
+    }
+
+    .btn-save {
+      background: transparent;
+      border: 1px solid rgba(27, 20, 16, 0.6);
+      color: var(--fg);
+      border-radius: 4px;
+      padding: 6px 14px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: all 0.2s;
+    }
+
+    .btn-save:hover {
+      background: var(--fg);
+      color: #FFF;
+    }
+
+    .btn-del {
+      background: transparent;
+      border: 1px solid #B91C1C;
+      color: #B91C1C;
+      border-radius: 4px;
+      padding: 6px 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      cursor: pointer;
+      font-family: var(--font-sans);
+      transition: all 0.2s;
+    }
+
+    .btn-del:hover {
+      background: #B91C1C;
+      color: #FFF;
+    }
+
+    .price-field {
+      background: #E5DDD1 !important;
+      border: 1px solid rgba(139, 111, 46, 0.3) !important;
+      font-weight: 700 !important;
+      font-size: 0.95rem !important;
+      color: var(--fg) !important;
+    }
+
+    .price-field:focus {
+      background: #FFF !important;
+      border-color: var(--primary) !important;
+    }
+
+    .price-label {
+      font-weight: 600;
+      color: #8B6F2E;
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .price-display {
+      font-weight: 700;
+      color: #8B6F2E;
+      font-size: 1.05rem;
+      letter-spacing: -0.01em;
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+      flex-shrink: 0;
+    }
+
+    .status-dot.active {
+      background: #15803D;
+    }
+
+    .status-dot.inactive {
+      background: #B91C1C;
+    }
+
+    .empty-state {
+      text-align: center;
+      padding: 32px 16px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      background: #FFF;
+      border-radius: 10px;
+      border: 1px dashed var(--border);
+    }
   </style>
 </head>
-<body style="background:var(--bg);">
+<body>
 
-<header style="background:#fff; border-bottom:1px solid rgba(27,20,16,0.1); padding:16px 24px;">
-  <div style="max-width:1240px; margin:0 auto; display:flex; align-items:center; justify-content:space-between;">
-    <div style="display:flex; align-items:center; gap:20px;">
-      <a href="/" style="font-family:var(--font-serif); font-size:20px; font-weight:600; color:var(--fg);">Caroline's Place</a>
-      <span style="font-size:12px; letter-spacing:0.12em; text-transform:uppercase; background:var(--primary); color:#fff; padding:3px 10px; border-radius:999px;">Admin</span>
-    </div>
-    <div style="display:flex; align-items:center; gap:16px; font-size:14px;">
-      <a href="/admin/dashboard" style="color:var(--muted);">Bookings</a>
-      <a href="/admin/spa_products" style="font-weight:600; color:var(--primary);">Spa Catalog</a>
-      <a href="/" style="color:var(--muted);">Public Site</a>
-      <span style="color:var(--muted);">|</span>
-      <span style="color:var(--fg); font-weight:500;">Hello, <%= admin.display_name || admin.username %></span>
-      <a href="/admin/logout" style="color:#c53030; text-decoration:none; font-size:13px; padding:6px 12px; border:1px solid rgba(197,48,48,0.3); border-radius:6px;">Logout</a>
-    </div>
+<nav class="admin-nav">
+  <div class="admin-nav__left">
+    <a href="/admin" class="admin-nav__brand">
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+        <rect x="3" y="3" width="7" height="7"/>
+        <rect x="14" y="3" width="7" height="7"/>
+        <rect x="14" y="14" width="7" height="7"/>
+        <rect x="3" y="14" width="7" height="7"/>
+      </svg>
+      ADMIN
+    </a>
+    <a class="admin-nav__link" href="/admin/spa_products">
+      🛠️ Spa Products &amp; Pricing
+    </a>
   </div>
-</header>
-
-<div class="admin-layout">
-  <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:24px; flex-wrap:wrap; gap:12px;">
-    <div>
-      <h1 style="font-family:var(--font-serif); font-size:28px; color:var(--fg); margin:0;">Spa Catalog</h1>
-      <p style="color:var(--muted); font-size:14px; margin:4px 0 0;"><%= totalServices %> services configured across <%= catData.length %> categories</p>
-    </div>
-    <a href="/spa_menu" class="btn btn--outline" target="_blank" style="padding:10px 18px; font-size:13px;">Preview Public Menu ↗</a>
+  <div class="admin-nav__right">
+    <span class="admin-nav__user">Logged in as <%= displayName %></span>
+    <button id="logoutBtn" class="admin-nav__logout" type="button" onclick="window.location.href='/admin/logout'">LOGOUT</button>
   </div>
+</nav>
 
-  <% catData.forEach(cd => { %>
-    <div class="catalog-block">
-      <div class="catalog-block__header">
-        <div style="display:flex; align-items:center; gap:10px;">
-          <span style="font-size:24px;"><%= cd.cat.icon || '✨' %></span>
-          <div>
-            <h2 style="font-family:var(--font-serif); font-size:20px; color:var(--fg); margin:0;"><%= cd.cat.name %></h2>
-            <span style="font-size:12px; color:var(--muted);"><%= cd.services.length %> services</span>
-          </div>
+<main class="admin-main">
+  <h1 class="page-title">Spa Products Management</h1>
+  <p class="page-subtitle">Manage categories, services, and pricing options for the spa booking system.</p>
+
+  <div class="spa-grid">
+
+    <!-- ==========================================
+         COLUMN 1: MANAGE CATEGORIES
+         ========================================== -->
+    <div class="spa-card">
+      <h2 class="spa-card__title">Manage Categories</h2>
+
+      <form method="POST" action="" class="spa-form">
+        <input type="hidden" name="action" value="add_category" />
+        <% if (svcCatFilter > 0) { %><input type="hidden" name="svc_cat" value="<%= svcCatFilter %>" /><% } %>
+        <% if (optSvcFilter > 0) { %><input type="hidden" name="opt_svc" value="<%= optSvcFilter %>" /><% } %>
+
+        <div class="form-group">
+          <label class="form-label">CATEGORY NAME</label>
+          <input type="text" name="name" class="form-input" placeholder="e.g. Massage Therapy" required />
         </div>
-      </div>
+        <div class="form-group">
+          <label class="form-label">SORT ORDER</label>
+          <input type="number" name="sort_order" class="form-input" value="0" min="0" />
+        </div>
+        <button type="submit" class="btn-admin-action">+ ADD CATEGORY</button>
+      </form>
 
-      <div>
-        <% cd.services.forEach(s => { %>
-          <div class="service-row">
-            <div>
-              <div style="font-weight:600; color:var(--fg); font-size:15px;"><%= s.name %></div>
-              <% if (s.description) { %>
-                <div style="font-size:12px; color:var(--muted); margin-top:2px;"><%= s.description %></div>
-              <% } %>
-              <% if (s.options && s.options.length > 0) { %>
-                <div style="margin-top:6px; display:flex; flex-wrap:wrap; gap:6px;">
-                  <% s.options.forEach(o => { %>
-                    <span style="background:#faf5eb; border:1px solid rgba(27,20,16,0.08); padding:2px 8px; border-radius:4px; font-size:11px; color:var(--fg);">
-                      <%= o.option_label %>: <strong style="color:var(--primary);"><%= priceFmt(o.price_ngn) %></strong>
-                    </span>
-                  <% }); %>
+      <div class="spa-card__subtitle">EXISTING CATEGORIES</div>
+
+      <div class="item-list">
+        <% if (categories.length === 0) { %>
+          <div class="empty-state">No categories found. Add one above.</div>
+        <% } else { %>
+          <% categories.forEach(cat => { %>
+            <div class="item-row">
+              <div class="item-row__name">
+                <span class="status-dot <%= cat.is_active ? 'active' : 'inactive' %>"></span>
+                <span><%= cat.name %></span>
+              </div>
+              <div class="item-row__meta">Sort: <%= cat.sort_order || 0 %></div>
+
+              <form method="POST" action="">
+                <input type="hidden" name="action" value="update_category" />
+                <input type="hidden" name="id" value="<%= cat.id %>" />
+                <% if (svcCatFilter > 0) { %><input type="hidden" name="svc_cat" value="<%= svcCatFilter %>" /><% } %>
+                <% if (optSvcFilter > 0) { %><input type="hidden" name="opt_svc" value="<%= optSvcFilter %>" /><% } %>
+
+                <div class="inline-row" style="margin-bottom:8px;">
+                  <input type="text" name="name" class="form-input" value="<%= cat.name %>" required style="flex:1;" />
+                  <input type="number" name="sort_order" class="form-input" value="<%= cat.sort_order || 0 %>" min="0" style="max-width:60px; text-align:center;" />
                 </div>
-              <% } %>
+
+                <div class="item-actions-row">
+                  <label class="inline-checkbox">
+                    <input type="checkbox" name="is_active" <%= cat.is_active ? 'checked' : '' %> />
+                    <span>Active</span>
+                  </label>
+                  <div style="display:flex; gap:6px;">
+                    <button type="submit" class="btn-save">SAVE</button>
+                    <button
+                      type="submit"
+                      class="btn-del"
+                      onclick="this.form.action.value='delete_category'; return confirm('Delete category? Associated services will also be removed.');"
+                    >DELETE</button>
+                  </div>
+                </div>
+              </form>
             </div>
-            <div style="text-align:right;">
-              <span style="font-size:11px; padding:3px 8px; border-radius:999px; background:#e6f4ea; color:#137333; font-weight:600;">Active</span>
-            </div>
-          </div>
-        <% }); %>
+          <% }); %>
+        <% } %>
       </div>
     </div>
-  <% }); %>
 
-</div>
+    <!-- ==========================================
+         COLUMN 2: MANAGE SERVICES
+         ========================================== -->
+    <div class="spa-card">
+      <h2 class="spa-card__title">Manage Services</h2>
+
+      <div class="filter-bar">
+        <select class="filter-select" onchange="const val = this.value; window.location.href = val > 0 ? '?svc_cat=' + val + '<%= optSvcFilter > 0 ? '&opt_svc=' + optSvcFilter : '' %>' : '<%= optSvcFilter > 0 ? '?opt_svc=' + optSvcFilter : '/admin/spa_products' %>';">
+          <option value="0">All Categories</option>
+          <% categories.forEach(c => { %>
+            <option value="<%= c.id %>" <%= svcCatFilter === c.id ? 'selected' : '' %>><%= c.name %></option>
+          <% }); %>
+        </select>
+      </div>
+
+      <form method="POST" action="" class="spa-form">
+        <input type="hidden" name="action" value="add_service" />
+        <% if (svcCatFilter > 0) { %><input type="hidden" name="svc_cat" value="<%= svcCatFilter %>" /><% } %>
+        <% if (optSvcFilter > 0) { %><input type="hidden" name="opt_svc" value="<%= optSvcFilter %>" /><% } %>
+
+        <div class="form-group">
+          <label class="form-label">CATEGORY</label>
+          <select name="category_id" class="form-select" required>
+            <option value="">Select category...</option>
+            <% categories.forEach(c => { %>
+              <option value="<%= c.id %>" <%= svcCatFilter === c.id ? 'selected' : '' %>><%= c.name %></option>
+            <% }); %>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">SERVICE NAME</label>
+          <input type="text" name="name" class="form-input" placeholder="e.g. Swedish Massage" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">SORT ORDER</label>
+          <input type="number" name="sort_order" class="form-input" value="0" min="0" />
+        </div>
+        <button type="submit" class="btn-admin-action">+ ADD SERVICE</button>
+      </form>
+
+      <div class="spa-card__subtitle">EXISTING SERVICES</div>
+
+      <div class="item-list">
+        <% if (services.length === 0) { %>
+          <div class="empty-state">No services found in this category.</div>
+        <% } else { %>
+          <% services.forEach(svc => { %>
+            <div class="item-row">
+              <div class="item-row__name">
+                <span class="status-dot <%= svc.is_active ? 'active' : 'inactive' %>"></span>
+                <span><%= svc.name %></span>
+              </div>
+              <div class="item-row__meta">
+                Category: <%= svc.category_name %> · Sort: <%= svc.sort_order || 0 %>
+              </div>
+
+              <form method="POST" action="">
+                <input type="hidden" name="action" value="update_service" />
+                <input type="hidden" name="id" value="<%= svc.id %>" />
+                <% if (svcCatFilter > 0) { %><input type="hidden" name="svc_cat" value="<%= svcCatFilter %>" /><% } %>
+                <% if (optSvcFilter > 0) { %><input type="hidden" name="opt_svc" value="<%= optSvcFilter %>" /><% } %>
+
+                <div class="inline-row" style="margin-bottom:8px;">
+                  <input type="text" name="name" class="form-input" value="<%= svc.name %>" required style="width:100%;" />
+                </div>
+                <div class="inline-row" style="margin-bottom:8px;">
+                  <select name="category_id" class="form-select" required style="flex:1;">
+                    <% categories.forEach(c => { %>
+                      <option value="<%= c.id %>" <%= svc.category_id === c.id ? 'selected' : '' %>><%= c.name %></option>
+                    <% }); %>
+                  </select>
+                  <input type="number" name="sort_order" class="form-input" value="<%= svc.sort_order || 0 %>" min="0" style="max-width:60px; text-align:center;" />
+                </div>
+
+                <div class="item-actions-row">
+                  <label class="inline-checkbox">
+                    <input type="checkbox" name="is_active" <%= svc.is_active ? 'checked' : '' %> />
+                    <span>Active</span>
+                  </label>
+                  <div style="display:flex; gap:6px;">
+                    <button type="submit" class="btn-save">SAVE</button>
+                    <button
+                      type="submit"
+                      class="btn-del"
+                      onclick="this.form.action.value='delete_service'; return confirm('Delete service? Associated options will also be removed.');"
+                    >DELETE</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          <% }); %>
+        <% } %>
+      </div>
+    </div>
+
+    <!-- ==========================================
+         COLUMN 3: MANAGE OPTIONS & PRICES
+         ========================================== -->
+    <div class="spa-card">
+      <h2 class="spa-card__title">Manage Options &amp; Prices</h2>
+
+      <div class="filter-bar">
+        <select class="filter-select" onchange="const val = this.value; window.location.href = val > 0 ? '<%= svcCatFilter > 0 ? '?svc_cat=' + svcCatFilter + '&opt_svc=' : '?opt_svc=' %>' + val : '<%= svcCatFilter > 0 ? '?svc_cat=' + svcCatFilter : '/admin/spa_products' %>';">
+          <option value="0">All Services</option>
+          <% svcDropdown.forEach(s => { %>
+            <option value="<%= s.id %>" <%= optSvcFilter === s.id ? 'selected' : '' %>>
+              <%= s.category_name %> — <%= s.name %>
+            </option>
+          <% }); %>
+        </select>
+      </div>
+
+      <form method="POST" action="" class="spa-form">
+        <input type="hidden" name="action" value="add_option" />
+        <% if (svcCatFilter > 0) { %><input type="hidden" name="svc_cat" value="<%= svcCatFilter %>" /><% } %>
+        <% if (optSvcFilter > 0) { %><input type="hidden" name="opt_svc" value="<%= optSvcFilter %>" /><% } %>
+
+        <div class="form-group">
+          <label class="form-label">SERVICE</label>
+          <select name="service_id" class="form-select" required>
+            <option value="">Select service...</option>
+            <% svcDropdown.forEach(s => { %>
+              <option value="<%= s.id %>" <%= optSvcFilter === s.id ? 'selected' : '' %>>
+                <%= s.category_name %> — <%= s.name %>
+              </option>
+            <% }); %>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">OPTION LABEL</label>
+          <input type="text" name="option_label" class="form-input" placeholder="e.g. 60 minutes, Short, etc." required />
+        </div>
+        <div class="form-group">
+          <label class="form-label price-label">₦ PRICE (NGN)</label>
+          <input type="number" name="price_ngn" class="form-input price-field" placeholder="0" min="0" step="1" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">SORT ORDER</label>
+          <input type="number" name="sort_order" class="form-input" value="0" min="0" />
+        </div>
+        <button type="submit" class="btn-admin-action">+ ADD PRICE OPTION</button>
+      </form>
+
+      <div class="spa-card__subtitle">EXISTING OPTIONS</div>
+
+      <div class="item-list">
+        <% if (options.length === 0) { %>
+          <div class="empty-state">No pricing options found. Add one above.</div>
+        <% } else { %>
+          <% options.forEach(opt => { %>
+            <div class="item-row">
+              <div class="item-row__name" style="justify-content:space-between;">
+                <div>
+                  <span class="status-dot <%= opt.is_active ? 'active' : 'inactive' %>"></span>
+                  <span><%= opt.option_label %></span>
+                </div>
+                <span class="price-display">
+                  <%= priceFmt(opt.price_ngn) %>
+                </span>
+              </div>
+              <div class="item-row__meta">
+                Service: <%= opt.category_name %> — <%= opt.service_name %> · Sort: <%= opt.sort_order || 0 %>
+              </div>
+
+              <form method="POST" action="">
+                <input type="hidden" name="action" value="update_option" />
+                <input type="hidden" name="id" value="<%= opt.id %>" />
+                <% if (svcCatFilter > 0) { %><input type="hidden" name="svc_cat" value="<%= svcCatFilter %>" /><% } %>
+                <% if (optSvcFilter > 0) { %><input type="hidden" name="opt_svc" value="<%= optSvcFilter %>" /><% } %>
+
+                <div class="inline-row" style="margin-bottom:8px;">
+                  <input type="text" name="option_label" class="form-input" value="<%= opt.option_label %>" required style="width:100%;" />
+                </div>
+                <div class="inline-row" style="margin-bottom:8px;">
+                  <div style="flex:1;">
+                    <label class="price-label" style="font-size:0.68rem; margin-bottom:2px; display:block;">₦ Price</label>
+                    <input type="number" name="price_ngn" class="form-input price-field" value="<%= Math.round(opt.price_ngn) %>" min="0" step="1" required />
+                  </div>
+                  <div style="max-width:60px;">
+                    <label class="form-label" style="font-size:0.68rem; margin-bottom:2px; display:block;">SORT</label>
+                    <input type="number" name="sort_order" class="form-input" value="<%= opt.sort_order || 0 %>" min="0" style="text-align:center;" />
+                  </div>
+                </div>
+
+                <div class="item-actions-row">
+                  <label class="inline-checkbox">
+                    <input type="checkbox" name="is_active" <%= opt.is_active ? 'checked' : '' %> />
+                    <span>Active</span>
+                  </label>
+                  <div style="display:flex; gap:6px;">
+                    <button type="submit" class="btn-save">SAVE</button>
+                    <button
+                      type="submit"
+                      class="btn-del"
+                      onclick="this.form.action.value='delete_option'; return confirm('Delete this pricing option?');"
+                    >DELETE</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          <% }); %>
+        <% } %>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<script>
+(function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const token = urlParams.get('token') || localStorage.getItem('carolines_admin_token') || 'sanctuary_admin_2026';
+  if (token) {
+    try {
+      localStorage.setItem('carolines_admin_token', token);
+      sessionStorage.setItem('carolines_admin_token', token);
+      document.cookie = 'admin_auth=' + encodeURIComponent(token) + '; path=/; max-age=86400; SameSite=None; Secure';
+    } catch(e) {}
+    document.querySelectorAll('a[href^="/admin/"]').forEach(a => {
+      if (!a.href.includes('logout') && !a.href.includes('token=')) {
+        a.href += (a.href.includes('?') ? '&' : '?') + 'token=' + encodeURIComponent(token);
+      }
+    });
+    document.querySelectorAll('form').forEach(f => {
+      if (!f.querySelector('input[name="token"]')) {
+        const inp = document.createElement('input');
+        inp.type = 'hidden';
+        inp.name = 'token';
+        inp.value = token;
+        f.appendChild(inp);
+      }
+    });
+  }
+})();
+</script>
 
 </body>
 </html>

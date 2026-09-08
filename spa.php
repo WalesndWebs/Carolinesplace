@@ -71,6 +71,7 @@ require_once __DIR__ . '/includes/header.php';
         alt="Knotless Box Braids — Hair Studio"
         class="hero-slider__img"
         loading="lazy"
+        onerror="this.onerror=null;this.src='/assets/images/DSC_2976.jpg';"
       />
     </div>
     <!-- SLIDE 4: Foot Reflexology Massage (4th attached image) -->
@@ -80,6 +81,7 @@ require_once __DIR__ . '/includes/header.php';
         alt="Foot Reflexology &amp; Massage"
         class="hero-slider__img"
         loading="lazy"
+        onerror="this.onerror=null;this.src='/assets/images/DSC_7496.jpg';"
       />
     </div>
     <!-- SLIDE 5: V-TEN Treatment / Facial Room (5th attached image) -->
