@@ -68,9 +68,9 @@
     {
       "id": 1,
       "category_id": 1,
-      "name": "Signature Facial (Caroline Special)",
-      "description": "Signature Facial (Caroline Special)",
-      "duration_minutes": 90,
+      "name": "Anti-Aging Facial",
+      "description": "Anti-Aging Facial",
+      "duration_minutes": 60,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -88,9 +88,9 @@
     {
       "id": 19,
       "category_id": 3,
-      "name": "Full Body Waxing",
-      "description": "Full Body Waxing",
-      "duration_minutes": 90,
+      "name": "Chin Wax",
+      "description": "Chin Wax",
+      "duration_minutes": 15,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -138,8 +138,8 @@
     {
       "id": 2,
       "category_id": 1,
-      "name": "Anti-Aging Facial",
-      "description": "Anti-Aging Facial",
+      "name": "Microdermabrasion Facial",
+      "description": "Microdermabrasion Facial",
       "duration_minutes": 60,
       "sort_order": 2,
       "is_active": 1,
@@ -158,9 +158,9 @@
     {
       "id": 20,
       "category_id": 3,
-      "name": "Full Leg Wax",
-      "description": "Full Leg Wax",
-      "duration_minutes": 60,
+      "name": "Upper Lip Wax",
+      "description": "Upper Lip Wax",
+      "duration_minutes": 15,
       "sort_order": 2,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -208,9 +208,9 @@
     {
       "id": 3,
       "category_id": 1,
-      "name": "Brightening / Glow Facial",
-      "description": "Brightening / Glow Facial",
-      "duration_minutes": 60,
+      "name": "Men Facial",
+      "description": "Men Facial",
+      "duration_minutes": 45,
       "sort_order": 3,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -228,9 +228,9 @@
     {
       "id": 21,
       "category_id": 3,
-      "name": "Half Leg Wax",
-      "description": "Half Leg Wax",
-      "duration_minutes": 45,
+      "name": "Underarm Waxing",
+      "description": "Underarm Waxing",
+      "duration_minutes": 15,
       "sort_order": 3,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -278,8 +278,8 @@
     {
       "id": 4,
       "category_id": 1,
-      "name": "Deep Cleansing Facial",
-      "description": "Deep Cleansing Facial",
+      "name": "Dermaplaning Facial",
+      "description": "Dermaplaning Facial",
       "duration_minutes": 45,
       "sort_order": 4,
       "is_active": 1,
@@ -288,8 +288,8 @@
     {
       "id": 11,
       "category_id": 2,
-      "name": "Thai Massage",
-      "description": "Thai Massage",
+      "name": "Couple Swedish Massage",
+      "description": "Couple Swedish Massage",
       "duration_minutes": 60,
       "sort_order": 4,
       "is_active": 1,
@@ -298,9 +298,9 @@
     {
       "id": 22,
       "category_id": 3,
-      "name": "Full Arm Wax",
-      "description": "Full Arm Wax",
-      "duration_minutes": 45,
+      "name": "Full Hand Waxing",
+      "description": "Full Hand Waxing",
+      "duration_minutes": 30,
       "sort_order": 4,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -338,9 +338,9 @@
     {
       "id": 5,
       "category_id": 1,
-      "name": "Hydrating Facial",
-      "description": "Hydrating Facial",
-      "duration_minutes": 45,
+      "name": "Vitamin C Brightening Facial",
+      "description": "Vitamin C Brightening Facial",
+      "duration_minutes": 60,
       "sort_order": 5,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -348,8 +348,8 @@
     {
       "id": 12,
       "category_id": 2,
-      "name": "Sports Massage",
-      "description": "Sports Massage",
+      "name": "Couple Deep Tissue Massage",
+      "description": "Couple Deep Tissue Massage",
       "duration_minutes": 60,
       "sort_order": 5,
       "is_active": 1,
@@ -358,9 +358,9 @@
     {
       "id": 23,
       "category_id": 3,
-      "name": "Half Arm Wax",
-      "description": "Half Arm Wax",
-      "duration_minutes": 30,
+      "name": "Half Hand Waxing",
+      "description": "Half Hand Waxing",
+      "duration_minutes": 20,
       "sort_order": 5,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -398,8 +398,8 @@
     {
       "id": 6,
       "category_id": 1,
-      "name": "Acne Treatment Facial",
-      "description": "Acne Treatment Facial",
+      "name": "Deep Cleansing Facial",
+      "description": "Deep Cleansing Facial",
       "duration_minutes": 60,
       "sort_order": 6,
       "is_active": 1,
@@ -408,9 +408,9 @@
     {
       "id": 13,
       "category_id": 2,
-      "name": "Aromatherapy Massage",
-      "description": "Aromatherapy Massage",
-      "duration_minutes": 60,
+      "name": "Back Massage",
+      "description": "Back Massage",
+      "duration_minutes": 45,
       "sort_order": 6,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -418,9 +418,9 @@
     {
       "id": 24,
       "category_id": 3,
-      "name": "Underarm Wax",
-      "description": "Underarm Wax",
-      "duration_minutes": 15,
+      "name": "Full Leg Waxing",
+      "description": "Full Leg Waxing",
+      "duration_minutes": 45,
       "sort_order": 6,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -458,9 +458,9 @@
     {
       "id": 7,
       "category_id": 1,
-      "name": "Men Facial",
-      "description": "Men Facial",
-      "duration_minutes": 45,
+      "name": "Acne Treatment Facial",
+      "description": "Acne Treatment Facial",
+      "duration_minutes": 60,
       "sort_order": 7,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -468,8 +468,8 @@
     {
       "id": 14,
       "category_id": 2,
-      "name": "Reflexology (Feet)",
-      "description": "Reflexology (Feet)",
+      "name": "Reflexology Massage",
+      "description": "Reflexology Massage",
       "duration_minutes": 45,
       "sort_order": 7,
       "is_active": 1,
@@ -478,8 +478,8 @@
     {
       "id": 25,
       "category_id": 3,
-      "name": "Bikini Line Wax",
-      "description": "Bikini Line Wax",
+      "name": "Half Leg Waxing",
+      "description": "Half Leg Waxing",
       "duration_minutes": 30,
       "sort_order": 7,
       "is_active": 1,
@@ -518,9 +518,9 @@
     {
       "id": 15,
       "category_id": 2,
-      "name": "Back / Shoulder / Neck Massage",
-      "description": "Back / Shoulder / Neck Massage",
-      "duration_minutes": 30,
+      "name": "Aromatherapy Massage / Steam",
+      "description": "Aromatherapy Massage / Steam",
+      "duration_minutes": 60,
       "sort_order": 8,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -528,9 +528,9 @@
     {
       "id": 26,
       "category_id": 3,
-      "name": "Brazilian Wax",
-      "description": "Brazilian Wax",
-      "duration_minutes": 45,
+      "name": "Bikini Waxing",
+      "description": "Bikini Waxing",
+      "duration_minutes": 30,
       "sort_order": 8,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -568,8 +568,8 @@
     {
       "id": 16,
       "category_id": 2,
-      "name": "Pre-Natal Massage",
-      "description": "Pre-Natal Massage",
+      "name": "Prenatal Massage",
+      "description": "Prenatal Massage",
       "duration_minutes": 60,
       "sort_order": 9,
       "is_active": 1,
@@ -578,8 +578,8 @@
     {
       "id": 27,
       "category_id": 3,
-      "name": "Hollywood Wax",
-      "description": "Hollywood Wax",
+      "name": "Brazilian Waxing",
+      "description": "Brazilian Waxing",
       "duration_minutes": 45,
       "sort_order": 9,
       "is_active": 1,
@@ -608,9 +608,9 @@
     {
       "id": 17,
       "category_id": 2,
-      "name": "Couples Massage",
-      "description": "Couples Massage",
-      "duration_minutes": 90,
+      "name": "Head Massage",
+      "description": "Head Massage",
+      "duration_minutes": 30,
       "sort_order": 10,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -618,9 +618,9 @@
     {
       "id": 28,
       "category_id": 3,
-      "name": "Chest Wax",
-      "description": "Chest Wax",
-      "duration_minutes": 30,
+      "name": "Eyebrow Waxing",
+      "description": "Eyebrow Waxing",
+      "duration_minutes": 15,
       "sort_order": 10,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -648,8 +648,8 @@
     {
       "id": 18,
       "category_id": 2,
-      "name": "Lymphatic Drainage",
-      "description": "Lymphatic Drainage",
+      "name": "Peace Balance",
+      "description": "Peace Balance",
       "duration_minutes": 60,
       "sort_order": 11,
       "is_active": 1,
@@ -658,9 +658,9 @@
     {
       "id": 29,
       "category_id": 3,
-      "name": "Back Wax",
-      "description": "Back Wax",
-      "duration_minutes": 30,
+      "name": "Full Body Waxing",
+      "description": "Full Body Waxing",
+      "duration_minutes": 90,
       "sort_order": 11,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -688,9 +688,9 @@
     {
       "id": 30,
       "category_id": 3,
-      "name": "Stomach Wax",
-      "description": "Stomach Wax",
-      "duration_minutes": 20,
+      "name": "Hollywood Waxing",
+      "description": "Hollywood Waxing",
+      "duration_minutes": 45,
       "sort_order": 12,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -716,16 +716,6 @@
       "created_at": "2026-08-31 20:39:05"
     },
     {
-      "id": 31,
-      "category_id": 3,
-      "name": "Face Wax",
-      "description": "Face Wax",
-      "duration_minutes": 15,
-      "sort_order": 13,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
       "id": 54,
       "category_id": 5,
       "name": "Crochet Braids (Hair not included)",
@@ -742,16 +732,6 @@
       "description": "Hard Gel",
       "duration_minutes": 60,
       "sort_order": 13,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 32,
-      "category_id": 3,
-      "name": "Upper Lip Wax",
-      "description": "Upper Lip Wax",
-      "duration_minutes": 10,
-      "sort_order": 14,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
     },
@@ -776,16 +756,6 @@
       "created_at": "2026-08-31 20:39:05"
     },
     {
-      "id": 33,
-      "category_id": 3,
-      "name": "Chin Wax",
-      "description": "Chin Wax",
-      "duration_minutes": 10,
-      "sort_order": 15,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
       "id": 56,
       "category_id": 5,
       "name": "Wig Install",
@@ -802,16 +772,6 @@
       "description": "Press On Nails",
       "duration_minutes": 30,
       "sort_order": 15,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 34,
-      "category_id": 3,
-      "name": "Eyebrow Waxing",
-      "description": "Eyebrow Waxing",
-      "duration_minutes": 15,
-      "sort_order": 16,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
     },
@@ -836,16 +796,6 @@
       "created_at": "2026-08-31 20:39:05"
     },
     {
-      "id": 35,
-      "category_id": 3,
-      "name": "Sideburns Wax",
-      "description": "Sideburns Wax",
-      "duration_minutes": 10,
-      "sort_order": 17,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
       "id": 58,
       "category_id": 5,
       "name": "Wig Styling (Wash & Style)",
@@ -862,16 +812,6 @@
       "description": "Regular Polish",
       "duration_minutes": 30,
       "sort_order": 17,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 36,
-      "category_id": 3,
-      "name": "Neck Wax",
-      "description": "Neck Wax",
-      "duration_minutes": 15,
-      "sort_order": 18,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
     },
@@ -896,16 +836,6 @@
       "created_at": "2026-08-31 20:39:05"
     },
     {
-      "id": 37,
-      "category_id": 3,
-      "name": "Nose Wax",
-      "description": "Nose Wax",
-      "duration_minutes": 10,
-      "sort_order": 19,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
       "id": 60,
       "category_id": 5,
       "name": "Full Head Colour",
@@ -922,16 +852,6 @@
       "description": "Tidy Up of Nails",
       "duration_minutes": 30,
       "sort_order": 19,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 38,
-      "category_id": 3,
-      "name": "Ear Wax",
-      "description": "Ear Wax",
-      "duration_minutes": 10,
-      "sort_order": 20,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
     },
@@ -1371,7 +1291,7 @@
       "id": 1,
       "service_id": 1,
       "option_label": "Standard",
-      "price_ngn": 53750,
+      "price_ngn": 37625,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1380,7 +1300,7 @@
       "id": 2,
       "service_id": 2,
       "option_label": "Standard",
-      "price_ngn": 37625,
+      "price_ngn": 32250,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1398,7 +1318,7 @@
       "id": 4,
       "service_id": 4,
       "option_label": "Standard",
-      "price_ngn": 26875,
+      "price_ngn": 21500,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1407,7 +1327,7 @@
       "id": 5,
       "service_id": 5,
       "option_label": "Standard",
-      "price_ngn": 26875,
+      "price_ngn": 32250,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1416,7 +1336,7 @@
       "id": 6,
       "service_id": 6,
       "option_label": "Standard",
-      "price_ngn": 43000,
+      "price_ngn": 32250,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1425,7 +1345,7 @@
       "id": 7,
       "service_id": 7,
       "option_label": "Standard",
-      "price_ngn": 32250,
+      "price_ngn": 43000,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1443,7 +1363,7 @@
       "id": 9,
       "service_id": 9,
       "option_label": "Standard",
-      "price_ngn": 26875,
+      "price_ngn": 37625,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1452,7 +1372,7 @@
       "id": 10,
       "service_id": 10,
       "option_label": "Standard",
-      "price_ngn": 32250,
+      "price_ngn": 43000,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1461,7 +1381,7 @@
       "id": 11,
       "service_id": 11,
       "option_label": "Standard",
-      "price_ngn": 32250,
+      "price_ngn": 43000,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1470,7 +1390,7 @@
       "id": 12,
       "service_id": 12,
       "option_label": "Standard",
-      "price_ngn": 26875,
+      "price_ngn": 53750,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1479,7 +1399,7 @@
       "id": 13,
       "service_id": 13,
       "option_label": "Standard",
-      "price_ngn": 26875,
+      "price_ngn": 16125,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1497,7 +1417,7 @@
       "id": 15,
       "service_id": 15,
       "option_label": "Standard",
-      "price_ngn": 16125,
+      "price_ngn": 37625,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1515,7 +1435,7 @@
       "id": 17,
       "service_id": 17,
       "option_label": "Standard",
-      "price_ngn": 64500,
+      "price_ngn": 16125,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1524,7 +1444,7 @@
       "id": 18,
       "service_id": 18,
       "option_label": "Standard",
-      "price_ngn": 32250,
+      "price_ngn": 43000,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1533,7 +1453,7 @@
       "id": 19,
       "service_id": 19,
       "option_label": "Standard",
-      "price_ngn": 53750,
+      "price_ngn": 7525,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1542,7 +1462,7 @@
       "id": 20,
       "service_id": 20,
       "option_label": "Standard",
-      "price_ngn": 32250,
+      "price_ngn": 5375,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1551,7 +1471,7 @@
       "id": 21,
       "service_id": 21,
       "option_label": "Standard",
-      "price_ngn": 21500,
+      "price_ngn": 10750,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1560,7 +1480,7 @@
       "id": 22,
       "service_id": 22,
       "option_label": "Standard",
-      "price_ngn": 21500,
+      "price_ngn": 15050,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1569,7 +1489,7 @@
       "id": 23,
       "service_id": 23,
       "option_label": "Standard",
-      "price_ngn": 10750,
+      "price_ngn": 7525,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1578,7 +1498,7 @@
       "id": 24,
       "service_id": 24,
       "option_label": "Standard",
-      "price_ngn": 5375,
+      "price_ngn": 21500,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1587,7 +1507,7 @@
       "id": 25,
       "service_id": 25,
       "option_label": "Standard",
-      "price_ngn": 10750,
+      "price_ngn": 9675,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1596,7 +1516,7 @@
       "id": 26,
       "service_id": 26,
       "option_label": "Standard",
-      "price_ngn": 21500,
+      "price_ngn": 32250,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1614,7 +1534,7 @@
       "id": 28,
       "service_id": 28,
       "option_label": "Standard",
-      "price_ngn": 16125,
+      "price_ngn": 5375,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1623,7 +1543,7 @@
       "id": 29,
       "service_id": 29,
       "option_label": "Standard",
-      "price_ngn": 16125,
+      "price_ngn": 53750,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
@@ -1632,79 +1552,7 @@
       "id": 30,
       "service_id": 30,
       "option_label": "Standard",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 31,
-      "service_id": 31,
-      "option_label": "Standard",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 32,
-      "service_id": 32,
-      "option_label": "Standard",
-      "price_ngn": 2150,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 33,
-      "service_id": 33,
-      "option_label": "Standard",
-      "price_ngn": 3225,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 34,
-      "service_id": 34,
-      "option_label": "Standard",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 35,
-      "service_id": 35,
-      "option_label": "Standard",
-      "price_ngn": 3225,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 36,
-      "service_id": 36,
-      "option_label": "Standard",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 37,
-      "service_id": 37,
-      "option_label": "Standard",
-      "price_ngn": 3225,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 38,
-      "service_id": 38,
-      "option_label": "Standard",
-      "price_ngn": 3225,
+      "price_ngn": 26875,
       "sort_order": 1,
       "is_active": 1,
       "created_at": "2026-08-31 20:39:05"
