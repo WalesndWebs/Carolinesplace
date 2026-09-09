@@ -18,16 +18,16 @@ $current   = $current   ?? 'index';
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=3" />
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=3" />
-  <link rel="stylesheet" href="/assets/css/style.css?v=3" />
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=<?= time() ?>" />
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=<?= time() ?>" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=<?= time() ?>" />
 </head>
 <body>
 
 <nav class="nav <?php echo $current === 'spa' ? 'nav--spa' : ''; ?>" id="mainNav">
   <a href="/" class="nav__logo" aria-label="The Club House @ Caroline's Place">
     <img
-      src="/assets/images/carologo.png?v=<?= time() ?>"
+      src="/assets/images/dsclogo.png?v=<?= time() ?>"
       alt="The Club House @ Caroline's Place"
       class="nav__logo-img nav__logo-img--transparent"
       loading="eager"
@@ -49,7 +49,7 @@ $current   = $current   ?? 'index';
 
 <div class="nav__mobile" id="mobileMenu">
   <div class="nav__mobile-brand" style="padding: 18px 24px 12px; border-bottom: 1px solid rgba(27,20,16,0.08); margin-bottom: 12px;">
-    <img src="/assets/images/carologo.png?v=<?= time() ?>" alt="The Club House @ Caroline's Place" style="height: 38px; width: auto; object-fit: contain; display: block;" />
+    <img src="/assets/images/dsclogo.png?v=<?= time() ?>" alt="The Club House @ Caroline's Place" style="height: 38px; width: auto; object-fit: contain; display: block;" />
   </div>
   <a href="/" class="nav__link">Home</a>
   <a href="/clubhouse.php" class="nav__link">Club House</a>

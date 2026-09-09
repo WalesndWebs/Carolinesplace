@@ -16,7 +16,7 @@ require_once __DIR__ . '/includes/header.php';
   <div class="hero-split__text">
     <div class="spa-page__brand-lockup" style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
       <img
-        src="/assets/images/carologo.png?v=<?= time() ?>"
+        src="/assets/images/dsclogo.png?v=<?= time() ?>"
         alt="The Club House @ Caroline's Place"
         style="height:48px; width:auto; max-width:240px; object-fit:contain; display:block;"
       />

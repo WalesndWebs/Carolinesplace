@@ -8,7 +8,7 @@
     <div>
       <a href="/" style="display:inline-block; margin-bottom:14px; text-decoration:none;" aria-label="The Club House @ Caroline's Place">
         <img
-          src="/assets/images/carologo-white.png?v=<?= time() ?>"
+          src="/assets/images/dsclogo-white.png?v=<?= time() ?>"
           alt="The Club House @ Caroline's Place"
           style="height:44px; width:auto; max-width:240px; object-fit:contain; display:block;"
         />

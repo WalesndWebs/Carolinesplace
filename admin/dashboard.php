@@ -109,7 +109,7 @@ $bookings = $stmt->fetchAll();
   <div style="max-width:1240px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:12px;">
     <div style="display:flex; align-items:center; gap:16px;">
       <a href="/" style="display:flex; align-items:center; text-decoration:none;">
-        <img src="/assets/images/carologo.png?v=<?= time() ?>" alt="The Club House @ Caroline's Place" style="height:36px; width:auto; max-width:200px; object-fit:contain; display:block;" />
+        <img src="/assets/images/dsclogo.png?v=<?= time() ?>" alt="The Club House @ Caroline's Place" style="height:36px; width:auto; max-width:200px; object-fit:contain; display:block;" />
       </a>
       <span style="font-size:11px; letter-spacing:0.12em; text-transform:uppercase; background:var(--primary); color:#fff; padding:3px 10px; border-radius:999px; font-weight:600;">Admin</span>
     </div>

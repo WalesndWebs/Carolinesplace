@@ -123,7 +123,7 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
 
     <div class="admin-login__logo" style="text-align:center; margin-bottom:28px;">
       <a href="/" style="display:inline-block; margin-bottom:8px;" title="Caroline's Place Home">
-        <img src="/assets/images/carologo.png?v=<?= time() ?>" alt="The Club House @ Caroline's Place" style="height:48px; width:auto; max-width:240px; object-fit:contain; display:block; margin:0 auto;" />
+        <img src="/assets/images/dsclogo.png?v=<?= time() ?>" alt="The Club House @ Caroline's Place" style="height:48px; width:auto; max-width:240px; object-fit:contain; display:block; margin:0 auto;" />
       </a>
       <div class="admin-login__logo-sub" style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--primary); font-weight:600;">Admin Portal</div>
     </div>
