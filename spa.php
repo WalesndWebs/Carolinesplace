@@ -78,6 +78,33 @@ require_once __DIR__ . '/includes/header.php';
         loading="lazy"
       />
     </div>
+    <!-- SLIDE 2.1: massage room  -->
+    <div class="hero-slider__slide">
+      <img
+        src="assets/images/spa3.jpg"
+        alt="massage room "
+        class="hero-slider__img"
+        loading="lazy"
+      />
+    </div>
+    <!-- SLIDE 2.2: massage room -->
+    <div class="hero-slider__slide">
+      <img
+        src="assets/images/spa4.jpg"
+        alt="Massage room"
+        class="hero-slider__img"
+        loading="lazy"
+      />
+    </div>
+    <!-- SLIDE 2.3 Massage room -->
+    <div class="hero-slider__slide">
+      <img
+        src="assets/images/spa5.jpg"
+        alt="Massage room"
+        class="hero-slider__img"
+        loading="lazy"
+      />
+    </div>
     <!-- SLIDE 3: Knotless Box Braids (3rd attached image) -->
     <div class="hero-slider__slide">
       <img
@@ -107,6 +134,16 @@ require_once __DIR__ . '/includes/header.php';
         loading="lazy"
       />
     </div>
+        <!-- SLIDE 5: V-TEN Treatment / Facial Room (5th attached image) -->
+    <div class="hero-slider__slide">
+      <img
+        src="assets/images/spa3.jpg"
+        alt="massage room"
+        class="hero-slider__img"
+        loading="lazy"
+      />
+    </div>
+
      <!-- SLIDE 5: V-TEN Treatment / Facial Room (5th attached image) -->
     <div class="hero-slider__slide">
       <img

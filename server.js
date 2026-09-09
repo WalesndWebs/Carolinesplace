@@ -11,7 +11,7 @@ try {
 } catch {
   console.log('PHP runtime not found. Provisioning php-cli and php-sqlite3...');
   try {
-    execSync('DEBIAN_FRONTEND=noninteractive apt-get update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends php-cli php-sqlite3', { stdio: 'inherit' });
+    execSync('DEBIAN_FRONTEND=noninteractive apt-get update -y && DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends -o Dpkg::Options::="--force-confdef" -o Dpkg::Options::="--force-confold" php-cli php-sqlite3', { stdio: 'inherit' });
   } catch (err) {
     console.error('Error provisioning PHP:', err);
   }
