@@ -33,6 +33,21 @@ $current   = $current   ?? 'index';
       loading="eager"
       fetchpriority="high"
     />
+    <?php if ($current === 'spa'): ?>
+      <span class="nav__logo-sep" aria-hidden="true" style="display:inline-block; width:1px; height:24px; background:rgba(215,181,118,0.45); margin:0 10px;"></span>
+      <div class="nav__spa-brand-blend" title="The Nail Lounge &amp; Spa at Caroline's Place">
+        <img
+          src="/assets/images/nlogo.png?v=<?= time() ?>"
+          alt="The Nail Lounge &amp; Spa Emblem"
+          class="nav__spa-logo-img"
+          loading="eager"
+        />
+        <div class="nav__spa-brand-text">
+          <span class="nav__spa-brand-title">THE NAIL LOUNGE</span>
+          <span class="nav__spa-brand-sub">&amp; SPA</span>
+        </div>
+      </div>
+    <?php endif; ?>
   </a>
 
   <div class="nav__links">
@@ -48,8 +63,12 @@ $current   = $current   ?? 'index';
 </nav>
 
 <div class="nav__mobile" id="mobileMenu">
-  <div class="nav__mobile-brand" style="padding: 18px 24px 12px; border-bottom: 1px solid rgba(27,20,16,0.08); margin-bottom: 12px;">
+  <div class="nav__mobile-brand" style="padding: 18px 24px 12px; border-bottom: 1px solid rgba(27,20,16,0.08); margin-bottom: 12px; display: flex; align-items: center; gap: 12px;">
     <img src="/assets/images/dsclogo.png?v=<?= time() ?>" alt="The Club House @ Caroline's Place" style="height: 38px; width: auto; object-fit: contain; display: block;" />
+    <?php if ($current === 'spa'): ?>
+      <span style="display: inline-block; width: 1px; height: 26px; background: rgba(215,181,118,0.5);"></span>
+      <img src="/assets/images/nlogo.png?v=<?= time() ?>" alt="The Nail Lounge &amp; Spa" style="height: 38px; width: 38px; border-radius: 50%; object-fit: contain; display: block;" />
+    <?php endif; ?>
   </div>
   <a href="/" class="nav__link">Home</a>
   <a href="/clubhouse.php" class="nav__link">Club House</a>

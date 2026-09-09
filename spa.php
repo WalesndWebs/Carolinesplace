@@ -14,12 +14,32 @@ require_once __DIR__ . '/includes/header.php';
      ================================================================ -->
 <section class="hero-split hero-split--page">
   <div class="hero-split__text">
-    <div class="spa-page__brand-lockup" style="display:flex; align-items:center; gap:16px; margin-bottom:20px;">
-      <img
-        src="/assets/images/dsclogo.png?v=<?= time() ?>"
-        alt="The Club House @ Caroline's Place"
-        style="height:48px; width:auto; max-width:240px; object-fit:contain; display:block;"
-      />
+    <div class="spa-page__brand-lockup" style="display:flex; align-items:center; gap:18px; flex-wrap:wrap; margin-bottom:24px;">
+      <!-- Logo 1: The Club House @ Caroline's Place -->
+      <a href="/" style="display:inline-block; text-decoration:none;" title="The Club House @ Caroline's Place">
+        <img
+          src="/assets/images/dsclogo.png?v=<?= time() ?>"
+          alt="The Club House @ Caroline's Place"
+          style="height:48px; width:auto; max-width:230px; object-fit:contain; display:block;"
+        />
+      </a>
+
+      <!-- Brand Divider -->
+      <span class="spa-page__brand-sep" style="display:inline-block; width:1px; height:46px; background:linear-gradient(to bottom, transparent, rgba(215,181,118,0.6), transparent);" aria-hidden="true"></span>
+
+      <!-- Logo 2: The Nail Lounge & Spa (Uploaded Emblem) -->
+      <div class="spa-page__brand-logo-frame" title="The Nail Lounge &amp; Spa">
+        <img
+          src="/assets/images/nlogo.png?v=<?= time() ?>"
+          alt="The Nail Lounge &amp; Spa Emblem"
+          class="spa-page__brand-logo"
+          width="92"
+          height="92"
+          fetchpriority="high"
+          loading="eager"
+        />
+      </div>
+
       <div class="spa-page__brand-meta">
         <span class="spa-page__brand-badge">Bespoke Wellness Sanctuary</span>
         <span class="spa-page__brand-sub">The Nail Lounge &amp; Spa · Lagos</span>
