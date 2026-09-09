@@ -6,7 +6,13 @@
 <footer class="footer">
   <div class="footer__grid">
     <div>
-      <div class="footer__brand-name">Caroline's Place</div>
+      <a href="/" style="display:inline-block; margin-bottom:14px; text-decoration:none;" aria-label="The Club House @ Caroline's Place">
+        <img
+          src="/assets/images/carologo-white.png?v=<?= time() ?>"
+          alt="The Club House @ Caroline's Place"
+          style="height:44px; width:auto; max-width:240px; object-fit:contain; display:block;"
+        />
+      </a>
       <div class="footer__brand-sub">Lagos, Nigeria</div>
       <p class="footer__tagline">
         A private sanctuary built in honour of Dame Caroline Oladunni Adesubun.

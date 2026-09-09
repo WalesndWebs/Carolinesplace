@@ -122,8 +122,10 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST') {
   <div class="admin-login__card" style="width:100%; max-width:440px; background:#fff; border-radius:18px; padding:40px; border:1px solid rgba(27,20,16,0.1); box-shadow:0 8px 30px rgba(17,17,17,0.06);">
 
     <div class="admin-login__logo" style="text-align:center; margin-bottom:28px;">
-      <div class="admin-login__logo-title" style="font-family:var(--font-serif); font-size:24px; color:var(--fg);">Caroline's Place</div>
-      <div class="admin-login__logo-sub" style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:var(--primary); margin-top:4px;">Admin Portal</div>
+      <a href="/" style="display:inline-block; margin-bottom:8px;" title="Caroline's Place Home">
+        <img src="/assets/images/carologo.png?v=<?= time() ?>" alt="The Club House @ Caroline's Place" style="height:48px; width:auto; max-width:240px; object-fit:contain; display:block; margin:0 auto;" />
+      </a>
+      <div class="admin-login__logo-sub" style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:var(--primary); font-weight:600;">Admin Portal</div>
     </div>
 
     <?php if (!empty($error)): ?>

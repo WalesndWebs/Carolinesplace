@@ -689,14 +689,9 @@ function formatPriceLocal($amount) {
 
 <nav class="admin-nav">
   <div class="admin-nav__left">
-    <a href="dashboard.php" class="admin-nav__brand">
-      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-        <rect x="3" y="3" width="7" height="7"/>
-        <rect x="14" y="3" width="7" height="7"/>
-        <rect x="14" y="14" width="7" height="7"/>
-        <rect x="3" y="14" width="7" height="7"/>
-      </svg>
-      ADMIN
+    <a href="dashboard.php" class="admin-nav__brand" style="display:flex; align-items:center; gap:10px;">
+      <img src="/assets/images/carologo.png?v=<?= time() ?>" alt="The Club House @ Caroline's Place" style="height:32px; width:auto; max-width:160px; object-fit:contain; display:block;" />
+      <span style="font-size:11px; letter-spacing:0.12em; font-weight:600; background:var(--primary); color:#fff; padding:2px 8px; border-radius:4px;">ADMIN</span>
     </a>
     <a class="admin-nav__link" href="spa_products.php">
       🛠️ Spa Products &amp; Pricing

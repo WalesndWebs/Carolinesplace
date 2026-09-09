@@ -18,34 +18,21 @@ $current   = $current   ?? 'index';
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png?v=3" />
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=3" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=3" />
 </head>
 <body>
 
 <nav class="nav <?php echo $current === 'spa' ? 'nav--spa' : ''; ?>" id="mainNav">
-  <a href="/" class="nav__logo" aria-label="Caroline's Place Home">
+  <a href="/" class="nav__logo" aria-label="The Club House @ Caroline's Place">
     <img
-      src="/assets/images/logo.png"
-      alt="Caroline's Place Logo"
+      src="/assets/images/carologo.png?v=<?= time() ?>"
+      alt="The Club House @ Caroline's Place"
       class="nav__logo-img nav__logo-img--transparent"
       loading="eager"
       fetchpriority="high"
     />
-    <?php if ($current === 'spa'): ?>
-      <span class="nav__logo-sep" aria-hidden="true"></span>
-      <div class="nav__spa-brand-blend" title="The Nail Lounge &amp; Spa at Caroline's Place">
-        <img
-          src="/assets/images/logo.jpg"
-          alt="The Nail Lounge &amp; Spa Emblem"
-          class="nav__spa-logo-img"
-          loading="eager"
-        />
-        <div class="nav__spa-brand-text">
-          <span class="nav__spa-brand-title">THE NAIL LOUNGE</span>
-          <span class="nav__spa-brand-sub">&amp; SPA</span>
-        </div>
-      </div>
-    <?php endif; ?>
   </a>
 
   <div class="nav__links">
@@ -61,6 +48,9 @@ $current   = $current   ?? 'index';
 </nav>
 
 <div class="nav__mobile" id="mobileMenu">
+  <div class="nav__mobile-brand" style="padding: 18px 24px 12px; border-bottom: 1px solid rgba(27,20,16,0.08); margin-bottom: 12px;">
+    <img src="/assets/images/carologo.png?v=<?= time() ?>" alt="The Club House @ Caroline's Place" style="height: 38px; width: auto; object-fit: contain; display: block;" />
+  </div>
   <a href="/" class="nav__link">Home</a>
   <a href="/clubhouse.php" class="nav__link">Club House</a>
   <a href="/spa.php" class="nav__link">Spa</a>

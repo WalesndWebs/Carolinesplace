@@ -32,7 +32,7 @@ This project is fully structured with standard **HTML5, CSS3, JavaScript, and PH
    └── spa_review.php       <- Booking review endpoint
    ```
 
-*(Note: Node.js files like `server.js`, `data.js`, `views/`, and `node_modules/` are only used for the AI Studio preview environment and can be omitted when uploading pure PHP/HTML to Hostinger).*
+*(Note: `server.js` and `package.json` are solely used to run the live preview container inside Google AI Studio. For Hostinger, cPanel, Apache, or standard PHP web hosting, you simply upload the PHP, HTML, CSS, and JS files directly).*
 
 ---
 

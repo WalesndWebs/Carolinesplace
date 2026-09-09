@@ -805,47 +805,48 @@ ul { list-style: none; }
 /* ============================================================
    CUSTOM USER ASSETS (new logo + hero building image)
    ============================================================ */
-/* ── Nav Logo (orange rounded rectangle with house icon) ──── */
+/* ── Nav Logo (The Club House @ Caroline's Place brand logo) ──── */
 .nav__logo {
   display: inline-flex;
-  align-items: stretch;
-  justify-content: center;
+  align-items: center;
   text-decoration: none;
-  line-height: 0;
+  line-height: 1;
   flex-shrink: 0;
+  padding: 2px 0;
 }
 .nav__logo-img {
-  height: 58px;
-  max-width: 340px;
+  height: 52px;
+  max-height: 54px;
   width: auto;
+  max-width: 320px;
   object-fit: contain;
   object-position: left center;
   display: block;
-  border-radius: 8px;
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.nav__logo:hover .nav__logo-img {
+  opacity: 0.92;
+  transform: translateY(-1px);
 }
 @media (max-width: 900px) {
   .nav__logo-img {
-    height: 50px;
-    max-width: 280px;
-  }
-}
-@media (max-width: 768px) {
-  .nav__logo-img {
     height: 46px;
-    max-width: 240px;
+    max-height: 48px;
+    max-width: 260px;
   }
 }
-@media (max-width: 520px) {
+@media (max-width: 640px) {
   .nav__logo-img {
-    height: 42px;
-    max-width: 200px;
+    height: 40px;
+    max-height: 42px;
+    max-width: 220px;
   }
 }
 @media (max-width: 400px) {
   .nav__logo-img {
-    height: 38px;
-    max-width: 170px;
+    height: 36px;
+    max-height: 38px;
+    max-width: 190px;
   }
 }
 
@@ -872,25 +873,20 @@ ul { list-style: none; }
    NEW SECTIONS: hero-split / 4-features / spaces / sanctuary / journey CTA
    ============================================================ */
 
-/* ── NEW NAV LOGO: Orange script (EXACTLY image logo!) ── */
+/* ── NEW NAV LOGO: The Club House @ Caroline's Place ── */
 .nav__logo {
   display: inline-flex !important;
   flex-direction: row;
   align-items: center;
-  line-height: 1.05;
-  padding: 4px 2px;
+  line-height: 1;
+  padding: 4px 0;
   text-decoration: none;
 }
-/* ── NAV LOGO (REAL IMAGE + AUTO TRANSPARENT white bg via multiply blend) ── */
-.nav__logo-img { display: block !important; max-height: 56px; width: auto; object-fit: contain; }
 .nav__logo::before, .nav__logo::after { content: none !important; }
 .nav__logo-img--transparent {
-  mix-blend-mode: multiply;
   background: transparent !important;
-  filter: contrast(1.08) saturate(1.05);
-}
-@media (max-width: 640px) {
-  .nav__logo-img { max-height: 42px; }
+  mix-blend-mode: normal !important;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.04));
 }
 
 /* ── SPA-ONLY NAV LOGO BLEND (Active strictly on /spa alone) ── */
