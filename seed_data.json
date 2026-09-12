@@ -1,2832 +1,3522 @@
 {
-  "categories": [
-    {
-      "id": 1,
-      "name": "Spa Section",
-      "description": "Signature facials and skin-care sanctuary",
-      "icon": "🧖‍♀️",
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 2,
-      "name": "Massage",
-      "description": "Therapeutic, relaxation, specialty massages",
-      "icon": "💆",
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 3,
-      "name": "Waxing",
-      "description": "Full-body hair removal with wax options",
-      "icon": "✨",
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 4,
-      "name": "Body Treatment",
-      "description": "Scrubs, wraps, steam baths, hammam, hair masks",
-      "icon": "🧴",
-      "sort_order": 4,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 5,
-      "name": "Hair Section",
-      "description": "Braids, cornrows, wigs, relaxers, styling, perms",
-      "icon": "💇",
-      "sort_order": 5,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 6,
-      "name": "Nails Price List",
-      "description": "Manicures, gel, acrylic, BIAB, art, chrome, gel X",
-      "icon": "💅",
-      "sort_order": 6,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 7,
-      "name": "Pedicure Section",
-      "description": "Pedicures, manicure combos & kids variants",
-      "icon": "🦶",
-      "sort_order": 7,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    }
-  ],
-  "services": [
-    {
-      "id": 1,
-      "category_id": 1,
-      "name": "Anti-Aging Facial",
-      "description": "Anti-Aging Facial",
-      "duration_minutes": 60,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 8,
-      "category_id": 2,
-      "name": "Swedish (Relaxation) Massage",
-      "description": "Swedish (Relaxation) Massage",
-      "duration_minutes": 60,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 19,
-      "category_id": 3,
-      "name": "Chin Wax",
-      "description": "Chin Wax",
-      "duration_minutes": 15,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 39,
-      "category_id": 4,
-      "name": "Coffee Scrub / Body Wrap",
-      "description": "Coffee Scrub / Body Wrap",
-      "duration_minutes": 60,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 42,
-      "category_id": 5,
-      "name": "Washing of Hair Alone",
-      "description": "Washing of Hair Alone",
-      "duration_minutes": 45,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 94,
-      "category_id": 6,
-      "name": "Gel X",
-      "description": "Gel X",
-      "duration_minutes": 60,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 123,
-      "category_id": 7,
-      "name": "Regular Pedicure",
-      "description": "Regular Pedicure",
-      "duration_minutes": 60,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 2,
-      "category_id": 1,
-      "name": "Microdermabrasion Facial",
-      "description": "Microdermabrasion Facial",
-      "duration_minutes": 60,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 9,
-      "category_id": 2,
-      "name": "Deep Tissue Massage",
-      "description": "Deep Tissue Massage",
-      "duration_minutes": 60,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 20,
-      "category_id": 3,
-      "name": "Upper Lip Wax",
-      "description": "Upper Lip Wax",
-      "duration_minutes": 15,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 40,
-      "category_id": 4,
-      "name": "Hammam (Moroccan Bath)",
-      "description": "Hammam (Moroccan Bath)",
-      "duration_minutes": 75,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 43,
-      "category_id": 5,
-      "name": "Washing & Blow-dry",
-      "description": "Washing & Blow-dry",
-      "duration_minutes": 60,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 95,
-      "category_id": 6,
-      "name": "French Tips",
-      "description": "French Tips",
-      "duration_minutes": 45,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 124,
-      "category_id": 7,
-      "name": "Dry Pedicure",
-      "description": "Dry Pedicure",
-      "duration_minutes": 60,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 3,
-      "category_id": 1,
-      "name": "Men Facial",
-      "description": "Men Facial",
-      "duration_minutes": 45,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 10,
-      "category_id": 2,
-      "name": "Hot Stone Massage",
-      "description": "Hot Stone Massage",
-      "duration_minutes": 75,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 21,
-      "category_id": 3,
-      "name": "Underarm Waxing",
-      "description": "Underarm Waxing",
-      "duration_minutes": 15,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 41,
-      "category_id": 4,
-      "name": "Steam Bath",
-      "description": "Steam Bath",
-      "duration_minutes": 60,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 44,
-      "category_id": 5,
-      "name": "Washing & Straightening (Temporary)",
-      "description": "Washing & Straightening (Temporary)",
-      "duration_minutes": 75,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 96,
-      "category_id": 6,
-      "name": "Chrome",
-      "description": "Chrome",
-      "duration_minutes": 45,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 125,
-      "category_id": 7,
-      "name": "Spa Pedicure",
-      "description": "Spa Pedicure",
-      "duration_minutes": 75,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 4,
-      "category_id": 1,
-      "name": "Dermaplaning Facial",
-      "description": "Dermaplaning Facial",
-      "duration_minutes": 45,
-      "sort_order": 4,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 11,
-      "category_id": 2,
-      "name": "Couple Swedish Massage",
-      "description": "Couple Swedish Massage",
-      "duration_minutes": 60,
-      "sort_order": 4,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 22,
-      "category_id": 3,
-      "name": "Full Hand Waxing",
-      "description": "Full Hand Waxing",
-      "duration_minutes": 30,
-      "sort_order": 4,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 45,
-      "category_id": 5,
-      "name": "Protein Treatment (Hair Botox)",
-      "description": "Protein Treatment (Hair Botox)",
-      "duration_minutes": 60,
-      "sort_order": 4,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 97,
-      "category_id": 6,
-      "name": "Ombre",
-      "description": "Ombre",
-      "duration_minutes": 60,
-      "sort_order": 4,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 126,
-      "category_id": 7,
-      "name": "Manicure",
-      "description": "Manicure",
-      "duration_minutes": 45,
-      "sort_order": 4,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 5,
-      "category_id": 1,
-      "name": "Vitamin C Brightening Facial",
-      "description": "Vitamin C Brightening Facial",
-      "duration_minutes": 60,
-      "sort_order": 5,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 12,
-      "category_id": 2,
-      "name": "Couple Deep Tissue Massage",
-      "description": "Couple Deep Tissue Massage",
-      "duration_minutes": 60,
-      "sort_order": 5,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 23,
-      "category_id": 3,
-      "name": "Half Hand Waxing",
-      "description": "Half Hand Waxing",
-      "duration_minutes": 20,
-      "sort_order": 5,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 46,
-      "category_id": 5,
-      "name": "Deep Conditioning Treatment",
-      "description": "Deep Conditioning Treatment",
-      "duration_minutes": 45,
-      "sort_order": 5,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 98,
-      "category_id": 6,
-      "name": "Coloured Powder",
-      "description": "Coloured Powder",
-      "duration_minutes": 60,
-      "sort_order": 5,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 127,
-      "category_id": 7,
-      "name": "Pedicure with Cavia",
-      "description": "Pedicure with Cavia",
-      "duration_minutes": 60,
-      "sort_order": 5,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 6,
-      "category_id": 1,
-      "name": "Deep Cleansing Facial",
-      "description": "Deep Cleansing Facial",
-      "duration_minutes": 60,
-      "sort_order": 6,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 13,
-      "category_id": 2,
-      "name": "Back Massage",
-      "description": "Back Massage",
-      "duration_minutes": 45,
-      "sort_order": 6,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 24,
-      "category_id": 3,
-      "name": "Full Leg Waxing",
-      "description": "Full Leg Waxing",
-      "duration_minutes": 45,
-      "sort_order": 6,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 47,
-      "category_id": 5,
-      "name": "Hot Oil Treatment",
-      "description": "Hot Oil Treatment",
-      "duration_minutes": 30,
-      "sort_order": 6,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 99,
-      "category_id": 6,
-      "name": "Ombre Refill",
-      "description": "Ombre Refill",
-      "duration_minutes": 45,
-      "sort_order": 6,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 128,
-      "category_id": 7,
-      "name": "Luxury Pedicure",
-      "description": "Luxury Pedicure",
-      "duration_minutes": 90,
-      "sort_order": 6,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 7,
-      "category_id": 1,
-      "name": "Acne Treatment Facial",
-      "description": "Acne Treatment Facial",
-      "duration_minutes": 60,
-      "sort_order": 7,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 14,
-      "category_id": 2,
-      "name": "Reflexology Massage",
-      "description": "Reflexology Massage",
-      "duration_minutes": 45,
-      "sort_order": 7,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 25,
-      "category_id": 3,
-      "name": "Half Leg Waxing",
-      "description": "Half Leg Waxing",
-      "duration_minutes": 30,
-      "sort_order": 7,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 48,
-      "category_id": 5,
-      "name": "Steam Treatment for Hair",
-      "description": "Steam Treatment for Hair",
-      "duration_minutes": 30,
-      "sort_order": 7,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 100,
-      "category_id": 6,
-      "name": "Acrylic Nail Refill",
-      "description": "Acrylic Nail Refill",
-      "duration_minutes": 45,
-      "sort_order": 7,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 129,
-      "category_id": 7,
-      "name": "Kids Pedicure",
-      "description": "Kids Pedicure",
-      "duration_minutes": 30,
-      "sort_order": 7,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 15,
-      "category_id": 2,
-      "name": "Aromatherapy Massage / Steam",
-      "description": "Aromatherapy Massage / Steam",
-      "duration_minutes": 60,
-      "sort_order": 8,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 26,
-      "category_id": 3,
-      "name": "Bikini Waxing",
-      "description": "Bikini Waxing",
-      "duration_minutes": 30,
-      "sort_order": 8,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 49,
-      "category_id": 5,
-      "name": "Knotless Braids",
-      "description": "Knotless Braids",
-      "duration_minutes": 150,
-      "sort_order": 8,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 101,
-      "category_id": 6,
-      "name": "Acrylic Wrap",
-      "description": "Acrylic Wrap",
-      "duration_minutes": 60,
-      "sort_order": 8,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 130,
-      "category_id": 7,
-      "name": "Kids Manicure",
-      "description": "Kids Manicure",
-      "duration_minutes": 20,
-      "sort_order": 8,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 16,
-      "category_id": 2,
-      "name": "Prenatal Massage",
-      "description": "Prenatal Massage",
-      "duration_minutes": 60,
-      "sort_order": 9,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 27,
-      "category_id": 3,
-      "name": "Brazilian Waxing",
-      "description": "Brazilian Waxing",
-      "duration_minutes": 45,
-      "sort_order": 9,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 50,
-      "category_id": 5,
-      "name": "Tiny / Knotless Braids",
-      "description": "Tiny / Knotless Braids",
-      "duration_minutes": 150,
-      "sort_order": 9,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 102,
-      "category_id": 6,
-      "name": "Stick On",
-      "description": "Stick On",
-      "duration_minutes": 45,
-      "sort_order": 9,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 17,
-      "category_id": 2,
-      "name": "Head Massage",
-      "description": "Head Massage",
-      "duration_minutes": 30,
-      "sort_order": 10,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 28,
-      "category_id": 3,
-      "name": "Eyebrow Waxing",
-      "description": "Eyebrow Waxing",
-      "duration_minutes": 15,
-      "sort_order": 10,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 51,
-      "category_id": 5,
-      "name": "Box Braids",
-      "description": "Box Braids",
-      "duration_minutes": 150,
-      "sort_order": 10,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 103,
-      "category_id": 6,
-      "name": "Refill Gel",
-      "description": "Refill Gel",
-      "duration_minutes": 60,
-      "sort_order": 10,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 18,
-      "category_id": 2,
-      "name": "Peace Balance",
-      "description": "Peace Balance",
-      "duration_minutes": 60,
-      "sort_order": 11,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 29,
-      "category_id": 3,
-      "name": "Full Body Waxing",
-      "description": "Full Body Waxing",
-      "duration_minutes": 90,
-      "sort_order": 11,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 52,
-      "category_id": 5,
-      "name": "Cornrows (Feed-in)",
-      "description": "Cornrows (Feed-in)",
-      "duration_minutes": 60,
-      "sort_order": 11,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 104,
-      "category_id": 6,
-      "name": "Acrylic",
-      "description": "Acrylic",
-      "duration_minutes": 60,
-      "sort_order": 11,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 30,
-      "category_id": 3,
-      "name": "Hollywood Waxing",
-      "description": "Hollywood Waxing",
-      "duration_minutes": 45,
-      "sort_order": 12,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 53,
-      "category_id": 5,
-      "name": "Ghana Weaving",
-      "description": "Ghana Weaving",
-      "duration_minutes": 90,
-      "sort_order": 12,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 105,
-      "category_id": 6,
-      "name": "BIAB",
-      "description": "BIAB",
-      "duration_minutes": 60,
-      "sort_order": 12,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 54,
-      "category_id": 5,
-      "name": "Crochet Braids (Hair not included)",
-      "description": "Crochet Braids (Hair not included)",
-      "duration_minutes": 120,
-      "sort_order": 13,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 106,
-      "category_id": 6,
-      "name": "Hard Gel",
-      "description": "Hard Gel",
-      "duration_minutes": 60,
-      "sort_order": 13,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 55,
-      "category_id": 5,
-      "name": "Wig Cap / Wig Construction",
-      "description": "Wig Cap / Wig Construction",
-      "duration_minutes": 180,
-      "sort_order": 14,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 107,
-      "category_id": 6,
-      "name": "Cateye Polish",
-      "description": "Cateye Polish",
-      "duration_minutes": 30,
-      "sort_order": 14,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 56,
-      "category_id": 5,
-      "name": "Wig Install",
-      "description": "Wig Install",
-      "duration_minutes": 120,
-      "sort_order": 15,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 108,
-      "category_id": 6,
-      "name": "Press On Nails",
-      "description": "Press On Nails",
-      "duration_minutes": 30,
-      "sort_order": 15,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 57,
-      "category_id": 5,
-      "name": "Wig Revamp / Takedown + Reinstall",
-      "description": "Wig Revamp / Takedown + Reinstall",
-      "duration_minutes": 120,
-      "sort_order": 16,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 109,
-      "category_id": 6,
-      "name": "Gel Polish",
-      "description": "Gel Polish",
-      "duration_minutes": 30,
-      "sort_order": 16,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 58,
-      "category_id": 5,
-      "name": "Wig Styling (Wash & Style)",
-      "description": "Wig Styling (Wash & Style)",
-      "duration_minutes": 60,
-      "sort_order": 17,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 110,
-      "category_id": 6,
-      "name": "Regular Polish",
-      "description": "Regular Polish",
-      "duration_minutes": 30,
-      "sort_order": 17,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 59,
-      "category_id": 5,
-      "name": "Colour Retouch / Root Touch-up",
-      "description": "Colour Retouch / Root Touch-up",
-      "duration_minutes": 90,
-      "sort_order": 18,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 111,
-      "category_id": 6,
-      "name": "Deep In (Nails)",
-      "description": "Deep In (Nails)",
-      "duration_minutes": 60,
-      "sort_order": 18,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 60,
-      "category_id": 5,
-      "name": "Full Head Colour",
-      "description": "Full Head Colour",
-      "duration_minutes": 120,
-      "sort_order": 19,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 112,
-      "category_id": 6,
-      "name": "Tidy Up of Nails",
-      "description": "Tidy Up of Nails",
-      "duration_minutes": 30,
-      "sort_order": 19,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 61,
-      "category_id": 5,
-      "name": "Hair Highlights (Balayage/Foils)",
-      "description": "Hair Highlights (Balayage/Foils)",
-      "duration_minutes": 120,
-      "sort_order": 20,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 113,
-      "category_id": 6,
-      "name": "Gel Topcoat",
-      "description": "Gel Topcoat",
-      "duration_minutes": 20,
-      "sort_order": 20,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 62,
-      "category_id": 5,
-      "name": "Bleach & Tone",
-      "description": "Bleach & Tone",
-      "duration_minutes": 120,
-      "sort_order": 21,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 114,
-      "category_id": 6,
-      "name": "BIAB Refill",
-      "description": "BIAB Refill",
-      "duration_minutes": 45,
-      "sort_order": 21,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 63,
-      "category_id": 5,
-      "name": "Silk Press",
-      "description": "Silk Press",
-      "duration_minutes": 60,
-      "sort_order": 22,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 115,
-      "category_id": 6,
-      "name": "Nail Art (Per Finger)",
-      "description": "Nail Art (Per Finger)",
-      "duration_minutes": 10,
-      "sort_order": 22,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 64,
-      "category_id": 5,
-      "name": "Flexi Rod Set",
-      "description": "Flexi Rod Set",
-      "duration_minutes": 60,
-      "sort_order": 23,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 116,
-      "category_id": 6,
-      "name": "3D Nail Art Design",
-      "description": "3D Nail Art Design",
-      "duration_minutes": 15,
-      "sort_order": 23,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 65,
-      "category_id": 5,
-      "name": "Perm Rod Set",
-      "description": "Perm Rod Set",
-      "duration_minutes": 60,
-      "sort_order": 24,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 117,
-      "category_id": 6,
-      "name": "Stone Nail Art",
-      "description": "Stone Nail Art",
-      "duration_minutes": 20,
-      "sort_order": 24,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 66,
-      "category_id": 5,
-      "name": "Washing & Setting of Wigs with Rollers",
-      "description": "Washing & Setting of Wigs with Rollers",
-      "duration_minutes": 60,
-      "sort_order": 25,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 118,
-      "category_id": 6,
-      "name": "Nail Replacement (Per Finger)",
-      "description": "Nail Replacement (Per Finger)",
-      "duration_minutes": 15,
-      "sort_order": 25,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 67,
-      "category_id": 5,
-      "name": "Washing & Straightening of Wigs",
-      "description": "Washing & Straightening of Wigs",
-      "duration_minutes": 60,
-      "sort_order": 26,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 119,
-      "category_id": 6,
-      "name": "Big Toes Fixing",
-      "description": "Big Toes Fixing",
-      "duration_minutes": 20,
-      "sort_order": 26,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 68,
-      "category_id": 5,
-      "name": "Washing & Curling",
-      "description": "Washing & Curling",
-      "duration_minutes": 60,
-      "sort_order": 27,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 120,
-      "category_id": 6,
-      "name": "Gel Dissolve",
-      "description": "Gel Dissolve",
-      "duration_minutes": 20,
-      "sort_order": 27,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 69,
-      "category_id": 5,
-      "name": "Straightening Alone",
-      "description": "Straightening Alone",
-      "duration_minutes": 45,
-      "sort_order": 28,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 121,
-      "category_id": 6,
-      "name": "Sculpting Gel",
-      "description": "Sculpting Gel",
-      "duration_minutes": 30,
-      "sort_order": 28,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 70,
-      "category_id": 5,
-      "name": "Curling Alone",
-      "description": "Curling Alone",
-      "duration_minutes": 45,
-      "sort_order": 29,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 122,
-      "category_id": 6,
-      "name": "Acrylic / BIAB / Stick-On Dissolve",
-      "description": "Acrylic / BIAB / Stick-On Dissolve",
-      "duration_minutes": 20,
-      "sort_order": 29,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 71,
-      "category_id": 5,
-      "name": "Wig Repairs",
-      "description": "Wig Repairs",
-      "duration_minutes": 30,
-      "sort_order": 30,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 72,
-      "category_id": 5,
-      "name": "Dyeing of Wig / Weave",
-      "description": "Dyeing of Wig / Weave",
-      "duration_minutes": 90,
-      "sort_order": 31,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 73,
-      "category_id": 5,
-      "name": "Sharper Powder",
-      "description": "Sharper Powder",
-      "duration_minutes": 120,
-      "sort_order": 32,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 74,
-      "category_id": 5,
-      "name": "Sharper Powder (Sizes)",
-      "description": "Sharper Powder (Sizes)",
-      "duration_minutes": 120,
-      "sort_order": 33,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 75,
-      "category_id": 5,
-      "name": "Mega Growth Relaxer",
-      "description": "Mega Growth Relaxer",
-      "duration_minutes": 30,
-      "sort_order": 34,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 76,
-      "category_id": 5,
-      "name": "Mega Growth Relaxer 2",
-      "description": "Mega Growth Relaxer 2",
-      "duration_minutes": 45,
-      "sort_order": 35,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 77,
-      "category_id": 5,
-      "name": "Loosing of Goodness Braid",
-      "description": "Loosing of Goodness Braid",
-      "duration_minutes": 45,
-      "sort_order": 36,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 78,
-      "category_id": 5,
-      "name": "Olive Oil Relaxer",
-      "description": "Olive Oil Relaxer",
-      "duration_minutes": 30,
-      "sort_order": 37,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 79,
-      "category_id": 5,
-      "name": "Olive Oil Relaxer 2",
-      "description": "Olive Oil Relaxer 2",
-      "duration_minutes": 45,
-      "sort_order": 38,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 80,
-      "category_id": 5,
-      "name": "Bob Marley",
-      "description": "Bob Marley",
-      "duration_minutes": 150,
-      "sort_order": 39,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 81,
-      "category_id": 5,
-      "name": "Stitch Braids",
-      "description": "Stitch Braids",
-      "duration_minutes": 150,
-      "sort_order": 40,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 82,
-      "category_id": 5,
-      "name": "Hair Trimming / Cutting",
-      "description": "Hair Trimming / Cutting",
-      "duration_minutes": 30,
-      "sort_order": 41,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 83,
-      "category_id": 5,
-      "name": "Scalp Treatment",
-      "description": "Scalp Treatment",
-      "duration_minutes": 30,
-      "sort_order": 42,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 84,
-      "category_id": 5,
-      "name": "Henna / Natural Hair Colour",
-      "description": "Henna / Natural Hair Colour",
-      "duration_minutes": 60,
-      "sort_order": 43,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 85,
-      "category_id": 5,
-      "name": "Weave / Weavon Fixing (Short)",
-      "description": "Weave / Weavon Fixing (Short)",
-      "duration_minutes": 90,
-      "sort_order": 44,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 86,
-      "category_id": 5,
-      "name": "Weave / Weavon Fixing (Long)",
-      "description": "Weave / Weavon Fixing (Long)",
-      "duration_minutes": 120,
-      "sort_order": 45,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 87,
-      "category_id": 5,
-      "name": "Clip-In Extensions Install",
-      "description": "Clip-In Extensions Install",
-      "duration_minutes": 60,
-      "sort_order": 46,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 88,
-      "category_id": 5,
-      "name": "Tape-In Extensions Install",
-      "description": "Tape-In Extensions Install",
-      "duration_minutes": 90,
-      "sort_order": 47,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 89,
-      "category_id": 5,
-      "name": "Faux Locs (Short)",
-      "description": "Faux Locs (Short)",
-      "duration_minutes": 120,
-      "sort_order": 48,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 90,
-      "category_id": 5,
-      "name": "Faux Locs (Long)",
-      "description": "Faux Locs (Long)",
-      "duration_minutes": 150,
-      "sort_order": 49,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 91,
-      "category_id": 5,
-      "name": "Dreadlocks Maintenance / Retwist",
-      "description": "Dreadlocks Maintenance / Retwist",
-      "duration_minutes": 60,
-      "sort_order": 50,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 92,
-      "category_id": 5,
-      "name": "Barbing / Hair Cut (Men)",
-      "description": "Barbing / Hair Cut (Men)",
-      "duration_minutes": 30,
-      "sort_order": 51,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 93,
-      "category_id": 5,
-      "name": "Kids Hair Styling (Simple)",
-      "description": "Kids Hair Styling (Simple)",
-      "duration_minutes": 30,
-      "sort_order": 52,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    }
-  ],
-  "options": [
-    {
-      "id": 1,
-      "service_id": 1,
-      "option_label": "Standard",
-      "price_ngn": 37625,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 2,
-      "service_id": 2,
-      "option_label": "Standard",
-      "price_ngn": 32250,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 3,
-      "service_id": 3,
-      "option_label": "Standard",
-      "price_ngn": 32250,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 4,
-      "service_id": 4,
-      "option_label": "Standard",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 5,
-      "service_id": 5,
-      "option_label": "Standard",
-      "price_ngn": 32250,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 6,
-      "service_id": 6,
-      "option_label": "Standard",
-      "price_ngn": 32250,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 7,
-      "service_id": 7,
-      "option_label": "Standard",
-      "price_ngn": 43000,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 8,
-      "service_id": 8,
-      "option_label": "Standard",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 9,
-      "service_id": 9,
-      "option_label": "Standard",
-      "price_ngn": 37625,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 10,
-      "service_id": 10,
-      "option_label": "Standard",
-      "price_ngn": 43000,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 11,
-      "service_id": 11,
-      "option_label": "Standard",
-      "price_ngn": 43000,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 12,
-      "service_id": 12,
-      "option_label": "Standard",
-      "price_ngn": 53750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 13,
-      "service_id": 13,
-      "option_label": "Standard",
-      "price_ngn": 16125,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 14,
-      "service_id": 14,
-      "option_label": "Standard",
-      "price_ngn": 16125,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 15,
-      "service_id": 15,
-      "option_label": "Standard",
-      "price_ngn": 37625,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 16,
-      "service_id": 16,
-      "option_label": "Standard",
-      "price_ngn": 32250,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 17,
-      "service_id": 17,
-      "option_label": "Standard",
-      "price_ngn": 16125,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 18,
-      "service_id": 18,
-      "option_label": "Standard",
-      "price_ngn": 43000,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 19,
-      "service_id": 19,
-      "option_label": "Standard",
-      "price_ngn": 7525,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 20,
-      "service_id": 20,
-      "option_label": "Standard",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 21,
-      "service_id": 21,
-      "option_label": "Standard",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 22,
-      "service_id": 22,
-      "option_label": "Standard",
-      "price_ngn": 15050,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 23,
-      "service_id": 23,
-      "option_label": "Standard",
-      "price_ngn": 7525,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 24,
-      "service_id": 24,
-      "option_label": "Standard",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 25,
-      "service_id": 25,
-      "option_label": "Standard",
-      "price_ngn": 9675,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 26,
-      "service_id": 26,
-      "option_label": "Standard",
-      "price_ngn": 32250,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 27,
-      "service_id": 27,
-      "option_label": "Standard",
-      "price_ngn": 26875,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 28,
-      "service_id": 28,
-      "option_label": "Standard",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 29,
-      "service_id": 29,
-      "option_label": "Standard",
-      "price_ngn": 53750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 30,
-      "service_id": 30,
-      "option_label": "Standard",
-      "price_ngn": 26875,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 39,
-      "service_id": 39,
-      "option_label": "Standard",
-      "price_ngn": 48375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 40,
-      "service_id": 40,
-      "option_label": "Standard",
-      "price_ngn": 43000,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 41,
-      "service_id": 41,
-      "option_label": "15 mins",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 44,
-      "service_id": 42,
-      "option_label": "Short",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 47,
-      "service_id": 43,
-      "option_label": "Short",
-      "price_ngn": 8600,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 50,
-      "service_id": 44,
-      "option_label": "Short",
-      "price_ngn": 12900,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 53,
-      "service_id": 45,
-      "option_label": "Standard",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 54,
-      "service_id": 46,
-      "option_label": "Standard",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 55,
-      "service_id": 47,
-      "option_label": "Standard",
-      "price_ngn": 7525,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 56,
-      "service_id": 48,
-      "option_label": "Standard",
-      "price_ngn": 8600,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 57,
-      "service_id": 49,
-      "option_label": "Bob (Shoulder)",
-      "price_ngn": 43000,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 60,
-      "service_id": 50,
-      "option_label": "Bob (Shoulder)",
-      "price_ngn": 43000,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 63,
-      "service_id": 51,
-      "option_label": "Short/Shoulder",
-      "price_ngn": 32250,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 66,
-      "service_id": 52,
-      "option_label": "Simple",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 68,
-      "service_id": 53,
-      "option_label": "Short",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 70,
-      "service_id": 54,
-      "option_label": "Short",
-      "price_ngn": 16125,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 72,
-      "service_id": 55,
-      "option_label": "Closure",
-      "price_ngn": 26875,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 75,
-      "service_id": 56,
-      "option_label": "Closure",
-      "price_ngn": 16125,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 78,
-      "service_id": 57,
-      "option_label": "Standard",
-      "price_ngn": 32250,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 79,
-      "service_id": 58,
-      "option_label": "Loose Curls / Waves",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 82,
-      "service_id": 59,
-      "option_label": "Standard",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 83,
-      "service_id": 60,
-      "option_label": "Standard",
-      "price_ngn": 32250,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 84,
-      "service_id": 61,
-      "option_label": "Partial",
-      "price_ngn": 26875,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 86,
-      "service_id": 62,
-      "option_label": "Standard",
-      "price_ngn": 37625,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 87,
-      "service_id": 63,
-      "option_label": "Standard",
-      "price_ngn": 16125,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 88,
-      "service_id": 64,
-      "option_label": "Standard",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 89,
-      "service_id": 65,
-      "option_label": "Standard",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 90,
-      "service_id": 66,
-      "option_label": "Short",
-      "price_ngn": 16125,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 92,
-      "service_id": 67,
-      "option_label": "Short",
-      "price_ngn": 16125,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 95,
-      "service_id": 68,
-      "option_label": "Short",
-      "price_ngn": 16125,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 97,
-      "service_id": 69,
-      "option_label": "Short",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 99,
-      "service_id": 70,
-      "option_label": "Short",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 101,
-      "service_id": 71,
-      "option_label": "Wig Band Replacement",
-      "price_ngn": 2150,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 104,
-      "service_id": 72,
-      "option_label": "Short",
-      "price_ngn": 24725,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 107,
-      "service_id": 73,
-      "option_label": "Client's Product",
-      "price_ngn": 29025,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 109,
-      "service_id": 74,
-      "option_label": "Medium",
-      "price_ngn": 31175,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 111,
-      "service_id": 75,
-      "option_label": "Standard",
-      "price_ngn": 2150,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 112,
-      "service_id": 76,
-      "option_label": "Standard",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 113,
-      "service_id": 77,
-      "option_label": "Standard",
-      "price_ngn": 17200,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 114,
-      "service_id": 78,
-      "option_label": "Standard",
-      "price_ngn": 2150,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 115,
-      "service_id": 79,
-      "option_label": "Standard",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 116,
-      "service_id": 80,
-      "option_label": "Standard",
-      "price_ngn": 37625,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 117,
-      "service_id": 81,
-      "option_label": "Medium",
-      "price_ngn": 31175,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 119,
-      "service_id": 82,
-      "option_label": "Standard",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 120,
-      "service_id": 83,
-      "option_label": "Standard",
-      "price_ngn": 8600,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 121,
-      "service_id": 84,
-      "option_label": "Standard",
-      "price_ngn": 16125,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 122,
-      "service_id": 85,
-      "option_label": "Standard",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 123,
-      "service_id": 86,
-      "option_label": "Standard",
-      "price_ngn": 32250,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 124,
-      "service_id": 87,
-      "option_label": "Standard",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 125,
-      "service_id": 88,
-      "option_label": "Standard",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 126,
-      "service_id": 89,
-      "option_label": "Standard",
-      "price_ngn": 32250,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 127,
-      "service_id": 90,
-      "option_label": "Standard",
-      "price_ngn": 43000,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 128,
-      "service_id": 91,
-      "option_label": "Standard",
-      "price_ngn": 16125,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 129,
-      "service_id": 92,
-      "option_label": "Standard",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 130,
-      "service_id": 93,
-      "option_label": "Standard",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 131,
-      "service_id": 94,
-      "option_label": "Long",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 134,
-      "service_id": 95,
-      "option_label": "Standard (Hands)",
-      "price_ngn": 7525,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 136,
-      "service_id": 96,
-      "option_label": "Full",
-      "price_ngn": 16125,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 138,
-      "service_id": 97,
-      "option_label": "Standard",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 139,
-      "service_id": 98,
-      "option_label": "New Set",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 141,
-      "service_id": 99,
-      "option_label": "Standard",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 142,
-      "service_id": 100,
-      "option_label": "Standard",
-      "price_ngn": 12900,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 143,
-      "service_id": 101,
-      "option_label": "Standard",
-      "price_ngn": 12900,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 144,
-      "service_id": 102,
-      "option_label": "Standard",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 145,
-      "service_id": 103,
-      "option_label": "Standard",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 146,
-      "service_id": 104,
-      "option_label": "Long",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 148,
-      "service_id": 105,
-      "option_label": "Standard",
-      "price_ngn": 17200,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 149,
-      "service_id": 106,
-      "option_label": "Standard",
-      "price_ngn": 19350,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 150,
-      "service_id": 107,
-      "option_label": "Standard",
-      "price_ngn": 7525,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 151,
-      "service_id": 108,
-      "option_label": "Standard",
-      "price_ngn": 7525,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 152,
-      "service_id": 109,
-      "option_label": "Standard",
-      "price_ngn": 8600,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 153,
-      "service_id": 110,
-      "option_label": "Standard",
-      "price_ngn": 6450,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 154,
-      "service_id": 111,
-      "option_label": "Standard",
-      "price_ngn": 12900,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 155,
-      "service_id": 112,
-      "option_label": "Standard",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 156,
-      "service_id": 113,
-      "option_label": "Standard",
-      "price_ngn": 2150,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 157,
-      "service_id": 114,
-      "option_label": "Standard",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 158,
-      "service_id": 115,
-      "option_label": "Standard",
-      "price_ngn": 528,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 159,
-      "service_id": 116,
-      "option_label": "Standard",
-      "price_ngn": 2150,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 160,
-      "service_id": 117,
-      "option_label": "Standard",
-      "price_ngn": 2150,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 161,
-      "service_id": 118,
-      "option_label": "Standard",
-      "price_ngn": 2150,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 162,
-      "service_id": 119,
-      "option_label": "Standard",
-      "price_ngn": 2150,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 163,
-      "service_id": 120,
-      "option_label": "Standard",
-      "price_ngn": 3225,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 164,
-      "service_id": 121,
-      "option_label": "Standard",
-      "price_ngn": 8600,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 165,
-      "service_id": 122,
-      "option_label": "Standard",
-      "price_ngn": 6450,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 166,
-      "service_id": 123,
-      "option_label": "Female",
-      "price_ngn": 12900,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 168,
-      "service_id": 124,
-      "option_label": "Standard",
-      "price_ngn": 13975,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 169,
-      "service_id": 125,
-      "option_label": "Standard",
-      "price_ngn": 26875,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 170,
-      "service_id": 126,
-      "option_label": "Standard",
-      "price_ngn": 9675,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 171,
-      "service_id": 127,
-      "option_label": "Standard",
-      "price_ngn": 21500,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 172,
-      "service_id": 128,
-      "option_label": "Standard",
-      "price_ngn": 26875,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 173,
-      "service_id": 129,
-      "option_label": "Standard",
-      "price_ngn": 10750,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 174,
-      "service_id": 130,
-      "option_label": "Standard",
-      "price_ngn": 5375,
-      "sort_order": 1,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 42,
-      "service_id": 41,
-      "option_label": "30 mins",
-      "price_ngn": 16125,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 45,
-      "service_id": 42,
-      "option_label": "Medium",
-      "price_ngn": 6450,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 48,
-      "service_id": 43,
-      "option_label": "Medium",
-      "price_ngn": 10750,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 51,
-      "service_id": 44,
-      "option_label": "Medium",
-      "price_ngn": 16125,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 58,
-      "service_id": 49,
-      "option_label": "Mid-Back (Bra Strap)",
-      "price_ngn": 48375,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 61,
-      "service_id": 50,
-      "option_label": "Mid-Back (Bra Strap)",
-      "price_ngn": 48375,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 64,
-      "service_id": 51,
-      "option_label": "Mid-Back",
-      "price_ngn": 37625,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 67,
-      "service_id": 52,
-      "option_label": "Intricate / Design",
-      "price_ngn": 16125,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 69,
-      "service_id": 53,
-      "option_label": "Long",
-      "price_ngn": 32250,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 71,
-      "service_id": 54,
-      "option_label": "Long",
-      "price_ngn": 21500,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 73,
-      "service_id": 55,
-      "option_label": "Frontal",
-      "price_ngn": 32250,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 76,
-      "service_id": 56,
-      "option_label": "Frontal",
-      "price_ngn": 21500,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 80,
-      "service_id": 58,
-      "option_label": "Flat Iron (Bone Straight)",
-      "price_ngn": 12900,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 85,
-      "service_id": 61,
-      "option_label": "Full Head",
-      "price_ngn": 43000,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 91,
-      "service_id": 66,
-      "option_label": "Long",
-      "price_ngn": 21500,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 93,
-      "service_id": 67,
-      "option_label": "Medium",
-      "price_ngn": 19350,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 96,
-      "service_id": 68,
-      "option_label": "Long",
-      "price_ngn": 21500,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 98,
-      "service_id": 69,
-      "option_label": "Long",
-      "price_ngn": 12900,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 100,
-      "service_id": 70,
-      "option_label": "Long",
-      "price_ngn": 16125,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 102,
-      "service_id": 71,
-      "option_label": "Band Replacement (Adjustable Pin)",
-      "price_ngn": 3225,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 105,
-      "service_id": 72,
-      "option_label": "Long",
-      "price_ngn": 29025,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 108,
-      "service_id": 73,
-      "option_label": "Salon Products",
-      "price_ngn": 37625,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 110,
-      "service_id": 74,
-      "option_label": "Small",
-      "price_ngn": 37625,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 118,
-      "service_id": 81,
-      "option_label": "Small",
-      "price_ngn": 37625,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 132,
-      "service_id": 94,
-      "option_label": "Short",
-      "price_ngn": 18275,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 135,
-      "service_id": 95,
-      "option_label": "Leg",
-      "price_ngn": 5375,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 137,
-      "service_id": 96,
-      "option_label": "Alone",
-      "price_ngn": 10750,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 140,
-      "service_id": 98,
-      "option_label": "Refill",
-      "price_ngn": 12900,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 147,
-      "service_id": 104,
-      "option_label": "Medium",
-      "price_ngn": 16125,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 167,
-      "service_id": 123,
-      "option_label": "Male",
-      "price_ngn": 16125,
-      "sort_order": 2,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 43,
-      "service_id": 41,
-      "option_label": "60 mins",
-      "price_ngn": 26875,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 46,
-      "service_id": 42,
-      "option_label": "Long",
-      "price_ngn": 7525,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 49,
-      "service_id": 43,
-      "option_label": "Long",
-      "price_ngn": 12900,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 52,
-      "service_id": 44,
-      "option_label": "Long",
-      "price_ngn": 18275,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 59,
-      "service_id": 49,
-      "option_label": "Waist Length",
-      "price_ngn": 56975,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 62,
-      "service_id": 50,
-      "option_label": "Waist Length",
-      "price_ngn": 56975,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 65,
-      "service_id": 51,
-      "option_label": "Waist",
-      "price_ngn": 43000,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 74,
-      "service_id": 55,
-      "option_label": "360 / Full Lace",
-      "price_ngn": 53750,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 77,
-      "service_id": 56,
-      "option_label": "360 / Full Lace",
-      "price_ngn": 32250,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 81,
-      "service_id": 58,
-      "option_label": "Curls with Wand",
-      "price_ngn": 12900,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 94,
-      "service_id": 67,
-      "option_label": "Long",
-      "price_ngn": 21500,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 103,
-      "service_id": 71,
-      "option_label": "Closure / Frontal Stitching",
-      "price_ngn": 5375,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 106,
-      "service_id": 72,
-      "option_label": "Highlights",
-      "price_ngn": 26875,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    },
-    {
-      "id": 133,
-      "service_id": 94,
-      "option_label": "Refill",
-      "price_ngn": 12900,
-      "sort_order": 3,
-      "is_active": 1,
-      "created_at": "2026-08-31 20:39:05"
-    }
-  ],
-  "admins": [
-    {
-      "id": 1,
-      "username": "carolines_admin",
-      "display_name": "Caroline Main Admin",
-      "email": "admin@carolinesplace.com",
-      "is_active": 1
-    },
-    {
-      "id": 2,
-      "username": "admin",
-      "display_name": "Quick Admin Login",
-      "email": "admin@carolinesplace.com",
-      "is_active": 1
-    }
-  ],
-  "bookings": [
-    {
-      "id": 1,
-      "reference_code": "SPA-439BA962",
-      "full_name": "John Doe",
-      "email": "jOHN@yahoo.com",
-      "phone": "+23408136779318",
-      "preferred_date": "2026-09-02",
-      "preferred_time": "06:00 PM",
-      "total_amount_ngn": 12900,
-      "notes": "RAh",
-      "status": "completed",
-      "payment_status": "paid",
-      "admin_notes": null,
-      "created_at": "2026-09-01 07:05:22",
-      "updated_at": "2026-09-01 07:13:58"
-    }
-  ],
-  "booking_items": [
-    {
-      "id": 1,
-      "booking_id": 1,
-      "service_id": 123,
-      "option_id": 166,
-      "service_name": "Regular Pedicure",
-      "option_label": "Female",
-      "unit_price_ngn": 12900,
-      "quantity": 1,
-      "line_total_ngn": 12900
-    }
-  ]
+    "categories": [
+        {
+            "id": 1,
+            "name": "Spa Section",
+            "description": "Signature facials and skin-care sanctuary",
+            "icon": "🧖‍♀️",
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 2,
+            "name": "Massage",
+            "description": "Therapeutic, relaxation, specialty massages",
+            "icon": "💆",
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 3,
+            "name": "Waxing",
+            "description": "Full-body hair removal with wax options",
+            "icon": "✨",
+            "sort_order": 3,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 4,
+            "name": "Body Treatment",
+            "description": "Scrubs, wraps, steam baths, hammam, hair masks",
+            "icon": "🧴",
+            "sort_order": 4,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 5,
+            "name": "Hair Section",
+            "description": "Braids, cornrows, wigs, relaxers, styling, perms",
+            "icon": "💇",
+            "sort_order": 5,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 6,
+            "name": "Nails Price List",
+            "description": "Manicures, gel, acrylic, BIAB, art, chrome, gel X",
+            "icon": "💅",
+            "sort_order": 6,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 7,
+            "name": "Pedicure Section",
+            "description": "Pedicures, manicure combos & kids variants",
+            "icon": "🦶",
+            "sort_order": 7,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        }
+    ],
+    "services": [
+        {
+            "id": 1,
+            "category_id": 1,
+            "name": "Anti-Aging Facial",
+            "description": "Anti-Aging Facial",
+            "duration_minutes": 60,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 2,
+            "category_id": 1,
+            "name": "Microdermabrasion Facial",
+            "description": "Microdermabrasion Facial",
+            "duration_minutes": 60,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 3,
+            "category_id": 1,
+            "name": "Men Facial",
+            "description": "Men Facial",
+            "duration_minutes": 45,
+            "sort_order": 3,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 4,
+            "category_id": 1,
+            "name": "Dermaplaning Facial",
+            "description": "Dermaplaning Facial",
+            "duration_minutes": 45,
+            "sort_order": 4,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 5,
+            "category_id": 1,
+            "name": "Vitamin C Brightening Facial",
+            "description": "Vitamin C Brightening Facial",
+            "duration_minutes": 60,
+            "sort_order": 5,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 6,
+            "category_id": 1,
+            "name": "Deep Cleansing Facial",
+            "description": "Deep Cleansing Facial",
+            "duration_minutes": 60,
+            "sort_order": 6,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 7,
+            "category_id": 1,
+            "name": "Acne Treatment Facial",
+            "description": "Acne Treatment Facial",
+            "duration_minutes": 60,
+            "sort_order": 7,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 8,
+            "category_id": 2,
+            "name": "Swedish (Relaxation) Massage",
+            "description": "Swedish (Relaxation) Massage",
+            "duration_minutes": 60,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 9,
+            "category_id": 2,
+            "name": "Deep Tissue Massage",
+            "description": "Deep Tissue Massage",
+            "duration_minutes": 60,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 10,
+            "category_id": 2,
+            "name": "Hot Stone Massage",
+            "description": "Hot Stone Massage",
+            "duration_minutes": 75,
+            "sort_order": 3,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 11,
+            "category_id": 2,
+            "name": "Couple Swedish Massage",
+            "description": "Couple Swedish Massage",
+            "duration_minutes": 60,
+            "sort_order": 4,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 12,
+            "category_id": 2,
+            "name": "Couple Deep Tissue Massage",
+            "description": "Couple Deep Tissue Massage",
+            "duration_minutes": 60,
+            "sort_order": 5,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 13,
+            "category_id": 2,
+            "name": "Back Massage",
+            "description": "Back Massage",
+            "duration_minutes": 45,
+            "sort_order": 6,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 14,
+            "category_id": 2,
+            "name": "Reflexology Massage",
+            "description": "Reflexology Massage",
+            "duration_minutes": 45,
+            "sort_order": 7,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 15,
+            "category_id": 2,
+            "name": "Aromatherapy Massage / Steam",
+            "description": "Aromatherapy Massage / Steam",
+            "duration_minutes": 60,
+            "sort_order": 8,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 16,
+            "category_id": 2,
+            "name": "Prenatal Massage",
+            "description": "Prenatal Massage",
+            "duration_minutes": 60,
+            "sort_order": 9,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 17,
+            "category_id": 2,
+            "name": "Head Massage",
+            "description": "Head Massage",
+            "duration_minutes": 30,
+            "sort_order": 10,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 18,
+            "category_id": 2,
+            "name": "Peace Balance",
+            "description": "Peace Balance",
+            "duration_minutes": 60,
+            "sort_order": 11,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 19,
+            "category_id": 3,
+            "name": "Chin Wax",
+            "description": "Chin Wax",
+            "duration_minutes": 15,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 20,
+            "category_id": 3,
+            "name": "Upper Lip Wax",
+            "description": "Upper Lip Wax",
+            "duration_minutes": 15,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 21,
+            "category_id": 3,
+            "name": "Underarm Waxing",
+            "description": "Underarm Waxing",
+            "duration_minutes": 15,
+            "sort_order": 3,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 22,
+            "category_id": 3,
+            "name": "Full Hand Waxing",
+            "description": "Full Hand Waxing",
+            "duration_minutes": 30,
+            "sort_order": 4,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 23,
+            "category_id": 3,
+            "name": "Half Hand Waxing",
+            "description": "Half Hand Waxing",
+            "duration_minutes": 20,
+            "sort_order": 5,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 24,
+            "category_id": 3,
+            "name": "Full Leg Waxing",
+            "description": "Full Leg Waxing",
+            "duration_minutes": 45,
+            "sort_order": 6,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 25,
+            "category_id": 3,
+            "name": "Half Leg Waxing",
+            "description": "Half Leg Waxing",
+            "duration_minutes": 30,
+            "sort_order": 7,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 26,
+            "category_id": 3,
+            "name": "Bikini Waxing",
+            "description": "Bikini Waxing",
+            "duration_minutes": 30,
+            "sort_order": 8,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 27,
+            "category_id": 3,
+            "name": "Brazilian Waxing",
+            "description": "Brazilian Waxing",
+            "duration_minutes": 45,
+            "sort_order": 9,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 28,
+            "category_id": 3,
+            "name": "Eyebrow Waxing",
+            "description": "Eyebrow Waxing",
+            "duration_minutes": 15,
+            "sort_order": 10,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 29,
+            "category_id": 3,
+            "name": "Full Body Waxing",
+            "description": "Full Body Waxing",
+            "duration_minutes": 90,
+            "sort_order": 11,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 30,
+            "category_id": 3,
+            "name": "Hollywood Waxing",
+            "description": "Hollywood Waxing",
+            "duration_minutes": 45,
+            "sort_order": 12,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 39,
+            "category_id": 4,
+            "name": "Coffee Scrub / Body Wrap",
+            "description": "Coffee Scrub / Body Wrap",
+            "duration_minutes": 60,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 40,
+            "category_id": 4,
+            "name": "Hammam (Moroccan Bath)",
+            "description": "Hammam (Moroccan Bath)",
+            "duration_minutes": 75,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 41,
+            "category_id": 4,
+            "name": "Steam Bath",
+            "description": "Steam Bath",
+            "duration_minutes": 60,
+            "sort_order": 3,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 94,
+            "category_id": 6,
+            "name": "Gel X",
+            "description": "Gel X",
+            "duration_minutes": 60,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 95,
+            "category_id": 6,
+            "name": "French Tips",
+            "description": "French Tips",
+            "duration_minutes": 45,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 96,
+            "category_id": 6,
+            "name": "Chrome",
+            "description": "Chrome",
+            "duration_minutes": 45,
+            "sort_order": 3,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 97,
+            "category_id": 6,
+            "name": "Ombre",
+            "description": "Ombre",
+            "duration_minutes": 60,
+            "sort_order": 4,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 98,
+            "category_id": 6,
+            "name": "Coloured Powder",
+            "description": "Coloured Powder",
+            "duration_minutes": 60,
+            "sort_order": 5,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 99,
+            "category_id": 6,
+            "name": "Ombre Refill",
+            "description": "Ombre Refill",
+            "duration_minutes": 45,
+            "sort_order": 6,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 100,
+            "category_id": 6,
+            "name": "Acrylic Nail Refill",
+            "description": "Acrylic Nail Refill",
+            "duration_minutes": 45,
+            "sort_order": 7,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 101,
+            "category_id": 6,
+            "name": "Acrylic Wrap",
+            "description": "Acrylic Wrap",
+            "duration_minutes": 60,
+            "sort_order": 8,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 102,
+            "category_id": 6,
+            "name": "Stick On",
+            "description": "Stick On",
+            "duration_minutes": 45,
+            "sort_order": 9,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 103,
+            "category_id": 6,
+            "name": "Refill Gel",
+            "description": "Refill Gel",
+            "duration_minutes": 60,
+            "sort_order": 10,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 104,
+            "category_id": 6,
+            "name": "Acrylic",
+            "description": "Acrylic",
+            "duration_minutes": 60,
+            "sort_order": 11,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 105,
+            "category_id": 6,
+            "name": "BIAB",
+            "description": "BIAB",
+            "duration_minutes": 60,
+            "sort_order": 12,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 106,
+            "category_id": 6,
+            "name": "Hard Gel",
+            "description": "Hard Gel",
+            "duration_minutes": 60,
+            "sort_order": 13,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 107,
+            "category_id": 6,
+            "name": "Cateye Polish",
+            "description": "Cateye Polish",
+            "duration_minutes": 30,
+            "sort_order": 14,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 108,
+            "category_id": 6,
+            "name": "Press On Nails",
+            "description": "Press On Nails",
+            "duration_minutes": 30,
+            "sort_order": 15,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 109,
+            "category_id": 6,
+            "name": "Gel Polish",
+            "description": "Gel Polish",
+            "duration_minutes": 30,
+            "sort_order": 16,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 110,
+            "category_id": 6,
+            "name": "Regular Polish",
+            "description": "Regular Polish",
+            "duration_minutes": 30,
+            "sort_order": 17,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 111,
+            "category_id": 6,
+            "name": "Deep In (Nails)",
+            "description": "Deep In (Nails)",
+            "duration_minutes": 60,
+            "sort_order": 18,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 112,
+            "category_id": 6,
+            "name": "Tidy Up of Nails",
+            "description": "Tidy Up of Nails",
+            "duration_minutes": 30,
+            "sort_order": 19,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 113,
+            "category_id": 6,
+            "name": "Gel Topcoat",
+            "description": "Gel Topcoat",
+            "duration_minutes": 20,
+            "sort_order": 20,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 114,
+            "category_id": 6,
+            "name": "BIAB Refill",
+            "description": "BIAB Refill",
+            "duration_minutes": 45,
+            "sort_order": 21,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 115,
+            "category_id": 6,
+            "name": "Nail Art (Per Finger)",
+            "description": "Nail Art (Per Finger)",
+            "duration_minutes": 10,
+            "sort_order": 22,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 116,
+            "category_id": 6,
+            "name": "3D Nail Art Design",
+            "description": "3D Nail Art Design",
+            "duration_minutes": 15,
+            "sort_order": 23,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 117,
+            "category_id": 6,
+            "name": "Stone Nail Art",
+            "description": "Stone Nail Art",
+            "duration_minutes": 20,
+            "sort_order": 24,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 118,
+            "category_id": 6,
+            "name": "Nail Replacement (Per Finger)",
+            "description": "Nail Replacement (Per Finger)",
+            "duration_minutes": 15,
+            "sort_order": 25,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 119,
+            "category_id": 6,
+            "name": "Big Toes Fixing",
+            "description": "Big Toes Fixing",
+            "duration_minutes": 20,
+            "sort_order": 26,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 120,
+            "category_id": 6,
+            "name": "Gel Dissolve",
+            "description": "Gel Dissolve",
+            "duration_minutes": 20,
+            "sort_order": 27,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 121,
+            "category_id": 6,
+            "name": "Sculpting Gel",
+            "description": "Sculpting Gel",
+            "duration_minutes": 30,
+            "sort_order": 28,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 122,
+            "category_id": 6,
+            "name": "Acrylic / BIAB / Stick-On Dissolve",
+            "description": "Acrylic / BIAB / Stick-On Dissolve",
+            "duration_minutes": 20,
+            "sort_order": 29,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 123,
+            "category_id": 7,
+            "name": "Regular Pedicure",
+            "description": "Regular Pedicure",
+            "duration_minutes": 60,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 124,
+            "category_id": 7,
+            "name": "Dry Pedicure",
+            "description": "Dry Pedicure",
+            "duration_minutes": 60,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 125,
+            "category_id": 7,
+            "name": "Spa Pedicure",
+            "description": "Spa Pedicure",
+            "duration_minutes": 75,
+            "sort_order": 3,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 126,
+            "category_id": 7,
+            "name": "Manicure",
+            "description": "Manicure",
+            "duration_minutes": 45,
+            "sort_order": 4,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 127,
+            "category_id": 7,
+            "name": "Pedicure with Cavia",
+            "description": "Pedicure with Cavia",
+            "duration_minutes": 60,
+            "sort_order": 5,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 128,
+            "category_id": 7,
+            "name": "Luxury Pedicure",
+            "description": "Luxury Pedicure",
+            "duration_minutes": 90,
+            "sort_order": 6,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 129,
+            "category_id": 7,
+            "name": "Kids Pedicure",
+            "description": "Kids Pedicure",
+            "duration_minutes": 30,
+            "sort_order": 7,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 130,
+            "category_id": 7,
+            "name": "Kids Manicure",
+            "description": "Kids Manicure",
+            "duration_minutes": 20,
+            "sort_order": 8,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 131,
+            "category_id": 5,
+            "name": "Washing of Hair (Permed)",
+            "description": "Professional wash and gentle cleansing for permed hair.",
+            "duration_minutes": 60,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 132,
+            "category_id": 5,
+            "name": "Washing of Hair (Natural)",
+            "description": "Deep clarifying and hydrating wash for natural hair.",
+            "duration_minutes": 60,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 133,
+            "category_id": 5,
+            "name": "Washing of Kid's Hair",
+            "description": "Gentle tear-free wash and conditioning for kids.",
+            "duration_minutes": 60,
+            "sort_order": 3,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 134,
+            "category_id": 5,
+            "name": "Detangling",
+            "description": "Gentle, knot-free hair detangling treatment.",
+            "duration_minutes": 60,
+            "sort_order": 4,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 135,
+            "category_id": 5,
+            "name": "Detangling with Washing",
+            "description": "Deep cleansing wash combined with thorough knot detangling.",
+            "duration_minutes": 60,
+            "sort_order": 5,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 136,
+            "category_id": 5,
+            "name": "Regular Steaming",
+            "description": "Hydrating moisture steam treatment for healthy hair revival.",
+            "duration_minutes": 60,
+            "sort_order": 6,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 137,
+            "category_id": 5,
+            "name": "Steaming with Client's Products",
+            "description": "Steam treatment application using your preferred hair products.",
+            "duration_minutes": 60,
+            "sort_order": 7,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 138,
+            "category_id": 5,
+            "name": "Protein Steaming",
+            "description": "Intensive protein-infused steam treatment for hair strengthening.",
+            "duration_minutes": 60,
+            "sort_order": 8,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 139,
+            "category_id": 5,
+            "name": "Placenta Treatment",
+            "description": "Nourishing placenta extract conditioning treatment.",
+            "duration_minutes": 60,
+            "sort_order": 9,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 140,
+            "category_id": 5,
+            "name": "Hot Oil Treatment",
+            "description": "Therapeutic warm botanical oil treatment for scalp and cuticle nourishment.",
+            "duration_minutes": 60,
+            "sort_order": 10,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 141,
+            "category_id": 5,
+            "name": "Wash & Silk Press/Setting",
+            "description": "Clarifying shampoo, deep condition, blow-dry and glass-shine silk press.",
+            "duration_minutes": 60,
+            "sort_order": 11,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 142,
+            "category_id": 5,
+            "name": "Wash & Setting",
+            "description": "Shampoo wash, roller setting, and salon drying for bouncy volume.",
+            "duration_minutes": 60,
+            "sort_order": 12,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 143,
+            "category_id": 5,
+            "name": "Retouching & Set/Silk Press",
+            "description": "Root relaxer retouch complete with styling setting or silk press.",
+            "duration_minutes": 60,
+            "sort_order": 13,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 144,
+            "category_id": 5,
+            "name": "Retouching",
+            "description": "Precise relaxer retouch for new hair growth.",
+            "duration_minutes": 60,
+            "sort_order": 14,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 145,
+            "category_id": 5,
+            "name": "Salon Products (Dyeing)",
+            "description": "Full hair coloring with salon premium dyes and care.",
+            "duration_minutes": 60,
+            "sort_order": 15,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 146,
+            "category_id": 5,
+            "name": "Client Products (Dyeing)",
+            "description": "Professional hair coloring application using client-provided dye.",
+            "duration_minutes": 60,
+            "sort_order": 16,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 147,
+            "category_id": 5,
+            "name": "Cornrows / Didi - Big (6 Pieces)",
+            "description": "Clean, defined big cornrows / didi styling (6 pieces).",
+            "duration_minutes": 60,
+            "sort_order": 17,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 148,
+            "category_id": 5,
+            "name": "Cornrows / Didi - Medium (10 Pieces)",
+            "description": "Neat medium-width cornrows / didi braiding (10 pieces).",
+            "duration_minutes": 60,
+            "sort_order": 18,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 149,
+            "category_id": 5,
+            "name": "Cornrows / Didi - Small (14 Pieces)",
+            "description": "Intricate small cornrows / didi braiding (14 pieces).",
+            "duration_minutes": 60,
+            "sort_order": 19,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 150,
+            "category_id": 5,
+            "name": "Cornrows / Didi - Tiny (18 Pieces)",
+            "description": "Delicate tiny cornrows / didi braiding (18 pieces).",
+            "duration_minutes": 60,
+            "sort_order": 20,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 151,
+            "category_id": 5,
+            "name": "Cornrows / Didi - Extra Tiny (20-22 Pieces)",
+            "description": "Ultra-fine precision cornrows / didi styling (20-22 pieces).",
+            "duration_minutes": 60,
+            "sort_order": 21,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 152,
+            "category_id": 5,
+            "name": "Natural Twist - Medium",
+            "description": "Medium two-strand twists on natural hair.",
+            "duration_minutes": 60,
+            "sort_order": 22,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 153,
+            "category_id": 5,
+            "name": "Natural Twist - Small",
+            "description": "Small defined two-strand twists on natural hair.",
+            "duration_minutes": 60,
+            "sort_order": 23,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 154,
+            "category_id": 5,
+            "name": "Natural Twist - Tiny",
+            "description": "Fine micro two-strand twists with lasting hold.",
+            "duration_minutes": 60,
+            "sort_order": 24,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 155,
+            "category_id": 5,
+            "name": "Blow Drying of Natural Hair",
+            "description": "Gentle heat-protectant blow drying and stretch for natural hair.",
+            "duration_minutes": 60,
+            "sort_order": 25,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 156,
+            "category_id": 5,
+            "name": "Revamping (Short)",
+            "description": "Restorative wash, treatment and restyling for short wigs/weaves.",
+            "duration_minutes": 60,
+            "sort_order": 26,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 157,
+            "category_id": 5,
+            "name": "Revamping (Long)",
+            "description": "Complete wash, deep treatment and restyling for long wigs/weaves.",
+            "duration_minutes": 60,
+            "sort_order": 27,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 158,
+            "category_id": 5,
+            "name": "School Hair for Kids",
+            "description": "Neat, comfortable school-friendly hairstyles for children.",
+            "duration_minutes": 60,
+            "sort_order": 28,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 159,
+            "category_id": 5,
+            "name": "Teens (School Hair)",
+            "description": "Trendy, smart school-approved hairstyles for teenagers.",
+            "duration_minutes": 60,
+            "sort_order": 29,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 160,
+            "category_id": 5,
+            "name": "Shade Adu",
+            "description": "Classic Shade Adu signature braided updo.",
+            "duration_minutes": 60,
+            "sort_order": 30,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 161,
+            "category_id": 5,
+            "name": "Kid's Hair - Braids/Crochet",
+            "description": "Protective braids or crochet styling for kids.",
+            "duration_minutes": 60,
+            "sort_order": 31,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 162,
+            "category_id": 5,
+            "name": "Kid's Hair - Cornrow",
+            "description": "Neat and pain-free cornrow styling for children.",
+            "duration_minutes": 60,
+            "sort_order": 32,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 163,
+            "category_id": 5,
+            "name": "Kid's Hair - With Extension",
+            "description": "Kids braided hairstyle with lightweight extensions.",
+            "duration_minutes": 60,
+            "sort_order": 33,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 164,
+            "category_id": 5,
+            "name": "Adult Crochet with Weaving",
+            "description": "Cornrow base with flawless crochet hair installation.",
+            "duration_minutes": 60,
+            "sort_order": 34,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 165,
+            "category_id": 5,
+            "name": "Braid Crochet",
+            "description": "Full crochet install using pre-braided extensions.",
+            "duration_minutes": 60,
+            "sort_order": 35,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 166,
+            "category_id": 5,
+            "name": "Big Braid - Bra Length",
+            "description": "Chunky box braids extending to bra-strap length.",
+            "duration_minutes": 60,
+            "sort_order": 36,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 167,
+            "category_id": 5,
+            "name": "Big Braid - Waist Length",
+            "description": "Chunky box braids extending to waist length.",
+            "duration_minutes": 60,
+            "sort_order": 37,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 168,
+            "category_id": 5,
+            "name": "Big Braid - Bum Length",
+            "description": "Chunky box braids extending to bum length.",
+            "duration_minutes": 60,
+            "sort_order": 38,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 169,
+            "category_id": 5,
+            "name": "Small Braids - Bra Length",
+            "description": "Neat small braids extending to bra-strap length.",
+            "duration_minutes": 60,
+            "sort_order": 39,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 170,
+            "category_id": 5,
+            "name": "Small Braids - Waist Length",
+            "description": "Neat small braids extending to waist length.",
+            "duration_minutes": 60,
+            "sort_order": 40,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 171,
+            "category_id": 5,
+            "name": "Small Braids - Bum Length",
+            "description": "Neat small braids extending to bum length.",
+            "duration_minutes": 60,
+            "sort_order": 41,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 172,
+            "category_id": 5,
+            "name": "Tiny / Knotless Braids - Shoulder Length",
+            "description": "Painless, seamless knotless braids at shoulder length.",
+            "duration_minutes": 60,
+            "sort_order": 42,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 173,
+            "category_id": 5,
+            "name": "Tiny / Knotless Braids - Bum Length",
+            "description": "Painless, seamless knotless braids extending to bum length.",
+            "duration_minutes": 60,
+            "sort_order": 43,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 174,
+            "category_id": 5,
+            "name": "Tiny / Knotless Braids - Waist Length",
+            "description": "Seamless lightweight knotless braids extending to waist length.",
+            "duration_minutes": 60,
+            "sort_order": 44,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 175,
+            "category_id": 5,
+            "name": "Tiny / Knotless Braids - Full Length",
+            "description": "Ultimate long luxury knotless braids extending full length.",
+            "duration_minutes": 60,
+            "sort_order": 45,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 176,
+            "category_id": 5,
+            "name": "Mega Growth Treatment",
+            "description": "Strengthening anti-breakage Mega Growth therapy.",
+            "duration_minutes": 60,
+            "sort_order": 46,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 177,
+            "category_id": 5,
+            "name": "Touch Up Braids",
+            "description": "Perimeter and hairline braid re-braiding for a fresh look.",
+            "duration_minutes": 60,
+            "sort_order": 47,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 178,
+            "category_id": 5,
+            "name": "Touch Up Wigs",
+            "description": "Quick styling, edge neatening and lace touch up for wigs.",
+            "duration_minutes": 60,
+            "sort_order": 48,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 179,
+            "category_id": 5,
+            "name": "Ghana Weaving - Large",
+            "description": "Classic feed-in Ghana weaving with bold parts.",
+            "duration_minutes": 60,
+            "sort_order": 49,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 180,
+            "category_id": 5,
+            "name": "Ghana Weaving - Medium",
+            "description": "Neat medium feed-in Ghana weaving.",
+            "duration_minutes": 60,
+            "sort_order": 50,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 181,
+            "category_id": 5,
+            "name": "Ghana Weaving - Small / Stitch Braids",
+            "description": "Intricate small stitch feed-in Ghana weaving.",
+            "duration_minutes": 60,
+            "sort_order": 51,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 182,
+            "category_id": 5,
+            "name": "Ghana Weaving - Tiny",
+            "description": "Ultra-fine intricate Ghana weaving with razor-sharp parts.",
+            "duration_minutes": 60,
+            "sort_order": 52,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 183,
+            "category_id": 5,
+            "name": "Ghana Weaving - Extra Tiny",
+            "description": "Micro-precision Ghana weaving with high durability.",
+            "duration_minutes": 60,
+            "sort_order": 53,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 184,
+            "category_id": 5,
+            "name": "Loosing of Braids - Big",
+            "description": "Careful, breakage-free takedown of big braids.",
+            "duration_minutes": 60,
+            "sort_order": 54,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 185,
+            "category_id": 5,
+            "name": "Loosing of Braids - Medium",
+            "description": "Careful, breakage-free takedown of medium braids.",
+            "duration_minutes": 60,
+            "sort_order": 55,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 186,
+            "category_id": 5,
+            "name": "Loosing of Braids - Small",
+            "description": "Gentle, damage-free takedown of small braids.",
+            "duration_minutes": 60,
+            "sort_order": 56,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 187,
+            "category_id": 5,
+            "name": "Loosing of Braids - Tiny",
+            "description": "Pain-free removal of micro / tiny braids.",
+            "duration_minutes": 60,
+            "sort_order": 57,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 188,
+            "category_id": 5,
+            "name": "Cornrows (Other)",
+            "description": "Under-wig flat cornrows or custom cornrow styling.",
+            "duration_minutes": 60,
+            "sort_order": 58,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 189,
+            "category_id": 5,
+            "name": "Kinky Braids - Short",
+            "description": "Textured kinky twist braids at short length.",
+            "duration_minutes": 60,
+            "sort_order": 59,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 190,
+            "category_id": 5,
+            "name": "Kinky Braids - Mid Length",
+            "description": "Textured kinky twist braids at mid-back length.",
+            "duration_minutes": 60,
+            "sort_order": 60,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 191,
+            "category_id": 5,
+            "name": "Kinky Braids - Long",
+            "description": "Textured kinky twist braids at waist length.",
+            "duration_minutes": 60,
+            "sort_order": 61,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 192,
+            "category_id": 5,
+            "name": "Closure Wigs Construction + Styling - Short",
+            "description": "Custom machine/hand wig-making with closure and styling (short).",
+            "duration_minutes": 60,
+            "sort_order": 62,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 193,
+            "category_id": 5,
+            "name": "Closure Wigs Construction + Styling - Long",
+            "description": "Custom wig-making with closure and styling (long).",
+            "duration_minutes": 60,
+            "sort_order": 63,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 194,
+            "category_id": 5,
+            "name": "Frontal Wigs Construction + Styling - Short",
+            "description": "Custom frontal wig-making with plucked hairline & styling (short).",
+            "duration_minutes": 60,
+            "sort_order": 64,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 195,
+            "category_id": 5,
+            "name": "Frontal Wigs Construction + Styling - Long",
+            "description": "Custom frontal wig-making with plucked hairline & styling (long).",
+            "duration_minutes": 60,
+            "sort_order": 65,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 196,
+            "category_id": 5,
+            "name": "Frontal Installation",
+            "description": "Flawless frontal lace melting and secure installation.",
+            "duration_minutes": 60,
+            "sort_order": 66,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 197,
+            "category_id": 5,
+            "name": "Sew In - With Leave Out",
+            "description": "Traditional sew-in weave with natural hair leave-out.",
+            "duration_minutes": 60,
+            "sort_order": 67,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 198,
+            "category_id": 5,
+            "name": "Sew In - Closure",
+            "description": "Full sew-in weave with lace closure.",
+            "duration_minutes": 60,
+            "sort_order": 68,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 199,
+            "category_id": 5,
+            "name": "Sew In - Frontal",
+            "description": "Full sew-in weave with lace frontal.",
+            "duration_minutes": 60,
+            "sort_order": 69,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 200,
+            "category_id": 5,
+            "name": "Ponytail",
+            "description": "Sleek high or low ponytail styling with extensions.",
+            "duration_minutes": 60,
+            "sort_order": 70,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 201,
+            "category_id": 5,
+            "name": "Half Up / Half Down",
+            "description": "Glamorous half-up half-down sew-in or quick-weave styling.",
+            "duration_minutes": 60,
+            "sort_order": 71,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 202,
+            "category_id": 5,
+            "name": "Washing & Setting of Wigs with Rollers - Short",
+            "description": "Deep wash, roller setting and drying for short wigs.",
+            "duration_minutes": 60,
+            "sort_order": 72,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 203,
+            "category_id": 5,
+            "name": "Washing & Setting of Wigs with Rollers - Long",
+            "description": "Deep wash, roller setting and drying for long wigs.",
+            "duration_minutes": 60,
+            "sort_order": 73,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 204,
+            "category_id": 5,
+            "name": "Washing & Straightening of Wigs - Short",
+            "description": "Shampoo wash, conditioning and bone-straight press (short).",
+            "duration_minutes": 60,
+            "sort_order": 74,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 205,
+            "category_id": 5,
+            "name": "Washing & Straightening of Wigs - Medium",
+            "description": "Shampoo wash, conditioning and bone-straight press (medium).",
+            "duration_minutes": 60,
+            "sort_order": 75,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 206,
+            "category_id": 5,
+            "name": "Washing & Straightening of Wigs - Long",
+            "description": "Shampoo wash, conditioning and bone-straight press (long).",
+            "duration_minutes": 60,
+            "sort_order": 76,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 207,
+            "category_id": 5,
+            "name": "Washing & Curling - Short",
+            "description": "Wash, condition, and wand/barrel curls for short wigs.",
+            "duration_minutes": 60,
+            "sort_order": 77,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 208,
+            "category_id": 5,
+            "name": "Washing & Curling - Long",
+            "description": "Wash, condition, and wand/barrel curls for long wigs.",
+            "duration_minutes": 60,
+            "sort_order": 78,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 209,
+            "category_id": 5,
+            "name": "Straightening Alone - Short",
+            "description": "Precision flat iron straightening for short hair/wigs.",
+            "duration_minutes": 60,
+            "sort_order": 79,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 210,
+            "category_id": 5,
+            "name": "Straightening Alone - Long",
+            "description": "Precision flat iron straightening for long hair/wigs.",
+            "duration_minutes": 60,
+            "sort_order": 80,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 211,
+            "category_id": 5,
+            "name": "Curling Alone - Short",
+            "description": "Hot tool curling and styling for short hair/wigs.",
+            "duration_minutes": 60,
+            "sort_order": 81,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 212,
+            "category_id": 5,
+            "name": "Curling Alone - Long",
+            "description": "Hot tool curling and styling for long hair/wigs.",
+            "duration_minutes": 60,
+            "sort_order": 82,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 213,
+            "category_id": 5,
+            "name": "Wig Band Replacement",
+            "description": "Elastic band replacement on wig for snug fit.",
+            "duration_minutes": 60,
+            "sort_order": 83,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 214,
+            "category_id": 5,
+            "name": "Band Replacement (Adjustable Pin)",
+            "description": "Adjustable pin band installation for secure grip.",
+            "duration_minutes": 60,
+            "sort_order": 84,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 215,
+            "category_id": 5,
+            "name": "Closure/Frontal Stitching",
+            "description": "Repair and reinforcement stitching for closures/frontals.",
+            "duration_minutes": 60,
+            "sort_order": 85,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 216,
+            "category_id": 5,
+            "name": "Dyeing of Wig / Weave - Short",
+            "description": "Professional coloring and toning for short wigs/bundles.",
+            "duration_minutes": 60,
+            "sort_order": 86,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 217,
+            "category_id": 5,
+            "name": "Dyeing of Wig / Weave - Long",
+            "description": "Professional coloring and toning for long wigs/bundles.",
+            "duration_minutes": 60,
+            "sort_order": 87,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 218,
+            "category_id": 5,
+            "name": "Highlights",
+            "description": "Custom streak highlights, ombre or balayage for hair/wigs.",
+            "duration_minutes": 60,
+            "sort_order": 88,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 219,
+            "category_id": 5,
+            "name": "Sharper Powder - Client's Product",
+            "description": "Hair lightening application using client-provided powder.",
+            "duration_minutes": 60,
+            "sort_order": 89,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 220,
+            "category_id": 5,
+            "name": "Sharper Powder - Salon Products",
+            "description": "Hair lightening and bleaching with salon premium powder.",
+            "duration_minutes": 60,
+            "sort_order": 90,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 221,
+            "category_id": 5,
+            "name": "Sharper Powder (Medium Size)",
+            "description": "Medium application lightening treatment.",
+            "duration_minutes": 60,
+            "sort_order": 91,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 222,
+            "category_id": 5,
+            "name": "Sharper Powder (Small Size)",
+            "description": "Small application precision lightening treatment.",
+            "duration_minutes": 60,
+            "sort_order": 92,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 223,
+            "category_id": 5,
+            "name": "Mega Growth Relaxer",
+            "description": "Standard Mega Growth relaxer application.",
+            "duration_minutes": 60,
+            "sort_order": 93,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 224,
+            "category_id": 5,
+            "name": "Mega Growth Relaxer 2",
+            "description": "Premium Mega Growth relaxer deep application.",
+            "duration_minutes": 60,
+            "sort_order": 94,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 225,
+            "category_id": 5,
+            "name": "Loosing of Goodness Braid",
+            "description": "Gentle, careful takedown of Goodness braids.",
+            "duration_minutes": 60,
+            "sort_order": 95,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 226,
+            "category_id": 5,
+            "name": "Olive Oil Relaxer",
+            "description": "Standard organic Olive Oil relaxer application.",
+            "duration_minutes": 60,
+            "sort_order": 96,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 227,
+            "category_id": 5,
+            "name": "Olive Oil Relaxer 2",
+            "description": "Premium organic Olive Oil relaxer deep application.",
+            "duration_minutes": 60,
+            "sort_order": 97,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 228,
+            "category_id": 5,
+            "name": "Bob Marley",
+            "description": "Signature Bob Marley twist braids styling.",
+            "duration_minutes": 60,
+            "sort_order": 98,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 229,
+            "category_id": 5,
+            "name": "Stitch Braids (Medium)",
+            "description": "Defined medium stitch cornrows with precision lines.",
+            "duration_minutes": 60,
+            "sort_order": 99,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 230,
+            "category_id": 5,
+            "name": "Stitch Braids (Small)",
+            "description": "Intricate small stitch cornrows with precision lines.",
+            "duration_minutes": 60,
+            "sort_order": 100,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        }
+    ],
+    "options": [
+        {
+            "id": 1,
+            "service_id": 1,
+            "option_label": "Standard",
+            "price_ngn": 37625,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 2,
+            "service_id": 2,
+            "option_label": "Standard",
+            "price_ngn": 32250,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 3,
+            "service_id": 3,
+            "option_label": "Standard",
+            "price_ngn": 32250,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 4,
+            "service_id": 4,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 5,
+            "service_id": 5,
+            "option_label": "Standard",
+            "price_ngn": 32250,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 6,
+            "service_id": 6,
+            "option_label": "Standard",
+            "price_ngn": 32250,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 7,
+            "service_id": 7,
+            "option_label": "Standard",
+            "price_ngn": 43000,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 8,
+            "service_id": 8,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 9,
+            "service_id": 9,
+            "option_label": "Standard",
+            "price_ngn": 37625,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 10,
+            "service_id": 10,
+            "option_label": "Standard",
+            "price_ngn": 43000,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 11,
+            "service_id": 11,
+            "option_label": "Standard",
+            "price_ngn": 43000,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 12,
+            "service_id": 12,
+            "option_label": "Standard",
+            "price_ngn": 53750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 13,
+            "service_id": 13,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 14,
+            "service_id": 14,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 15,
+            "service_id": 15,
+            "option_label": "Standard",
+            "price_ngn": 37625,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 16,
+            "service_id": 16,
+            "option_label": "Standard",
+            "price_ngn": 32250,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 17,
+            "service_id": 17,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 18,
+            "service_id": 18,
+            "option_label": "Standard",
+            "price_ngn": 43000,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 19,
+            "service_id": 19,
+            "option_label": "Standard",
+            "price_ngn": 7525,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 20,
+            "service_id": 20,
+            "option_label": "Standard",
+            "price_ngn": 5375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 21,
+            "service_id": 21,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 22,
+            "service_id": 22,
+            "option_label": "Standard",
+            "price_ngn": 15050,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 23,
+            "service_id": 23,
+            "option_label": "Standard",
+            "price_ngn": 7525,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 24,
+            "service_id": 24,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 25,
+            "service_id": 25,
+            "option_label": "Standard",
+            "price_ngn": 9675,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 26,
+            "service_id": 26,
+            "option_label": "Standard",
+            "price_ngn": 32250,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 27,
+            "service_id": 27,
+            "option_label": "Standard",
+            "price_ngn": 26875,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 28,
+            "service_id": 28,
+            "option_label": "Standard",
+            "price_ngn": 5375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 29,
+            "service_id": 29,
+            "option_label": "Standard",
+            "price_ngn": 53750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 30,
+            "service_id": 30,
+            "option_label": "Standard",
+            "price_ngn": 26875,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 39,
+            "service_id": 39,
+            "option_label": "Standard",
+            "price_ngn": 48375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 40,
+            "service_id": 40,
+            "option_label": "Standard",
+            "price_ngn": 43000,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 41,
+            "service_id": 41,
+            "option_label": "15 mins",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 42,
+            "service_id": 41,
+            "option_label": "30 mins",
+            "price_ngn": 16125,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 43,
+            "service_id": 41,
+            "option_label": "60 mins",
+            "price_ngn": 26875,
+            "sort_order": 3,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 131,
+            "service_id": 94,
+            "option_label": "Long",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 132,
+            "service_id": 94,
+            "option_label": "Short",
+            "price_ngn": 18275,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 133,
+            "service_id": 94,
+            "option_label": "Refill",
+            "price_ngn": 12900,
+            "sort_order": 3,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 134,
+            "service_id": 95,
+            "option_label": "Standard (Hands)",
+            "price_ngn": 7525,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 135,
+            "service_id": 95,
+            "option_label": "Leg",
+            "price_ngn": 5375,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 136,
+            "service_id": 96,
+            "option_label": "Full",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 137,
+            "service_id": 96,
+            "option_label": "Alone",
+            "price_ngn": 10750,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 138,
+            "service_id": 97,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 139,
+            "service_id": 98,
+            "option_label": "New Set",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 140,
+            "service_id": 98,
+            "option_label": "Refill",
+            "price_ngn": 12900,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 141,
+            "service_id": 99,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 142,
+            "service_id": 100,
+            "option_label": "Standard",
+            "price_ngn": 12900,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 143,
+            "service_id": 101,
+            "option_label": "Standard",
+            "price_ngn": 12900,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 144,
+            "service_id": 102,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 145,
+            "service_id": 103,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 146,
+            "service_id": 104,
+            "option_label": "Long",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 147,
+            "service_id": 104,
+            "option_label": "Medium",
+            "price_ngn": 16125,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 148,
+            "service_id": 105,
+            "option_label": "Standard",
+            "price_ngn": 17200,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 149,
+            "service_id": 106,
+            "option_label": "Standard",
+            "price_ngn": 19350,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 150,
+            "service_id": 107,
+            "option_label": "Standard",
+            "price_ngn": 7525,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 151,
+            "service_id": 108,
+            "option_label": "Standard",
+            "price_ngn": 7525,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 152,
+            "service_id": 109,
+            "option_label": "Standard",
+            "price_ngn": 8600,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 153,
+            "service_id": 110,
+            "option_label": "Standard",
+            "price_ngn": 6450,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 154,
+            "service_id": 111,
+            "option_label": "Standard",
+            "price_ngn": 12900,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 155,
+            "service_id": 112,
+            "option_label": "Standard",
+            "price_ngn": 5375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 156,
+            "service_id": 113,
+            "option_label": "Standard",
+            "price_ngn": 2150,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 157,
+            "service_id": 114,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 158,
+            "service_id": 115,
+            "option_label": "Standard",
+            "price_ngn": 528,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 159,
+            "service_id": 116,
+            "option_label": "Standard",
+            "price_ngn": 2150,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 160,
+            "service_id": 117,
+            "option_label": "Standard",
+            "price_ngn": 2150,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 161,
+            "service_id": 118,
+            "option_label": "Standard",
+            "price_ngn": 2150,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 162,
+            "service_id": 119,
+            "option_label": "Standard",
+            "price_ngn": 2150,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 163,
+            "service_id": 120,
+            "option_label": "Standard",
+            "price_ngn": 3225,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 164,
+            "service_id": 121,
+            "option_label": "Standard",
+            "price_ngn": 8600,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 165,
+            "service_id": 122,
+            "option_label": "Standard",
+            "price_ngn": 6450,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 166,
+            "service_id": 123,
+            "option_label": "Female",
+            "price_ngn": 12900,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 167,
+            "service_id": 123,
+            "option_label": "Male",
+            "price_ngn": 16125,
+            "sort_order": 2,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 168,
+            "service_id": 124,
+            "option_label": "Standard",
+            "price_ngn": 13975,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 169,
+            "service_id": 125,
+            "option_label": "Standard",
+            "price_ngn": 26875,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 170,
+            "service_id": 126,
+            "option_label": "Standard",
+            "price_ngn": 9675,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 171,
+            "service_id": 127,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 172,
+            "service_id": 128,
+            "option_label": "Standard",
+            "price_ngn": 26875,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 173,
+            "service_id": 129,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 174,
+            "service_id": 130,
+            "option_label": "Standard",
+            "price_ngn": 5375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-08-31 20:39:05"
+        },
+        {
+            "id": 175,
+            "service_id": 131,
+            "option_label": "Standard",
+            "price_ngn": 7525,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 176,
+            "service_id": 132,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 177,
+            "service_id": 133,
+            "option_label": "Standard",
+            "price_ngn": 5375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 178,
+            "service_id": 134,
+            "option_label": "Standard",
+            "price_ngn": 7525,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 179,
+            "service_id": 135,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 180,
+            "service_id": 136,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 181,
+            "service_id": 137,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 182,
+            "service_id": 138,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 183,
+            "service_id": 139,
+            "option_label": "Standard",
+            "price_ngn": 3225,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 184,
+            "service_id": 140,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 185,
+            "service_id": 141,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 186,
+            "service_id": 142,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 187,
+            "service_id": 143,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 188,
+            "service_id": 144,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 189,
+            "service_id": 145,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 190,
+            "service_id": 146,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 191,
+            "service_id": 147,
+            "option_label": "Standard",
+            "price_ngn": 5375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 192,
+            "service_id": 148,
+            "option_label": "Standard",
+            "price_ngn": 7525,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 193,
+            "service_id": 149,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 194,
+            "service_id": 150,
+            "option_label": "Standard",
+            "price_ngn": 12900,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 195,
+            "service_id": 151,
+            "option_label": "Standard",
+            "price_ngn": 18275,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 196,
+            "service_id": 152,
+            "option_label": "Standard",
+            "price_ngn": 19350,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 197,
+            "service_id": 153,
+            "option_label": "Standard",
+            "price_ngn": 22575,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 198,
+            "service_id": 154,
+            "option_label": "Standard",
+            "price_ngn": 29025,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 199,
+            "service_id": 155,
+            "option_label": "Standard",
+            "price_ngn": 8600,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 200,
+            "service_id": 156,
+            "option_label": "Standard",
+            "price_ngn": 25800,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 201,
+            "service_id": 157,
+            "option_label": "Standard",
+            "price_ngn": 30100,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 202,
+            "service_id": 158,
+            "option_label": "Standard",
+            "price_ngn": 5375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 203,
+            "service_id": 159,
+            "option_label": "Standard",
+            "price_ngn": 7525,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 204,
+            "service_id": 160,
+            "option_label": "Standard",
+            "price_ngn": 12900,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 205,
+            "service_id": 161,
+            "option_label": "Standard",
+            "price_ngn": 22575,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 206,
+            "service_id": 162,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 207,
+            "service_id": 163,
+            "option_label": "Standard",
+            "price_ngn": 29025,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 208,
+            "service_id": 164,
+            "option_label": "Standard",
+            "price_ngn": 29025,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 209,
+            "service_id": 165,
+            "option_label": "Standard",
+            "price_ngn": 35475,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 210,
+            "service_id": 166,
+            "option_label": "Standard",
+            "price_ngn": 22575,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 211,
+            "service_id": 167,
+            "option_label": "Standard",
+            "price_ngn": 29025,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 212,
+            "service_id": 168,
+            "option_label": "Standard",
+            "price_ngn": 37625,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 213,
+            "service_id": 169,
+            "option_label": "Standard",
+            "price_ngn": 29025,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 214,
+            "service_id": 170,
+            "option_label": "Standard",
+            "price_ngn": 37625,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 215,
+            "service_id": 171,
+            "option_label": "Standard",
+            "price_ngn": 41925,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 216,
+            "service_id": 172,
+            "option_label": "Standard",
+            "price_ngn": 37625,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 217,
+            "service_id": 173,
+            "option_label": "Standard",
+            "price_ngn": 41925,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 218,
+            "service_id": 174,
+            "option_label": "Standard",
+            "price_ngn": 56975,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 219,
+            "service_id": 175,
+            "option_label": "Standard",
+            "price_ngn": 78475,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 220,
+            "service_id": 176,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 221,
+            "service_id": 177,
+            "option_label": "Standard",
+            "price_ngn": 8600,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 222,
+            "service_id": 178,
+            "option_label": "Standard",
+            "price_ngn": 5375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 223,
+            "service_id": 179,
+            "option_label": "Standard",
+            "price_ngn": 19350,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 224,
+            "service_id": 180,
+            "option_label": "Standard",
+            "price_ngn": 22575,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 225,
+            "service_id": 181,
+            "option_label": "Standard",
+            "price_ngn": 29025,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 226,
+            "service_id": 182,
+            "option_label": "Standard",
+            "price_ngn": 37625,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 227,
+            "service_id": 183,
+            "option_label": "Standard",
+            "price_ngn": 44075,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 228,
+            "service_id": 184,
+            "option_label": "Standard",
+            "price_ngn": 8600,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 229,
+            "service_id": 185,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 230,
+            "service_id": 186,
+            "option_label": "Standard",
+            "price_ngn": 12900,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 231,
+            "service_id": 187,
+            "option_label": "Standard",
+            "price_ngn": 17200,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 232,
+            "service_id": 188,
+            "option_label": "Standard",
+            "price_ngn": 5375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 233,
+            "service_id": 189,
+            "option_label": "Standard",
+            "price_ngn": 31175,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 234,
+            "service_id": 190,
+            "option_label": "Standard",
+            "price_ngn": 37625,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 235,
+            "service_id": 191,
+            "option_label": "Standard",
+            "price_ngn": 44075,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 236,
+            "service_id": 192,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 237,
+            "service_id": 193,
+            "option_label": "Standard",
+            "price_ngn": 26875,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 238,
+            "service_id": 194,
+            "option_label": "Standard",
+            "price_ngn": 26875,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 239,
+            "service_id": 195,
+            "option_label": "Standard",
+            "price_ngn": 32250,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 240,
+            "service_id": 196,
+            "option_label": "Standard",
+            "price_ngn": 19350,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 241,
+            "service_id": 197,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 242,
+            "service_id": 198,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 243,
+            "service_id": 199,
+            "option_label": "Standard",
+            "price_ngn": 26875,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 244,
+            "service_id": 200,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 245,
+            "service_id": 201,
+            "option_label": "Standard",
+            "price_ngn": 26875,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 246,
+            "service_id": 202,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 247,
+            "service_id": 203,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 248,
+            "service_id": 204,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 249,
+            "service_id": 205,
+            "option_label": "Standard",
+            "price_ngn": 19350,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 250,
+            "service_id": 206,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 251,
+            "service_id": 207,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 252,
+            "service_id": 208,
+            "option_label": "Standard",
+            "price_ngn": 21500,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 253,
+            "service_id": 209,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 254,
+            "service_id": 210,
+            "option_label": "Standard",
+            "price_ngn": 12900,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 255,
+            "service_id": 211,
+            "option_label": "Standard",
+            "price_ngn": 10750,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 256,
+            "service_id": 212,
+            "option_label": "Standard",
+            "price_ngn": 16125,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 257,
+            "service_id": 213,
+            "option_label": "Standard",
+            "price_ngn": 2150,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 258,
+            "service_id": 214,
+            "option_label": "Standard",
+            "price_ngn": 3225,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 259,
+            "service_id": 215,
+            "option_label": "Standard",
+            "price_ngn": 5375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 260,
+            "service_id": 216,
+            "option_label": "Standard",
+            "price_ngn": 24725,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 261,
+            "service_id": 217,
+            "option_label": "Standard",
+            "price_ngn": 29025,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 262,
+            "service_id": 218,
+            "option_label": "Standard",
+            "price_ngn": 26875,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 263,
+            "service_id": 219,
+            "option_label": "Standard",
+            "price_ngn": 29025,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 264,
+            "service_id": 220,
+            "option_label": "Standard",
+            "price_ngn": 37625,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 265,
+            "service_id": 221,
+            "option_label": "Standard",
+            "price_ngn": 31175,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 266,
+            "service_id": 222,
+            "option_label": "Standard",
+            "price_ngn": 37625,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 267,
+            "service_id": 223,
+            "option_label": "Standard",
+            "price_ngn": 2150,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 268,
+            "service_id": 224,
+            "option_label": "Standard",
+            "price_ngn": 5375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 269,
+            "service_id": 225,
+            "option_label": "Standard",
+            "price_ngn": 17200,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 270,
+            "service_id": 226,
+            "option_label": "Standard",
+            "price_ngn": 2150,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 271,
+            "service_id": 227,
+            "option_label": "Standard",
+            "price_ngn": 5375,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 272,
+            "service_id": 228,
+            "option_label": "Standard",
+            "price_ngn": 37625,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 273,
+            "service_id": 229,
+            "option_label": "Standard",
+            "price_ngn": 31175,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        },
+        {
+            "id": 274,
+            "service_id": 230,
+            "option_label": "Standard",
+            "price_ngn": 37625,
+            "sort_order": 1,
+            "is_active": 1,
+            "created_at": "2026-09-11 20:53:17"
+        }
+    ],
+    "admins": [
+        {
+            "id": 1,
+            "username": "carolines_admin",
+            "password": "$2y$10$qN88zArnQoZ6BYqkxGp8.ePNyGu2mBYdiYzlcOIgvTvrdTWDVCa8S",
+            "display_name": "Caroline Main Admin",
+            "email": "admin@carolinesplace.com",
+            "is_active": 1,
+            "created_at": "2026-09-04 13:20:38"
+        },
+        {
+            "id": 2,
+            "username": "admin",
+            "password": "$2y$10$qN88zArnQoZ6BYqkxGp8.ePNyGu2mBYdiYzlcOIgvTvrdTWDVCa8S",
+            "display_name": "Super Admin",
+            "email": "admin@carolinesplace.com",
+            "is_active": 1,
+            "created_at": "2026-09-04 13:20:38"
+        }
+    ],
+    "bookings": [
+        {
+            "id": 1,
+            "reference_code": "SPA-439BA962",
+            "full_name": "John Doe",
+            "email": "jOHN@yahoo.com",
+            "phone": "+23408136779318",
+            "division": "spa",
+            "service_id": null,
+            "preferred_date": "2026-09-02",
+            "preferred_time": "06:00 PM",
+            "total_amount_ngn": 12900,
+            "notes": "RAh",
+            "status": "completed",
+            "payment_status": "paid",
+            "admin_notes": null,
+            "created_at": "2026-09-01 07:05:22",
+            "updated_at": "2026-09-04 13:20:38"
+        },
+        {
+            "id": 2,
+            "reference_code": "SPA-59C396",
+            "full_name": "Jane Adebayo",
+            "email": "jane@example.com",
+            "phone": "+2348012345678",
+            "division": "spa",
+            "service_id": null,
+            "preferred_date": "2026-10-15",
+            "preferred_time": "11:00 AM",
+            "total_amount_ngn": 107500,
+            "notes": "First time visiting.",
+            "status": "pending",
+            "payment_status": "unpaid",
+            "admin_notes": null,
+            "created_at": "2026-09-04 13:25:19",
+            "updated_at": "2026-09-04 13:25:19"
+        },
+        {
+            "id": 3,
+            "reference_code": "SPA-CFA6BE",
+            "full_name": "Tola Balogun",
+            "email": "tola@example.com",
+            "phone": "2348033334444",
+            "division": "spa",
+            "service_id": null,
+            "preferred_date": "2026-11-20",
+            "preferred_time": "02:00 PM",
+            "total_amount_ngn": 37625,
+            "notes": "Window seat if available",
+            "status": "confirmed",
+            "payment_status": "unpaid",
+            "admin_notes": "Room 2 prepared for Tola",
+            "created_at": "2026-09-04 13:26:25",
+            "updated_at": "2026-09-04 13:26:39"
+        },
+        {
+            "id": 4,
+            "reference_code": "SPA-AA95A5",
+            "full_name": "John Doe",
+            "email": "jOHN@yahoo.com",
+            "phone": "+23408136779318",
+            "division": "spa",
+            "service_id": null,
+            "preferred_date": "2026-09-12",
+            "preferred_time": "06:00 PM",
+            "total_amount_ngn": 21500,
+            "notes": "time",
+            "status": "pending",
+            "payment_status": "unpaid",
+            "admin_notes": null,
+            "created_at": "2026-09-05 18:20:32",
+            "updated_at": "2026-09-05 18:20:32"
+        }
+    ],
+    "booking_items": [
+        {
+            "id": 1,
+            "booking_id": 1,
+            "service_id": 123,
+            "option_id": 166,
+            "service_name": "Regular Pedicure",
+            "option_label": "Female",
+            "unit_price_ngn": 12900,
+            "quantity": 1,
+            "line_total_ngn": 12900
+        },
+        {
+            "id": 2,
+            "booking_id": 2,
+            "service_id": 1,
+            "option_id": 1,
+            "service_name": "Signature Facial (Caroline Special)",
+            "option_label": "Standard",
+            "unit_price_ngn": 53750,
+            "quantity": 2,
+            "line_total_ngn": 107500
+        },
+        {
+            "id": 3,
+            "booking_id": 3,
+            "service_id": 2,
+            "option_id": 2,
+            "service_name": "Anti-Aging Facial",
+            "option_label": "Standard",
+            "unit_price_ngn": 37625,
+            "quantity": 1,
+            "line_total_ngn": 37625
+        },
+        {
+            "id": 4,
+            "booking_id": 4,
+            "service_id": 22,
+            "option_id": 22,
+            "service_name": "Full Arm Wax",
+            "option_label": "Standard",
+            "unit_price_ngn": 21500,
+            "quantity": 1,
+            "line_total_ngn": 21500
+        }
+    ]
 }
