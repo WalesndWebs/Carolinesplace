@@ -255,27 +255,53 @@ require_once __DIR__ . '/includes/header.php';
     <form method="POST" id="spaMenuForm" action="/spa_menu.php">
       <input type="hidden" name="booking_type" value="spa_menu" />
 
-      <!-- ── Category chips ─────────────────────────────── -->
-      <div class="cat-chips reveal" style="margin-bottom:32px;">
-        <?php foreach ($catData as $i => $cd): ?>
-          <a
-            href="#cat-<?php echo $cd['cat']['id']; ?>"
-            class="cat-chip <?php echo $i === 0 ? 'is-active' : ''; ?>"
-            data-cat="<?php echo $cd['cat']['id']; ?>"
+      <!-- ── Search & Filter toolbar ───────────────────────── -->
+      <div class="menu-toolbar" style="margin-bottom:28px;">
+        <div class="menu-search-wrap" style="position:relative; margin-bottom:18px;">
+          <input
+            type="text"
+            id="menuSearchInput"
+            class="form-input menu-search-input"
+            placeholder="🔍 Search all services (e.g. Knotless Braids, Steaming, Didi, Silk Press, Relaxer, Wigs...)"
+            aria-label="Search services"
+            style="width:100%; padding:14px 18px 14px 44px; border-radius:12px; border:1px solid rgba(27,20,16,0.15); font-size:15px; background:#fff; box-shadow:0 2px 8px rgba(0,0,0,0.03);"
+          />
+          <svg style="position:absolute; left:16px; top:50%; transform:translateY(-50%); color:var(--muted); pointer-events:none;" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <button type="button" id="clearSearchBtn" style="display:none; position:absolute; right:14px; top:50%; transform:translateY(-50%); background:none; border:none; color:var(--muted); cursor:pointer; font-size:16px; padding:4px;">✕</button>
+        </div>
+
+        <!-- ── Category chips / tabs ──────────────────────── -->
+        <div class="cat-chips" id="catChipsNav">
+          <button
+            type="button"
+            class="cat-chip is-active"
+            data-cat="all"
           >
-            <span class="cat-chip__icon"><?php echo $cd['cat']['icon'] ?: '✨'; ?></span>
-            <span class="cat-chip__name"><?php echo htmlspecialchars($cd['cat']['name']); ?></span>
-            <span class="cat-chip__count"><?php echo count($cd['services']); ?></span>
-          </a>
-        <?php endforeach; ?>
+            <span class="cat-chip__icon">✨</span>
+            <span class="cat-chip__name">All Categories</span>
+            <span class="cat-chip__count"><?php echo count($services); ?></span>
+          </button>
+          <?php foreach ($catData as $cd): ?>
+            <button
+              type="button"
+              class="cat-chip"
+              data-cat="<?php echo $cd['cat']['id']; ?>"
+            >
+              <span class="cat-chip__icon"><?php echo $cd['cat']['icon'] ?: '✨'; ?></span>
+              <span class="cat-chip__name"><?php echo htmlspecialchars($cd['cat']['name']); ?></span>
+              <span class="cat-chip__count"><?php echo count($cd['services']); ?></span>
+            </button>
+          <?php endforeach; ?>
+        </div>
       </div>
 
       <!-- ── Category blocks ─────────────────────────────── -->
+      <div id="catBlocksContainer">
       <?php foreach ($catData as $cd):
           $c = $cd['cat'];
           $servicesList = $cd['services'];
       ?>
-      <section class="cat-block reveal" id="cat-<?php echo $c['id']; ?>" data-cat="<?php echo $c['id']; ?>">
+      <section class="cat-block" id="cat-<?php echo $c['id']; ?>" data-cat="<?php echo $c['id']; ?>">
 
         <div class="cat-block__header">
           <div style="display:flex; align-items:center; gap:12px;">
@@ -370,6 +396,14 @@ require_once __DIR__ . '/includes/header.php';
       </section>
       <?php endforeach; ?>
 
+      <div id="noResultsMsg" style="display:none; text-align:center; padding:48px 24px; background:#fff; border-radius:16px; border:1px dashed rgba(27,20,16,0.15); margin-bottom:28px;">
+        <p style="font-size:24px; margin-bottom:8px;">🔍</p>
+        <h4 style="font-family:var(--font-serif); font-size:18px; margin:0 0 6px;">No services found</h4>
+        <p style="color:var(--muted); font-size:14px; margin:0 0 16px;">Try adjusting your search query or pick a different category.</p>
+        <button type="button" id="resetSearchBtn" class="btn btn--outline btn--sm">Show All Categories</button>
+      </div>
+      </div><!-- /#catBlocksContainer -->
+
       <!-- ── Sticky summary bar ─────────────────────────── -->
       <div class="sticky-summary" id="stickySummary" hidden>
         <div class="container container--lg sticky-summary__inner">
@@ -400,17 +434,19 @@ require_once __DIR__ . '/includes/header.php';
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 10px 14px;
+    padding: 10px 16px;
     border-radius: 999px;
-    background: var(--surface, #fff);
-    border: 1px solid var(--border-soft, rgba(27,20,16,0.1));
-    color: var(--text-soft, #555);
+    background: #fff;
+    border: 1px solid rgba(27,20,16,0.12);
+    color: var(--muted, #555);
     font-size: 14px;
     font-weight: 500;
     text-decoration: none;
+    cursor: pointer;
+    font-family: inherit;
     transition: all .2s ease;
   }
-  .cat-chip:hover { border-color: var(--primary); color: var(--fg); }
+  .cat-chip:hover { border-color: var(--primary); color: var(--fg); background: #FAF3E7; }
   .cat-chip.is-active {
     background: var(--primary);
     border-color: var(--primary);
@@ -436,7 +472,13 @@ require_once __DIR__ . '/includes/header.php';
     padding: 24px;
     margin-bottom: 28px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+    transition: opacity .2s ease;
   }
+  .cat-block.is-collapsed .cat-block__body { display: none; }
+  .cat-block.is-collapsed .cat-block__toggle { transform: rotate(-90deg); }
   .cat-block__header {
     display: flex;
     align-items: center;
@@ -465,12 +507,18 @@ require_once __DIR__ . '/includes/header.php';
     color: var(--muted);
     transition: transform .2s ease;
   }
-  .cat-block.is-collapsed .cat-block__body { display: none; }
-  .cat-block.is-collapsed .cat-block__toggle { transform: rotate(-90deg); }
   .menu-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 16px;
+  }
+  @media (max-width: 640px) {
+    .menu-grid {
+      grid-template-columns: 1fr;
+    }
+    .cat-block {
+      padding: 18px 14px;
+    }
   }
   .menu-item {
     display: flex;
@@ -573,6 +621,15 @@ require_once __DIR__ . '/includes/header.php';
   const clearBtn = $('#clearAllBtn');
   const contBtn  = $('#continueBtn');
 
+  const chips           = $$('.cat-chip');
+  const blocks          = $$('.cat-block');
+  const searchInput     = $('#menuSearchInput');
+  const clearSearchBtn  = $('#clearSearchBtn');
+  const noResultsMsg    = $('#noResultsMsg');
+  const resetSearchBtn  = $('#resetSearchBtn');
+
+  let currentCat = 'all';
+
   const fmtPrice = n => '₦' + Math.round(n).toLocaleString('en-NG');
 
   function recalc() {
@@ -598,14 +655,16 @@ require_once __DIR__ . '/includes/header.php';
       count += 1;
     });
 
-    countEl.textContent = count;
-    pluralEl.textContent = count === 1 ? '' : 's';
-    totalEl.textContent = fmtPrice(total);
+    if (countEl) countEl.textContent = count;
+    if (pluralEl) pluralEl.textContent = count === 1 ? '' : 's';
+    if (totalEl) totalEl.textContent = fmtPrice(total);
 
-    if (count > 0) {
-      sticky.removeAttribute('hidden');
-    } else {
-      sticky.setAttribute('hidden', '');
+    if (sticky) {
+      if (count > 0) {
+        sticky.removeAttribute('hidden');
+      } else {
+        sticky.setAttribute('hidden', '');
+      }
     }
 
     return { count, total };
@@ -625,6 +684,105 @@ require_once __DIR__ . '/includes/header.php';
     });
   }
 
+  // Filter Menu by Category and Search Query
+  function filterMenu() {
+    const query = (searchInput?.value || '').trim().toLowerCase();
+    let anyMatchesTotal = 0;
+
+    blocks.forEach(b => {
+      const bCat = b.dataset.cat;
+      const matchesCat = (currentCat === 'all' || currentCat === bCat);
+
+      if (!matchesCat) {
+        b.style.display = 'none';
+        return;
+      }
+
+      let catMatches = 0;
+      const items = b.querySelectorAll('.menu-item');
+      items.forEach(item => {
+        const title = (item.querySelector('.menu-item__title')?.textContent || '').toLowerCase();
+        const desc = (item.querySelector('.menu-item__desc')?.textContent || '').toLowerCase();
+        const matchesQuery = !query || title.includes(query) || desc.includes(query);
+
+        if (matchesQuery) {
+          item.style.display = 'flex';
+          catMatches++;
+          anyMatchesTotal++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      if (query && catMatches === 0) {
+        b.style.display = 'none';
+      } else {
+        b.style.display = 'block';
+        // Always make sure opacity & transform are reset
+        b.style.opacity = '1';
+        b.style.visibility = 'visible';
+      }
+    });
+
+    if (clearSearchBtn) {
+      clearSearchBtn.style.display = query ? 'block' : 'none';
+    }
+
+    if (noResultsMsg) {
+      noResultsMsg.style.display = anyMatchesTotal === 0 ? 'block' : 'none';
+    }
+  }
+
+  function setCategory(catId, shouldScroll = false) {
+    currentCat = String(catId);
+    chips.forEach(c => c.classList.toggle('is-active', c.dataset.cat === currentCat));
+    filterMenu();
+
+    if (shouldScroll) {
+      const targetEl = currentCat === 'all'
+        ? ($('#catBlocksContainer') || form)
+        : (document.getElementById(`cat-${currentCat}`) || $('#catBlocksContainer'));
+
+      if (targetEl) {
+        const navH = 85;
+        const rect = targetEl.getBoundingClientRect();
+        const targetY = window.pageYOffset + rect.top - navH;
+        window.scrollTo({ top: Math.max(0, targetY), behavior: 'smooth' });
+      }
+    }
+  }
+
+  // Category chip clicks
+  chips.forEach(c => {
+    c.addEventListener('click', e => {
+      e.preventDefault();
+      setCategory(c.dataset.cat, true);
+    });
+  });
+
+  // Search input listeners
+  if (searchInput) {
+    searchInput.addEventListener('input', () => {
+      filterMenu();
+    });
+  }
+
+  if (clearSearchBtn) {
+    clearSearchBtn.addEventListener('click', () => {
+      searchInput.value = '';
+      filterMenu();
+      searchInput.focus();
+    });
+  }
+
+  if (resetSearchBtn) {
+    resetSearchBtn.addEventListener('click', () => {
+      if (searchInput) searchInput.value = '';
+      setCategory('all', true);
+    });
+  }
+
+  // Form delegation for checkboxes, selects, steppers, and accordion headers
   form.addEventListener('change', e => {
     if (e.target.matches('.svc-select') || e.target.matches('.svc-option')) {
       refreshPrices();
@@ -658,7 +816,7 @@ require_once __DIR__ . '/includes/header.php';
     if (toggle) {
       const cid = toggle.dataset.toggle;
       toggle.classList.toggle('is-collapsed');
-      $(`#cat-${cid}`).classList.toggle('is-collapsed');
+      $(`#cat-${cid}`)?.classList.toggle('is-collapsed');
       e.preventDefault();
     }
 
@@ -671,44 +829,44 @@ require_once __DIR__ . '/includes/header.php';
     }
   });
 
-  // Category chips smooth navigation
-  const chips = $$('.cat-chip');
-  const blocks = $$('.cat-block');
-  const setActive = id => {
-    chips.forEach(c => c.classList.toggle('is-active', c.dataset.cat === id));
-  };
-  const io = new IntersectionObserver(entries => {
-    entries.forEach(en => {
-      if (en.isIntersecting) setActive(en.target.dataset.cat);
+  if (clearBtn) {
+    clearBtn.addEventListener('click', () => {
+      $$('.svc-select:checked').forEach(c => c.checked = false);
+      $$('.svc-qty').forEach(q => q.value = '1');
+      refreshPrices();
+      recalc();
     });
-  }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
-  blocks.forEach(b => io.observe(b));
+  }
 
-  chips.forEach(c => {
-    c.addEventListener('click', e => {
-      e.preventDefault();
-      const id = c.dataset.cat;
-      setActive(id);
-      const t = document.getElementById(`cat-${id}`);
-      if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  if (contBtn) {
+    contBtn.addEventListener('click', e => {
+      const { count } = recalc();
+      if (count === 0) {
+        e.preventDefault();
+        alert('Please select at least one service to continue.');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }
     });
-  });
+  }
 
-  clearBtn.addEventListener('click', () => {
-    $$('.svc-select:checked').forEach(c => c.checked = false);
-    $$('.svc-qty').forEach(q => q.value = '1');
-    refreshPrices();
-    recalc();
-  });
+  // Check URL parameters & hash on load
+  const urlParams = new URLSearchParams(window.location.search);
+  const qCat = urlParams.get('cat');
+  const hash = window.location.hash.replace('#cat-', '').replace('#', '').toLowerCase();
 
-  contBtn.addEventListener('click', e => {
-    const { count } = recalc();
-    if (count === 0) {
-      e.preventDefault();
-      alert('Please select at least one service to continue.');
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+  if (qCat) {
+    setCategory(qCat, false);
+  } else if (hash) {
+    if (hash === 'hair' || hash === '5') {
+      setCategory('5', false);
+    } else {
+      const matched = blocks.find(b => b.dataset.cat === hash);
+      if (matched) setCategory(hash, false);
+      else filterMenu();
     }
-  });
+  } else {
+    filterMenu();
+  }
 
   refreshPrices();
   recalc();

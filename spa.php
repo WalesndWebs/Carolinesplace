@@ -201,6 +201,14 @@ require_once __DIR__ . '/includes/header.php';
       Our hair stylists and nail technicians are trained to deliver a
       flawless finish that lasts — every single visit.
     </p>
+    <div style="margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap;">
+      <a href="/spa_menu.php?cat=5" class="btn btn--primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+        💇 Browse Hair Section (100 Services) <span aria-hidden="true">→</span>
+      </a>
+      <a href="/spa_menu.php" class="btn btn--outline" style="text-decoration:none;">
+        Full Spa Menu
+      </a>
+    </div>
   </div>
 </section>
 
@@ -221,6 +229,11 @@ require_once __DIR__ . '/includes/header.php';
     
       — our senior nail technician and the fan-favourite behind the flawless royal blue sets everyone is booking.&nbsp;✨
     </p>
+    <div style="margin-top: 20px;">
+      <a href="/spa_menu.php?cat=6" class="btn btn--primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+        💅 View Nail Studio Menu (29 Services) <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </div>
   <div class="page-split__img">
     <img
@@ -247,6 +260,11 @@ require_once __DIR__ . '/includes/header.php';
       soothing treatments and refined finishing. Step out feeling refreshed,
       polished and perfectly cared for — in the hands of our skilled beauty therapists.
     </p>
+    <div style="margin-top: 20px;">
+      <a href="/spa_menu.php?cat=7" class="btn btn--primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px;">
+        🦶 View Pedicure Menu (8 Services) <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </div>
   <div class="page-split__img">
     <img src="/assets/images/DSC_7496.jpg" alt="Pedicure &amp; Nail Care Stations" loading="lazy" class="page-split__rounded-img" />
@@ -271,6 +289,11 @@ require_once __DIR__ . '/includes/header.php';
       treatments and waxing services. Step out feeling renewed, restored and
       glowing — in the hands of our certified beauty therapists.
     </p>
+    <div style="margin-top: 20px;">
+      <a href="/spa_menu.php?cat=2" class="btn btn--primary" style="text-decoration:none; display:inline-flex; align-items:center; gap:8px; background:#FAF3E7; color:#1B1410;">
+        🌿 View Massage &amp; Body Menu <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </div>
 </section>
 
