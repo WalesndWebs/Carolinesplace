@@ -87,10 +87,37 @@ require_once __DIR__ . '/includes/header.php';
         loading="lazy"
       />
     </div>
+    <!-- SLIDE 2.1: massage room  -->
+    <div class="hero-slider__slide">
+      <img
+        src="assets/images/STE.JPG"
+        alt="massage room "
+        class="hero-slider__img"
+        loading="lazy"
+      />
+    </div>
     <!-- SLIDE 2.2: massage room -->
     <div class="hero-slider__slide">
       <img
         src="assets/images/spa4.jpg"
+        alt="Massage room"
+        class="hero-slider__img"
+        loading="lazy"
+      />
+    </div>
+     <!-- SLIDE 2.2.1: massage room -->
+    <div class="hero-slider__slide">
+      <img
+        src="assets/images/BA.JPG"
+        alt="Massage room"
+        class="hero-slider__img"
+        loading="lazy"
+      />
+    </div>
+    <!-- SLIDE 2.2.2: massage room -->
+    <div class="hero-slider__slide">
+      <img
+        src="assets/images/BA1.JPG"
         alt="Massage room"
         class="hero-slider__img"
         loading="lazy"
@@ -128,7 +155,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- SLIDE 5: V-TEN Treatment / Facial Room (5th attached image) -->
     <div class="hero-slider__slide">
       <img
-        src="assets/images/DSC_75020.jpg"
+        src="assets/images/spa4.jpg"
         alt="V-TEN Advanced Treatment Room"
         class="hero-slider__img"
         loading="lazy"
@@ -276,7 +303,7 @@ require_once __DIR__ . '/includes/header.php';
      ================================================================ -->
 <section class="page-split page-split--dark reveal">
   <div class="page-split__img page-split__img--tall">
-    <img src="/assets/images/DSC_7595.jpg" alt="Massage &amp; Treatment Suite" loading="lazy" class="page-split__img-dark" />
+    <img src="/assets/images/spa4.jpg" alt="Massage &amp; Treatment Suite" loading="lazy" class="page-split__img-dark" />
   </div>
   <div class="page-split__copy page-split__copy--dark">
     <p class="page-split__eyebrow page-split__eyebrow--light">MASSAGE, FACIALS &amp; BODY</p>

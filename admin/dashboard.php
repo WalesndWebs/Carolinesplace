@@ -115,7 +115,7 @@ $bookings = $stmt->fetchAll();
     </div>
     <div style="display:flex; align-items:center; gap:16px; font-size:14px; flex-wrap:wrap;">
       <a href="/admin/dashboard.php" style="font-weight:600; color:var(--primary);">Bookings</a>
-      <a href="/admin/spa_products.php" style="color:var(--primary); font-weight:600;">🛠️ Spa Products &amp; Pricing</a>
+      <a href="https://carolinesplace.org/" style="color:var(--primary); font-weight:600;">🛠️ Spa Products &amp; Pricing</a>
       <a href="/" style="color:var(--muted);">Public Site</a>
       <span style="color:var(--muted);">|</span>
       <span style="color:var(--fg); font-weight:500;">Hello, <?php echo htmlspecialchars($admin['display_name'] ?: $admin['username']); ?></span>

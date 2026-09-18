@@ -67,6 +67,43 @@ require_once __DIR__ . '/includes/header.php';
 
     <!-- Slides Container -->
     <div class="hero-story__slides">
+      <!-- SLIDE 07: Top View of the builiding (From Image Folder DSC_3048) -->
+       <div class="hero-story__slide" data-slide-index="5">
+        <img
+          src="/assets/images/des.jpg"
+          alt="State-of-the-Art Private Fitness Suite &amp; Gym"
+          class="hero-story__img"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='/assets/images/DSC_3042.jpg';"
+        />
+        <div class="hero-story__overlay">
+          <div class="hero-story__card">
+            <h3 class="hero-story__title">THE Caroline's Place</h3>
+            <p class="hero-story__desc">
+             
+            </p>
+          </div>
+        </div>
+      </div>
+       <!-- SLIDE 05: Members' Lounge & Cigar Bar -->
+      <div class="hero-story__slide" data-slide-index="4">
+        <img
+          src="/assets/images/DSC_2929.jpg"
+          alt="Members' Lounge & Intimate Bar"
+          class="hero-story__img"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='/assets/images/DSC_3010.jpg';"
+        />
+        <div class="hero-story__overlay">
+          <div class="hero-story__card">
+            <h3 class="hero-story__title">Intimate Ambiance &amp; Purposeful Connection</h3>
+            <p class="hero-story__desc">
+              Savor craft refreshments under warm chandelier lighting, host private discussions, and nurture genuine community.
+            </p>
+          </div>
+        </div>
+      </div>
+      
       <!-- SLIDE 01: The Artisanal Hair & Beauty Studio (Uploaded slid1) -->
       <div class="hero-story__slide hero-story__slide--active" data-slide-index="0">
         <picture>
@@ -93,7 +130,7 @@ require_once __DIR__ . '/includes/header.php';
       <!-- SLIDE 02: N Lounge & Spa Rituals -->
       <div class="hero-story__slide" data-slide-index="1">
         <img
-          src="/assets/images/DSC_7595.jpg"
+          src="/assets/images/spa5.jpg"
           alt="N Lounge & Spa — Candlelit Treatment Suites"
           class="hero-story__img"
           loading="lazy"
@@ -150,25 +187,6 @@ require_once __DIR__ . '/includes/header.php';
         </div>
       </div>
 
-      <!-- SLIDE 05: Members' Lounge & Cigar Bar -->
-      <div class="hero-story__slide" data-slide-index="4">
-        <img
-          src="/assets/images/DSC_2929.jpg"
-          alt="Members' Lounge & Intimate Bar"
-          class="hero-story__img"
-          loading="lazy"
-          onerror="this.onerror=null;this.src='/assets/images/DSC_3010.jpg';"
-        />
-        <div class="hero-story__overlay">
-          <div class="hero-story__card">
-            <h3 class="hero-story__title">Intimate Ambiance &amp; Purposeful Connection</h3>
-            <p class="hero-story__desc">
-              Savor craft refreshments under warm chandelier lighting, host private discussions, and nurture genuine community.
-            </p>
-          </div>
-        </div>
-      </div>
-
       <!-- SLIDE 06: Private Gym & Fitness Suite (From Image Folder DSC_3048) -->
       <div class="hero-story__slide" data-slide-index="5">
         <img
@@ -187,10 +205,11 @@ require_once __DIR__ . '/includes/header.php';
           </div>
         </div>
       </div>
-      <!-- SLIDE 07: Top View of the builiding (From Image Folder DSC_3048) -->
-       <div class="hero-story__slide" data-slide-index="5">
+      
+      <!-- SLIDE 0: Stemroom  & Fitness Suite (From Image Folder DSC_3048) -->
+      <div class="hero-story__slide" data-slide-index="5">
         <img
-          src="/assets/images/des.jpg"
+          src="/assets/images/STE.JPG"
           alt="State-of-the-Art Private Fitness Suite &amp; Gym"
           class="hero-story__img"
           loading="lazy"
@@ -198,13 +217,32 @@ require_once __DIR__ . '/includes/header.php';
         />
         <div class="hero-story__overlay">
           <div class="hero-story__card">
-            <h3 class="hero-story__title">THE Caroline's Place</h3>
+            <h3 class="hero-story__title"></h3>
             <p class="hero-story__desc">
-             
+              
             </p>
           </div>
         </div>
       </div>
+      <!-- SLIDE 0: ROOFTOP & Fitness Suite (From Image Folder DSC_3048) -->
+      <div class="hero-story__slide" data-slide-index="5">
+        <img
+          src="/assets/images/ROF.JPG"
+          alt="State-of-the-Art Private Fitness Suite &amp; Gym"
+          class="hero-story__img"
+          loading="lazy"
+          onerror="this.onerror=null;this.src='/assets/images/DSC_3042.jpg';"
+        />
+        <div class="hero-story__overlay">
+          <div class="hero-story__card">
+            <h3 class="hero-story__title"></h3>
+            <p class="hero-story__desc">
+              
+            </p>
+          </div>
+        </div>
+      </div>
+      
     </div>
 
     <!-- Tap Zones for Mobile/Desktop Quick Navigation -->
@@ -302,7 +340,7 @@ require_once __DIR__ . '/includes/header.php';
     <!-- CARD 2: N Lounge & Spa -->
     <a href="/spa.php" class="space-card">
       <div class="space-card__img-wrap">
-        <img src="/assets/images/DSC_7595.jpg" alt="N Lounge &amp; Spa" loading="lazy" class="space-card__img" />
+        <img src="/assets/images/spa4.jpg" alt="N Lounge &amp; Spa" loading="lazy" class="space-card__img" />
       </div>
       <div class="space-card__body">
         <h3 class="space-card__title">N Lounge &amp; Spa</h3>
