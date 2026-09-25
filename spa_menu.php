@@ -67,10 +67,12 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && !empty($_POST['svc_selec
         exit;
     }
 
-    $timeSlots = [
-        '09:00 AM', '10:00 AM', '11:00 AM', '12:00 PM',
-        '01:00 PM', '02:00 PM', '03:00 PM', '04:00 PM',
-        '05:00 PM', '06:00 PM', '07:00 PM'
+   $timeSlots = [
+        '10:30 AM', '11:00 AM', '11:30 AM', '12:00 PM',
+        '12:30 PM', '01:00 PM', '01:30 PM', '02:00 PM',
+        '02:30 PM', '03:00 PM', '03:30 PM', '04:00 PM',
+        '04:30 PM', '05:00 PM', '05:30 PM', '06:00 PM',
+        '06:30 PM', '07:00 PM'
     ];
 
     require_once __DIR__ . '/includes/header.php';
@@ -153,20 +155,22 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && !empty($_POST['svc_selec
                 </div>
               </div>
 
-              <div class="form-row" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
+             <div class="form-row" style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:16px;">
                 <div class="form-group">
-                  <label for="preferred_date" class="form-label" style="display:block; margin-bottom:6px; font-weight:500; font-size:14px;">Preferred Date</label>
+                  <label for="preferred_date" class="form-label" style="display:block; margin-bottom:6px; font-weight:500; font-size:14px;">Preferred Date <span style="font-weight:400; font-size:12px; color:var(--muted);">(Tue – Sun)</span></label>
                   <input type="date" id="preferred_date" name="preferred_date" class="form-input" style="width:100%; padding:12px 14px; border:1px solid rgba(27,20,16,0.15); border-radius:8px; font-family:inherit; font-size:15px;" required />
                 </div>
                 <div class="form-group">
-                  <label for="preferred_time" class="form-label" style="display:block; margin-bottom:6px; font-weight:500; font-size:14px;">Preferred Time</label>
+                  <label for="preferred_time" class="form-label" style="display:block; margin-bottom:6px; font-weight:500; font-size:14px;">Preferred Time <span style="font-weight:400; font-size:12px; color:var(--muted);">(Tue – Sun, 10:30 AM – 7:00 PM)</span></label>
                   <select id="preferred_time" name="preferred_time" class="form-select" style="width:100%; padding:12px 14px; border:1px solid rgba(27,20,16,0.15); border-radius:8px; font-family:inherit; font-size:15px;" required>
-                    <option value="">Select a time</option>
+                    <option value="">Select a time (10:30 AM – 7:00 PM)</option>
                     <?php foreach ($timeSlots as $t): ?>
                       <option value="<?php echo htmlspecialchars($t); ?>"><?php echo htmlspecialchars($t); ?></option>
                     <?php endforeach; ?>
                   </select>
+                  <span style="display:block; margin-top:6px; font-size:12px; color:var(--muted);">Working Hours: Tuesday to Sunday, 10:30 AM – 7:00 PM (Closed Mondays)</span>
                 </div>
+              </div>
               </div>
 
               <div class="form-group" style="margin-bottom:24px;">
