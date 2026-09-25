@@ -191,15 +191,37 @@ if (($_SERVER['REQUEST_METHOD'] ?? 'GET') === 'POST' && !empty($_POST['svc_selec
       </div>
     </section>
 
-    <script>
-    (function() {
+   (function() {
       const today = new Date().toISOString().split('T')[0];
       const dateInput = document.getElementById('preferred_date');
+      const bookingForm = document.getElementById('bookingForm');
       if (dateInput) {
         dateInput.min = today;
+        dateInput.addEventListener('change', function() {
+          if (!this.value) return;
+          const parts = this.value.split('-');
+          const d = new Date(parts[0], parts[1] - 1, parts[2]);
+          if (d.getDay() === 1) { // 1 is Monday
+            alert("Caroline's Place is open from Tuesday to Sunday, 10:30 AM to 7:00 PM (Closed on Mondays). Please select a date from Tuesday to Sunday.");
+            this.value = '';
+          }
+        });
+      }
+      if (bookingForm) {
+        bookingForm.addEventListener('submit', function(e) {
+          if (dateInput && dateInput.value) {
+            const parts = dateInput.value.split('-');
+            const d = new Date(parts[0], parts[1] - 1, parts[2]);
+            if (d.getDay() === 1) {
+              e.preventDefault();
+              alert("Caroline's Place is closed on Mondays. Our hours are Tuesday to Sunday, 10:30 AM – 7:00 PM. Please select a valid date.");
+              dateInput.focus();
+              return false;
+            }
+          }
+        });
       }
     })();
-    </script>
 
     <?php
     require_once __DIR__ . '/includes/footer.php';
